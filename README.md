@@ -23,7 +23,7 @@
     - [ ] Project video or list of small images
         - [ ] Add zoom library 
     - [ ] Used tecnologics
-    - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com or phone on +5511971908333"
+    - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com
 - [ ] Add accessibility systems
     - [ ] Change website language
         - [ ] US
