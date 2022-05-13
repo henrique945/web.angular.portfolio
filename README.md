@@ -1,34 +1,57 @@
 # Portfolio
 
-## Checklist
+## Project checklist
 
 - [ ] Home
-    - [ ] Header com poucos menus (contato, projetos, more) ~ bandeiras para trocar de lingua
-    - [ ] Informações de contatos bem visiveis
-    - [ ] Slider de projetos (nome e image)
-    - [ ] Informações totais de forma bonita de ser ver
-- [ ] Lista de projetos com pesquisa e tags
-    - [ ] Pesquisa
+    - [ ] Header
+        - [ ] Home
+        - [ ] Contact
+        - [ ] Projects
+        - [ ] More
+        - [ ] Flags (to change website language)  
+    - [ ] Contact info need to be visible
+    - [ ] Project slider (name and image)
+    - [ ] Cool and beatifull info
+        - [ ] Total of projects
+        - [ ] Total of tecnlogics
+- [ ] List projects with search and tags
+    - [ ] Search
     - [ ] Tags
-    - [ ] Listagem de cards de projetos
-- [ ] Detalhes de um projeto
-    - [ ] Descrição do projeto
-    - [ ] Video do projeto ou conjunto de pequenas imagens
-    - [ ] Tecnologias utilizadas
-    - [ ] "Let's talk Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com or +5511971908333"
-- [ ] Adicionar sistemas de acessibilidade no portfolio
-    - [ ] Troca a lingua do site (PT-BR, US, ES)
+    - [ ] List of project cards
+- [ ] Project details
+    - [ ] Project description
+    - [ ] Project video or list of small images
+        - [ ] Add zoom library 
+    - [ ] Used tecnologics
+    - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com or phone on +5511971908333"
+- [ ] Add accessibility systems
+    - [ ] Change website language
+        - [ ] US
+        - [ ] PT-BR
+        - [ ] ES 
     - [ ] Libras
-    - [ ] Sons
-- [ ] Modal de contato
+    - [ ] Sounds
+- [ ] Contact modal
+    - [ ] Personal info 
     - [ ] Whatsapp
     - [ ] Email
-- [ ] Implementações adicionais
+- [ ] Additional implementations
     - [ ] ThreeJs
-    - [ ] Animações
-    - [ ] Paraxall
+    - [ ] Animations
+    - [ ] Background parallax
 - [ ] More
     - [ ] Articles
-        - [ ] Se conectar com o disqus
+        - [ ] Connect with Disqus
     - [ ] Codes
     - [ ] Playgrounds
+    - [ ] 3D objects
+
+## My projects reference
+* project1 - web.site.com
+* project2 - web.site.com
+
+## Credits
+
+Direct credits and libs used on this project
+
+
