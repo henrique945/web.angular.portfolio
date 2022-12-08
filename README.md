@@ -1,5 +1,10 @@
 # Portfolio
 
+## Info
+- Author: Henrique Rodrigues
+- Contact: henrique.rodrigues7@hotmail.com
+- Website: ...
+
 ## Project checklist
 
 - [ ] Home
