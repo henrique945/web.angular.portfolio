@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10rem;
+  color: #445964;
+
+  h2 {
+    display: flex;
+    font-size: 2.2rem;
+
+    img {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #445964;
+    margin: 0 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: scale 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
