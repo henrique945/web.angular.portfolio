@@ -16,8 +16,8 @@ export class HomeComponent {
 
   public listPositions: PositionInterface[] = [
     {
-      name: 'Junior',
-      description: 'Desenvolver Junior na empresa InfoJr da Unesp de Rio Claro atuando como desenvolvedor web',
+      name: 'Júnior',
+      description: 'Desenvolver Júnior na empresa InfoJr da Unesp de Rio Claro atuando como desenvolvedor web',
       backgroundColor: '#263138',
       fontColor: '#445964',
     },
@@ -29,7 +29,7 @@ export class HomeComponent {
     },
     {
       name: 'Sócio',
-      description: 'Sócio CTO da startup Educaprat, plataforma de educação',
+      description: 'Sócio CTO da Startup Educaprat, plataforma de educação',
       backgroundColor: '#263138',
       fontColor: '#445964',
     },

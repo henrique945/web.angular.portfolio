@@ -1,10 +1,16 @@
+//#region Imports
+
 import { Component } from '@angular/core';
+
+//#endregion
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'portfolio';
+  // TODO: style scroll
+  // TODO: verify mobile screen
+  // TODO: change language to English
 }

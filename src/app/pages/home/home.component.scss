@@ -57,7 +57,6 @@
   width: calc(100% - 20rem);
   min-height: calc(100vh - 5rem);
   padding: 4.5rem 10rem 0;
-  margin-top: 2rem;
   color: #445964;
 
   .header {
@@ -95,6 +94,7 @@
       padding: 2rem 2rem;
       margin: 2rem;
       width: 20vw;
+      box-shadow: 0 4px 9px #445964;
 
       h3 {
         font-weight: 900;
