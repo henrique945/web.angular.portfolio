@@ -49,3 +49,95 @@
     }
   }
 }
+
+.experience {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20rem);
+  min-height: calc(100vh - 5rem);
+  padding: 4.5rem 10rem 0;
+  margin-top: 2rem;
+  color: #445964;
+
+  .header {
+    display: flex;
+    margin-left: auto;
+
+    p {
+      text-align: right;
+      margin: auto 6rem 0 0;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      margin: 0;
+      text-align: right;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+
+      &:last-child {
+        color: black;
+      }
+    }
+  }
+
+  .positions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+
+    &--card {
+      border-radius: 20px;
+      padding: 2rem 2rem;
+      margin: 2rem;
+      width: 20vw;
+
+      h3 {
+        font-weight: 900;
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+      }
+
+      p {
+        color: white;
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  .lower {
+    transform: translateY(3rem);
+  }
+
+  .quote {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    img {
+      display: block;
+      height: 4rem;
+    }
+
+    p {
+      text-align: center;
+      max-width: 50%;
+      font-size: 1.3rem;
+    }
+
+    strong {
+      font-weight: 900;
+      color: #263138;
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -11,4 +11,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  //#region Public Functions
+
+  public downloadCV(): void {
+
+  }
+
+  //#endregion
+
 }
