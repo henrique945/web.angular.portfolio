@@ -27,10 +27,11 @@
     margin: 0 2rem;
     font-weight: bold;
     font-size: 1.5rem;
-    transition: scale 0.5s ease-in-out;
+    transition: all 0.1s linear;
+    transform: translateZ(0);
 
     &:hover {
-      transform: scale(1.15);
+      transform: scale(1.05);
     }
   }
 }

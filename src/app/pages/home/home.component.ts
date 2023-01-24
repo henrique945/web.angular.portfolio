@@ -1,6 +1,7 @@
 //#region Imports
 
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject } from '@angular/core';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
 
@@ -12,6 +13,15 @@ import { PositionInterface } from '../../models/interfaces/position.interface';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+
+  //#region Constructor
+
+  constructor(
+    @Inject(DOCUMENT)
+    private readonly doc: Document,
+  ) {}
+
+  //#endregion
 
   //#region Public Properties
 
@@ -39,6 +49,36 @@ export class HomeComponent {
   public listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
 
   public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
+
+  //#endregion
+
+  //#region Public Functions
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(): void {
+    this.toggleOnTop();
+  }
+
+  public topFunction(): void {
+    this.doc.body.scrollTop = 0;
+    this.doc.documentElement.scrollTop = 0;
+  }
+
+  //#endregion
+
+  //#region Private Functions
+
+  private toggleOnTop(): void {
+    const toTopButton = this.doc.getElementById('toTopBtn');
+
+    if (!toTopButton)
+      return;
+
+    toTopButton.style.display = 'none';
+
+    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
+      toTopButton.style.display = 'block';
+  }
 
   //#endregion
 
