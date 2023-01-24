@@ -50,6 +50,61 @@
   }
 }
 
+.projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20rem);
+  min-height: calc(100vh - 5rem);
+  padding: 4.5rem 10rem 0;
+  color: #445964;
+
+  .header {
+    display: flex;
+    margin-right: auto;
+
+    h2 {
+      margin: 0;
+      text-align: left;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+
+      &:first-child {
+        color: black;
+      }
+    }
+
+    p {
+      text-align: left;
+      margin: auto 6rem 0;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+    margin: 5rem 0 3rem;
+
+    .tag {
+      padding: 0.7rem 1rem;
+      font-weight: 900;
+      font-size: 1.4rem;
+      background: #DFDFDF;
+      border-radius: 10px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .active {
+      color: #FFFFFF;
+      background: #263138;
+    }
+  }
+}
+
 .experience {
   position: relative;
   display: flex;

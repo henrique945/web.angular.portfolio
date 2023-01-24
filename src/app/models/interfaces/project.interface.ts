@@ -1,3 +1,4 @@
+import { ProjectTagsEnum } from '../enums/project-tags.enum';
 import { ProjectLinkInterface } from './project-link.interface';
 
 export interface ProjectInterface {
@@ -7,4 +8,5 @@ export interface ProjectInterface {
   icon: string;
   description: string;
   features: string[];
+  tags: ProjectTagsEnum[];
 }

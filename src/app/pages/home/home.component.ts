@@ -1,6 +1,7 @@
 //#region Imports
 
 import { Component } from '@angular/core';
+import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
 
 //#endregion
@@ -8,7 +9,7 @@ import { PositionInterface } from '../../models/interfaces/position.interface';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
 
@@ -33,7 +34,11 @@ export class HomeComponent {
       backgroundColor: '#263138',
       fontColor: '#445964',
     },
-  ]
+  ];
+
+  public listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
+
+  public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
 
   //#endregion
 
