@@ -2,8 +2,18 @@
 
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
+import { abb } from '../../data/projects/abb';
+import { checkinCampus } from '../../data/projects/checkin-campus';
+import { facens } from '../../data/projects/facens';
+import { learnbox } from '../../data/projects/learnbox';
+import { sennaKids } from '../../data/projects/senna-kids';
+import { uqr } from '../../data/projects/uqr';
+import { yesno } from '../../data/projects/yesno';
+import { zoologico } from '../../data/projects/zoologico';
+import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
+import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 //#endregion
 
@@ -49,6 +59,18 @@ export class HomeComponent {
   public listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
 
   public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
+
+  public projectOrientation: typeof OrientationEnum = OrientationEnum;
+
+  public listProjects: ProjectInterface[] = [
+    uqr,
+    facens,
+    abb,
+    yesno,
+    checkinCampus,
+    zoologico,
+    learnbox,
+  ];
 
   //#endregion
 

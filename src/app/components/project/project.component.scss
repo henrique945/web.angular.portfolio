@@ -1,0 +1,43 @@
+.project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #263138;
+  overflow: hidden;
+
+  .gradient {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(19, 24, 28, 0.60) 95%);
+  }
+
+  img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  strong {
+    z-index: 10;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

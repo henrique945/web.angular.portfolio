@@ -55,6 +55,17 @@
       </div>
     </ng-container>
   </div>
+
+  <div class="list">
+    <ng-container *ngFor="let project of listProjects">
+      <div class="project"
+           [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL"
+           [class.vertical]="project.orientation === projectOrientation.VERTICAL"
+      >
+        <app-project [project]="project"></app-project>
+      </div>
+    </ng-container>
+  </div>
 </div>
 
 <div id="exp" class="experience">

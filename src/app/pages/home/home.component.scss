@@ -136,6 +136,27 @@
       background: #263138;
     }
   }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .project {
+      margin: 0.75rem;
+      cursor: pointer;
+    }
+
+    .horizontal {
+      width: 32rem;
+      height: 16rem;
+    }
+
+    .vertical {
+      width: 14rem;
+      height: 25rem;
+    }
+  }
 }
 
 .experience {
