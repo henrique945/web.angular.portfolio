@@ -5,8 +5,10 @@ export interface ProjectInterface {
   name: string;
   links: ProjectLinkInterface[];
   imageUrls: string[];
+  coverImage: string;
   icon: string;
   description: string;
   features: string[];
   tags: ProjectTagsEnum[];
+  techs: string[];
 }
