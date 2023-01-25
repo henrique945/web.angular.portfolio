@@ -8,6 +8,7 @@ export const zoologico: ProjectInterface = {
   icon: 'assets/imgs/projects/zoologico/icon.png',
   features: [],
   imageUrls: [
+    'assets/imgs/projects/zoologico/layout.jpg',
     'assets/imgs/projects/zoologico/zoologico1.jpeg',
     'assets/imgs/projects/zoologico/zoologico2.JPG',
     'assets/imgs/projects/zoologico/zoologico3.png',
