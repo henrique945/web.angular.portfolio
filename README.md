@@ -7,8 +7,8 @@
 
 ## Project Prints
 
-![](src/assets/portfolio1.PNG)
-![](src/assets/portfolio2.PNG)
+![](src/assets/port1.PNG)
+![](src/assets/port2.PNG)
 
 ## Project checklist
 
