@@ -5,6 +5,11 @@
 - Contact: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
 - Website: ...
 
+## Project Prints
+
+![](src/assets/portfolio1.PNG)
+![](src/assets/portfolio2.PNG)
+
 ## Project checklist
 
 - [ ] Home

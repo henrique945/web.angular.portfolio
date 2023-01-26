@@ -80,7 +80,7 @@
   <div class="positions">
     <ng-container *ngFor="let position of listPositions; let i = index">
       <div class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
-        <h3 [style.color]="position.fontColor">{{ position.name }}</h3>
+        <h3>{{ position.name }}</h3>
         <p>{{ position.description }}</p>
       </div>
     </ng-container>
