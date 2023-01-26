@@ -42,7 +42,6 @@
     - [ ] Change website language
         - [ ] US
         - [ ] PT-BR
-        - [ ] ES
     - [ ] Libras
     - [ ] Sounds
 - [ ] Contact modal
