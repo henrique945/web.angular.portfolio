@@ -44,6 +44,7 @@
         - [ ] PT-BR
     - [ ] Libras
     - [ ] Sounds
+    - [ ] Google Search
 - [ ] Contact modal
     - [ ] Personal info 
     - [ ] Whatsapp
@@ -59,6 +60,8 @@
     - [ ] Playgrounds
     - [ ] 3D objects
     - [ ] Tests
+    - [ ] Deploy
+    - [ ] Mobile
 
 ## My projects reference
 * UQR - https://www.universidadeuqr.com.br/

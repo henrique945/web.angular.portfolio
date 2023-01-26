@@ -1,5 +1,6 @@
 import { OrientationEnum } from '../enums/orientation.enum';
 import { ProjectTagsEnum } from '../enums/project-tags.enum';
+import { TechEnum } from '../enums/tech.enum';
 import { ProjectLinkInterface } from './project-link.interface';
 
 export interface ProjectInterface {
@@ -11,6 +12,6 @@ export interface ProjectInterface {
   description: string;
   features: string[];
   tags: ProjectTagsEnum[];
-  techs: string[];
+  techs: TechEnum[];
   orientation: OrientationEnum;
 }

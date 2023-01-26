@@ -3,11 +3,15 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
 import { abb } from '../../data/projects/abb';
+import { adpoints } from '../../data/projects/adpoints';
 import { checkinCampus } from '../../data/projects/checkin-campus';
 import { facens } from '../../data/projects/facens';
+import { iquot } from '../../data/projects/iquot';
 import { learnbox } from '../../data/projects/learnbox';
+import { movimentoCti } from '../../data/projects/movimentoCti';
 import { sennaKids } from '../../data/projects/senna-kids';
 import { uqr } from '../../data/projects/uqr';
+import { vacinaVotorantim } from '../../data/projects/vacinaVotorantim';
 import { yesno } from '../../data/projects/yesno';
 import { zoologico } from '../../data/projects/zoologico';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
@@ -67,6 +71,10 @@ export class HomeComponent {
     checkinCampus,
     zoologico,
     learnbox,
+    vacinaVotorantim,
+    movimentoCti,
+    adpoints,
+    iquot,
   ];
 
   //#endregion

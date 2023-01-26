@@ -39,6 +39,34 @@
   </div>
 </div>
 
+
+<div id="exp" class="experience">
+  <div class="header">
+    <p>Minha jornada está apenas <br>começando, sempre aprendendo e inovando</p>
+    <div>
+      <h2>Experiência</h2>
+      <h2>Profissional</h2>
+    </div>
+  </div>
+
+  <div class="positions">
+    <ng-container *ngFor="let position of listPositions; let i = index">
+      <div class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
+        <h3>{{ position.name }}</h3>
+        <p>{{ position.description }}</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="quote">
+    <img src="assets/imgs/quote.svg" alt="Frase">
+    <p>"Os <b>analfabetos do próximo século</b> não são aqueles que não sabem <b>ler ou escrever</b>, mas aqueles que se
+      recusam a <b>aprender, reaprender e voltar a aprender</b>"
+    </p>
+    <strong>~ Alvin Tofler</strong>
+  </div>
+</div>
+
 <div id="projects" class="projects">
   <div class="header">
     <div>
@@ -65,32 +93,5 @@
         <app-project [project]="project"></app-project>
       </div>
     </ng-container>
-  </div>
-</div>
-
-<div id="exp" class="experience">
-  <div class="header">
-    <p>Minha jornada está apenas <br>começando, sempre aprendendo e inovando</p>
-    <div>
-      <h2>Experiência</h2>
-      <h2>Profissional</h2>
-    </div>
-  </div>
-
-  <div class="positions">
-    <ng-container *ngFor="let position of listPositions; let i = index">
-      <div class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
-        <h3>{{ position.name }}</h3>
-        <p>{{ position.description }}</p>
-      </div>
-    </ng-container>
-  </div>
-
-  <div class="quote">
-    <img src="assets/imgs/quote.svg" alt="Frase">
-    <p>"Os <b>analfabetos do próximo século</b> não são aqueles que não sabem <b>ler ou escrever</b>, mas aqueles que se
-      recusam a <b>aprender, reaprender e voltar a aprender</b>"
-    </p>
-    <strong>~ Alvin Tofler</strong>
   </div>
 </div>
