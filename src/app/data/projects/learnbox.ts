@@ -19,7 +19,9 @@ export const learnbox: ProjectInterface = {
     'assets/imgs/projects/learnbox/learnbox9.PNG',
     'assets/imgs/projects/learnbox/learnbox10.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'App', link: 'https://play.google.com/store/apps/details?id=liga.app.learnbox&pli=1' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

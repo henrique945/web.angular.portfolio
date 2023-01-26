@@ -16,7 +16,10 @@ export const iquot: ProjectInterface = {
     'assets/imgs/projects/iquot/iquot6.PNG',
     'assets/imgs/projects/iquot/iquot7.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'App', link: 'https://play.google.com/store/apps/details?id=com.liga.android.iquot' },
+    { title: 'Painel de Controle', link: 'https://backoffice-dev.iquot.ligafacens.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

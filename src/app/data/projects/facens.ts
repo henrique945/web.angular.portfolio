@@ -13,7 +13,9 @@ export const facens: ProjectInterface = {
     'assets/imgs/projects/facens/facens3.webp',
     'assets/imgs/projects/facens/facens4.webp',
   ],
-  links: [],
+  links: [
+    { title: 'App', link: 'https://play.google.com/store/apps/details?id=liga.app.facens' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

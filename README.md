@@ -71,6 +71,10 @@
 * Checkin Campus - https://checkin-campus.com/
 * Zoológico PZMQB - https://play.google.com/store/apps/details?id=com.liga.zoologico
 * Learnbox - https://play.google.com/store/apps/details?id=liga.app.learnbox&pli=1
+* Vacina Votorantim - https://site.vacina-votorantim.ligafacens.com/
+* Movimento CTI - https://clinicamovimento.firebaseapp.com/
+* Ad Points - https://backoffice.adpoints.ligafacens.com/
+* Iquot - https://play.google.com/store/apps/details?id=com.liga.android.iquot
 
 ## Credits
 

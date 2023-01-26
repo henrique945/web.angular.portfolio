@@ -13,7 +13,10 @@ export const uqr: ProjectInterface = {
     'assets/imgs/projects/uqr/uqr3.PNG',
     'assets/imgs/projects/uqr/uqr4.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'Site', link: 'https://www.universidadeuqr.com.br/' },
+    { title: 'Painel de Controle', link: 'https://backoffice.universidadeuqr.com.br/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.HORIZONTAL,

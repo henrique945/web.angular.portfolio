@@ -12,7 +12,9 @@ export const abb: ProjectInterface = {
     'assets/imgs/projects/abb/abb2.PNG',
     'assets/imgs/projects/abb/abb3.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'Site', link: 'https://www.abb-download.ligafacens.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.HORIZONTAL,

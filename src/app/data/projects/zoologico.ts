@@ -22,7 +22,9 @@ export const zoologico: ProjectInterface = {
     'assets/imgs/projects/zoologico/zoologico11.PNG',
     'assets/imgs/projects/zoologico/zoologico12.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'App', link: 'https://play.google.com/store/apps/details?id=com.liga.zoologico' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

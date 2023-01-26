@@ -14,7 +14,9 @@ export const adpoints: ProjectInterface = {
     'assets/imgs/projects/adpoints/points4.PNG',
     'assets/imgs/projects/adpoints/layout.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'Painel de Controle', link: 'https://backoffice.adpoints.ligafacens.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

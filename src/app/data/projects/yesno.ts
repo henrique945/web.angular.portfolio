@@ -15,7 +15,9 @@ export const yesno: ProjectInterface = {
     'assets/imgs/projects/yesno/yesno5.jpeg',
     'assets/imgs/projects/yesno/yesno6.jpeg',
   ],
-  links: [],
+  links: [
+    { title: 'App', link: 'https://play.google.com/store/apps/details?id=liga.app.yesno' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

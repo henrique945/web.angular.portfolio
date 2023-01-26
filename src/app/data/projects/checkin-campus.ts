@@ -19,7 +19,9 @@ export const checkinCampus: ProjectInterface = {
     'assets/imgs/projects/checkinCampus/checkinCampus9.png',
     'assets/imgs/projects/checkinCampus/checkinCampus10.png',
   ],
-  links: [],
+  links: [
+    { title: 'Site', link: 'https://checkin-campus.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

@@ -15,7 +15,9 @@ export const vacinaVotorantim: ProjectInterface = {
     'assets/imgs/projects/vacinaVotorantim/vacina5.PNG',
     'assets/imgs/projects/vacinaVotorantim/vacina6.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'Site', link: 'https://site.vacina-votorantim.ligafacens.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,

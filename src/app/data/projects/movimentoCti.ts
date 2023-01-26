@@ -12,7 +12,9 @@ export const movimentoCti: ProjectInterface = {
     'assets/imgs/projects/movimentoCti/cti2.PNG',
     'assets/imgs/projects/movimentoCti/cti3.PNG',
   ],
-  links: [],
+  links: [
+    { title: 'Site', link: 'https://clinicamovimento.firebaseapp.com/' },
+  ],
   tags: [],
   techs: [],
   orientation: OrientationEnum.HORIZONTAL,
