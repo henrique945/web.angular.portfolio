@@ -4,16 +4,16 @@ import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
 import { abb } from '../../data/projects/abb';
 import { adpoints } from '../../data/projects/adpoints';
+import { ayrtonSenna } from '../../data/projects/ayrton-senna';
 import { checkinCampus } from '../../data/projects/checkin-campus';
+import { dpr } from '../../data/projects/dpr';
+import { ecologicatech } from '../../data/projects/ecologicatech';
+import { emerson } from '../../data/projects/emerson';
+import { fablab } from '../../data/projects/fablab';
 import { facens } from '../../data/projects/facens';
 import { iquot } from '../../data/projects/iquot';
 import { learnbox } from '../../data/projects/learnbox';
-import { movimentoCti } from '../../data/projects/movimentoCti';
-import { sennaKids } from '../../data/projects/senna-kids';
-import { uqr } from '../../data/projects/uqr';
-import { vacinaVotorantim } from '../../data/projects/vacinaVotorantim';
-import { yesno } from '../../data/projects/yesno';
-import { zoologico } from '../../data/projects/zoologico';
+import { cti } from '../../data/projects/cti';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
@@ -64,17 +64,18 @@ export class HomeComponent {
   public projectOrientation: typeof OrientationEnum = OrientationEnum;
 
   public listProjects: ProjectInterface[] = [
-    uqr,
-    facens,
     abb,
-    yesno,
-    checkinCampus,
-    zoologico,
-    learnbox,
-    vacinaVotorantim,
-    movimentoCti,
     adpoints,
+    ayrtonSenna,
+    checkinCampus,
+    cti,
+    dpr,
+    ecologicatech,
+    emerson,
+    fablab,
+    facens,
     iquot,
+    learnbox,
   ];
 
   //#endregion

@@ -12,9 +12,9 @@ export interface ProjectInterface {
   links: ProjectLinkInterface[];
   imageUrls: string[];
   coverImage: string;
-  icon: string;
+  developmentDate: string;
   description: string;
-  features: string[];
+  outcome: string;
   tags: ProjectTagsEnum[];
   techs: TechEnum[];
   orientation: OrientationEnum;
