@@ -53,6 +53,7 @@
     justify-content: space-between;
     min-width: 40%;
     padding: 5rem 0;
+    margin-right: 3rem;
 
     span {
       font-size: 1.3rem;
@@ -62,7 +63,7 @@
       margin: 0.5rem 0;
       font-weight: 900;
       text-transform: uppercase;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     .social {
@@ -74,7 +75,7 @@
   }
 
   .about {
-    padding: 5rem 0;
+    padding: 7rem 0;
 
     p {
       font-size: 1.9rem;
@@ -200,9 +201,9 @@
 
     &--card {
       border-radius: 20px;
-      padding: 2rem 2rem;
+      padding: 2rem 1.5rem;
       margin: 2rem;
-      width: 20vw;
+      width: 25%;
       box-shadow: 0 4px 9px #445964;
 
       h3 {
@@ -218,6 +219,7 @@
         text-align: center;
         font-size: 1.3rem;
         margin: 2rem 0;
+        white-space: pre-wrap;
       }
     }
   }

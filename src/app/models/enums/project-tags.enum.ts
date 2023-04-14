@@ -1,5 +1,5 @@
 export enum ProjectTagsEnum {
-  ALL = 'Todos',
+  ALL = 'All',
   MOBILE = 'App',
   WEB = 'Web',
   APIS = 'APIs',

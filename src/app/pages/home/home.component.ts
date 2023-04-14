@@ -41,18 +41,20 @@ export class HomeComponent {
 
   public listPositions: PositionInterface[] = [
     {
-      name: 'Júnior',
-      description: 'Desenvolver Júnior na empresa InfoJr da Unesp de Rio Claro atuando como desenvolvedor web',
+      name: 'Junior',
+      description: 'Develop Junior at InfoJr from Unesp in Rio Claro acting as a web developer',
       backgroundColor: '#263138',
     },
     {
-      name: 'Especialista',
-      description: 'Especialista Techlead na empresa Liga Facens, comandando um time de mais de 20 desenvolvedores com mais de 30 aplicações produzidas, atuando também como desenvolvedor FrontEnd (Ionic/Angular) e Backend (NestJs/NodeJs)',
+      name: 'Full-Stack Engineer',
+      description: '+4 years of experience building: \n\n' +
+        '• Mobile apps built with Ionic/Angular (HTML5, SASS, Typescript) for a variety of businesses and government organizations.\n\n' +
+        '• REST APIs architectured in NestJS (NodeJs) for deployment within AWS using AWS Lambda and integrating with services such as S3, Api Gateway, SQS, SNS, SES, Cloudfront',
       backgroundColor: '#445964',
     },
     {
-      name: 'Sócio',
-      description: 'Sócio CTO da Startup Educaprat, plataforma de educação',
+      name: 'Partner',
+      description: 'CTO Partner at Startup Educaprat, education platform',
       backgroundColor: '#263138',
     },
   ];
