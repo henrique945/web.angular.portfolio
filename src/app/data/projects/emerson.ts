@@ -8,7 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const emerson: ProjectInterface = {
-  name: 'emerson',
+  name: 'Emerson',
   coverImage: 'assets/imgs/projects/emerson/emerson2.PNG',
   developmentDate: '20/07/2020 ~ 17/08/2020',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>Bootstrap Template</b>.\n' +
@@ -25,4 +25,5 @@ export const emerson: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
+  position: 9,
 };

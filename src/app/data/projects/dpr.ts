@@ -32,4 +32,5 @@ export const dpr: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.UNITY, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
+  position: 8,
 };

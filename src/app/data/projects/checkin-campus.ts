@@ -28,4 +28,5 @@ export const checkinCampus: ProjectInterface = {
   tags: [],
   techs: [],
   orientation: OrientationEnum.VERTICAL,
+  position: 3,
 };

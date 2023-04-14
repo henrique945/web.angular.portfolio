@@ -9,7 +9,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 export const ecologicatech: ProjectInterface = {
   name: 'Ecologicatech',
-  coverImage: 'assets/imgs/projects/ecologicatech/eco11.PNG',
+  coverImage: 'assets/imgs/projects/ecologicatech/eco9.PNG',
   developmentDate: '13/03/2023 ~ 14/04/2023',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Google Maps API</b>.\n' +
     'Project focused on the creation of events for companies and on replies to these events forms, with this data we can calculate the distance between locations and transport (using Google Maps API). And verify the amount of CO2 emmited in the planet. Thus knowing how many trees will be needed to combat the CO2 emmited.\n',
@@ -34,4 +34,5 @@ export const ecologicatech: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
+  position: 6,
 };

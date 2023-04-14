@@ -1,7 +1,7 @@
 //#region Imports
 
 import { DOCUMENT } from '@angular/common';
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { abb } from '../../data/projects/abb';
 import { adpoints } from '../../data/projects/adpoints';
 import { ayrtonSenna } from '../../data/projects/ayrton-senna';
@@ -26,7 +26,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   //#region Constructor
 
@@ -92,6 +92,14 @@ export class HomeComponent {
   public topFunction(): void {
     this.doc.body.scrollTop = 0;
     this.doc.documentElement.scrollTop = 0;
+  }
+
+  //#endregion
+
+  //#region Public Functions
+
+  public ngOnInit(): void {
+    this.listProjects = this.listProjects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);
   }
 
   //#endregion

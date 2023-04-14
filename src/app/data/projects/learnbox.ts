@@ -39,4 +39,5 @@ export const learnbox: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
+  position: 12,
 };

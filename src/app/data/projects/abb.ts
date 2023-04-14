@@ -27,4 +27,5 @@ export const abb: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
+  position: 11,
 };

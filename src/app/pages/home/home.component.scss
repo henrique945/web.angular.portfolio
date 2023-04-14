@@ -92,6 +92,7 @@
   min-height: calc(100vh - 5rem);
   padding: 4.5rem 10rem 0;
   color: #445964;
+  margin-bottom: 2rem;
 
   .header {
     display: flex;
@@ -142,6 +143,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
     .project {
       margin: 0.75rem;

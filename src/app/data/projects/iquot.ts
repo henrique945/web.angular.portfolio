@@ -35,4 +35,5 @@ export const iquot: ProjectInterface = {
   tags: [ProjectTagsEnum.APIS],
   techs: [TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
+  position: 5,
 };

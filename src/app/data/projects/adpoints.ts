@@ -9,7 +9,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 export const adpoints: ProjectInterface = {
   name: 'Ad Points',
-  coverImage: 'assets/imgs/projects/adpoints/adpoints1.PNG',
+  coverImage: 'assets/imgs/projects/adpoints/adpoints1.png',
   developmentDate: '02/08/2019 ~ 18/10/2021',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n' +
     'You can create a campaign with questions related to your business and generate leads from the responses obtained.\n' +
@@ -20,10 +20,10 @@ export const adpoints: ProjectInterface = {
     'Be part of this community and come win your toast too!\n',
   outcome: 'Project was completed without problems but there was not much engagement and dissemination of it.',
   imageUrls: [
-    'assets/imgs/projects/adpoints/adpoints1.PNG',
-    'assets/imgs/projects/adpoints/adpoints2.PNG',
-    'assets/imgs/projects/adpoints/adpoints3.PNG',
-    'assets/imgs/projects/adpoints/adpoints4.PNG',
+    'assets/imgs/projects/adpoints/adpoints1.png',
+    'assets/imgs/projects/adpoints/adpoints2.png',
+    'assets/imgs/projects/adpoints/adpoints3.png',
+    'assets/imgs/projects/adpoints/adpoints4.png',
     'assets/imgs/projects/adpoints/adpoints5.PNG',
     'assets/imgs/projects/adpoints/adpoints6.PNG',
     'assets/imgs/projects/adpoints/adpoints7.PNG',
@@ -38,4 +38,5 @@ export const adpoints: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
+  position: 1,
 };
