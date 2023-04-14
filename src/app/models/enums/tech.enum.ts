@@ -7,3 +7,13 @@ export enum TechEnum {
   FLUTTER = 6,
   UNITY = 7,
 }
+
+export const formattedTechEnum: Record<TechEnum, string> = {
+  [TechEnum.ANGULAR]: 'Angular',
+  [TechEnum.IONIC]: 'Ionic',
+  [TechEnum.NESTJS]: 'NestJs',
+  [TechEnum.PWA]: 'PWA',
+  [TechEnum.REACT]: 'React',
+  [TechEnum.FLUTTER]: 'Flutter',
+  [TechEnum.UNITY]: 'Unity',
+}

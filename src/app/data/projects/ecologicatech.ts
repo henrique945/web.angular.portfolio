@@ -8,10 +8,11 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const ecologicatech: ProjectInterface = {
+  id: 'ecologicatech',
   name: 'Ecologicatech',
   coverImage: 'assets/imgs/projects/ecologicatech/eco9.PNG',
   developmentDate: '13/03/2023 ~ 14/04/2023',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Google Maps API</b>.\n' +
+  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Google Maps API</b>.\n\n' +
     'Project focused on the creation of events for companies and on replies to these events forms, with this data we can calculate the distance between locations and transport (using Google Maps API). And verify the amount of CO2 emmited in the planet. Thus knowing how many trees will be needed to combat the CO2 emmited.\n',
   outcome: 'Project was used in real events, being the first one in a conference called "MMA Impact Brasil" (Mobile Marketing Association) in São Paulo - Brazil with several data obtained.',
   imageUrls: [
@@ -20,12 +21,10 @@ export const ecologicatech: ProjectInterface = {
     'assets/imgs/projects/ecologicatech/eco3.PNG',
     'assets/imgs/projects/ecologicatech/eco4.PNG',
     'assets/imgs/projects/ecologicatech/eco5.PNG',
-    'assets/imgs/projects/ecologicatech/eco6.PNG',
-    'assets/imgs/projects/ecologicatech/eco7.PNG',
     'assets/imgs/projects/ecologicatech/eco8.PNG',
     'assets/imgs/projects/ecologicatech/eco9.PNG',
-    'assets/imgs/projects/ecologicatech/eco10.PNG',
-    'assets/imgs/projects/ecologicatech/eco11.PNG',
+    'assets/imgs/projects/ecologicatech/eco6.PNG',
+    'assets/imgs/projects/ecologicatech/eco7.PNG',
   ],
   links: [
     { title: 'Control Panel', link: 'https://backoffice.ecologicatech.ligafacens.com/' },

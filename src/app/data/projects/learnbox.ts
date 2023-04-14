@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const learnbox: ProjectInterface = {
+  id: 'learnbox',
   name: 'Learnbox',
   coverImage: 'assets/imgs/projects/learnbox/learnbox5.PNG',
   developmentDate: '27/04/2020 ~ 29/10/2021',
@@ -39,5 +40,5 @@ export const learnbox: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
-  position: 12,
+  position: 11,
 };

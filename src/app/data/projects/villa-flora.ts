@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const villaFlora: ProjectInterface = {
+  id: 'villaFlora',
   name: 'Villa Flora',
   coverImage: 'assets/imgs/projects/villa-flora/flora4.PNG',
   developmentDate: '09/08/2021 ~ 20/09/2021',

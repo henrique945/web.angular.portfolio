@@ -2,6 +2,7 @@ import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 export const checkinCampus: ProjectInterface = {
+  id: 'checkinCampus',
   name: 'Checkin Campus',
   coverImage: 'assets/imgs/projects/checkinCampus/checkinCampus9.png',
   developmentDate: '01/08/2019 ~ 10/09/2019',

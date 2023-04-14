@@ -3,7 +3,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NavbarComponent } from './navbar.component';
+import { ProjectItemComponent } from './project-item.component';
 
 //#endregion
 
@@ -13,11 +13,11 @@ import { NavbarComponent } from './navbar.component';
     RouterLink,
   ],
   declarations: [
-    NavbarComponent,
+    ProjectItemComponent,
   ],
   exports: [
-    NavbarComponent,
+    ProjectItemComponent,
   ],
 })
-export class NavbarModule {}
+export class ProjectItemModule {}
 

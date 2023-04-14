@@ -1,8 +1,12 @@
+//#region Imports
+
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectModule } from '../../components/project/project.module';
+import { ProjectItemModule } from '../../components/project-item/project-item.module';
 import { HomeComponent } from './home.component';
+
+//#endregion
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -10,7 +14,7 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    ProjectModule,
+    ProjectItemModule,
   ],
   declarations: [
     HomeComponent,

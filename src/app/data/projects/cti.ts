@@ -4,6 +4,7 @@ import { TechEnum } from '../../models/enums/tech.enum';
 import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 export const cti: ProjectInterface = {
+  id: 'cti',
   name: 'Movimento CTI',
   coverImage: 'assets/imgs/projects/cti/cti1.PNG',
   developmentDate: '29/03/2020 ~ 09/11/2020',

@@ -8,13 +8,14 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const fablab: ProjectInterface = {
+  id: 'fablab',
   name: 'Fablab',
   coverImage: 'assets/imgs/projects/fablab/fablab1.PNG',
   developmentDate: '15/10/2019 ~ 15/10/2020',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3) for tablet</b>.\n' +
     'A social network that helps the <b>worldwide Fablab community</b> to share knowledge and projects.\n' +
-    'A social network with features such as user achievements, machine training, project creation, likes and comments interactions and more...\n',
-  outcome: 'Was completed and was in the test phase but Fablab did not continue the project.',
+    'A social network with features such as user achievements, machine training, project-item creation, likes and comments interactions and more...\n',
+  outcome: 'Was completed and was in the test phase but Fablab did not continue the project-item.',
   imageUrls: [
     'assets/imgs/projects/fablab/fablab1.PNG',
     'assets/imgs/projects/fablab/fablab2.PNG',

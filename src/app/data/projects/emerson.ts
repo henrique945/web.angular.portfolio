@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const emerson: ProjectInterface = {
+  id: 'emerson',
   name: 'Emerson',
   coverImage: 'assets/imgs/projects/emerson/emerson2.PNG',
   developmentDate: '20/07/2020 ~ 17/08/2020',

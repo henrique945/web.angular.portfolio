@@ -8,6 +8,7 @@ import { ProjectLinkInterface } from './project-link.interface';
 //#endregion
 
 export interface ProjectInterface {
+  id: string;
   name: string;
   links: ProjectLinkInterface[];
   imageUrls: string[];

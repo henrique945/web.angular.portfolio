@@ -1,0 +1,38 @@
+<div class="project-detail">
+  <div class="header">
+    <img [src]="project?.coverImage" alt="Cape">
+    <div class="info">
+      <h1>{{ project?.name || 'Project name'}}</h1>
+      <p [innerHTML]="project?.description"></p>
+    </div>
+  </div>
+
+  <div class="text">
+    <h2>Outcome</h2>
+    <p>{{ project?.outcome }}</p>
+
+    <div class="d-flex">
+      <div>
+        <h2>Development date</h2>
+        <p>{{ project?.developmentDate }}</p>
+      </div>
+      <div>
+        <h2>Tags</h2>
+        <p>{{ tags }}</p>
+      </div>
+      <div>
+        <h2>Main Techs</h2>
+        <p>{{ techs }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="images">
+    <h2>Images</h2>
+    <div class="container">
+      <ng-container *ngFor="let image of project.imageUrls">
+        <img (click)="openZoom(image)" [src]="image" alt="Image">
+      </ng-container>
+    </div>
+  </div>
+</div>

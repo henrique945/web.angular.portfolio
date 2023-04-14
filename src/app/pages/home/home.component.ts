@@ -14,6 +14,7 @@ import { facens } from '../../data/projects/facens';
 import { iquot } from '../../data/projects/iquot';
 import { learnbox } from '../../data/projects/learnbox';
 import { cti } from '../../data/projects/cti';
+import { projects } from '../../data/projects/projects';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
@@ -46,10 +47,10 @@ export class HomeComponent implements OnInit {
       backgroundColor: '#263138',
     },
     {
-      name: 'Full-Stack Engineer',
+      name: 'Full-Stack Engineer at Liga Facens',
       description: '+4 years of experience building: \n\n' +
         '• Mobile apps built with Ionic/Angular (HTML5, SASS, Typescript) for a variety of businesses and government organizations.\n\n' +
-        '• REST APIs architectured in NestJS (NodeJs) for deployment within AWS using AWS Lambda and integrating with services such as S3, Api Gateway, SQS, SNS, SES, Cloudfront',
+        '• REST APIs architectured in NestJS (NodeJs + PostgresSQL) for deployment within AWS using AWS Lambda and integrating with services such as S3, Api Gateway, SQS, SNS, SES, Cloudfront',
       backgroundColor: '#445964',
     },
     {
@@ -65,20 +66,7 @@ export class HomeComponent implements OnInit {
 
   public projectOrientation: typeof OrientationEnum = OrientationEnum;
 
-  public listProjects: ProjectInterface[] = [
-    abb,
-    adpoints,
-    ayrtonSenna,
-    checkinCampus,
-    cti,
-    dpr,
-    ecologicatech,
-    emerson,
-    fablab,
-    facens,
-    iquot,
-    learnbox,
-  ];
+  public listProjects: ProjectInterface[] = projects;
 
   //#endregion
 

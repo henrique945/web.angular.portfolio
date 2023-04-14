@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const iquot: ProjectInterface = {
+  id: 'iquot',
   name: 'Iquot',
   coverImage: 'assets/imgs/projects/iquot/iquot7.PNG',
   developmentDate: '17/01/2022 ~ 14/03/2022',

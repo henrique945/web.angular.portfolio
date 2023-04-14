@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const dpr: ProjectInterface = {
+  id: 'dpr',
   name: 'DPR',
   coverImage: 'assets/imgs/projects/dpr/dpr1.png',
   developmentDate: '09/04/2020 ~ 02/07/2020',

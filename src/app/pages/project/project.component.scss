@@ -1,0 +1,68 @@
+.project-detail {
+  position: relative;
+  width: 100%;
+  overflow: auto hidden;
+  padding: 4rem 0 0;
+  color: #445964;
+
+  .header {
+    display: flex;
+    padding: 0 4rem;
+    margin-bottom: 3rem;
+
+    img {
+      height: 55vh;
+      max-width: 50vw;
+      border-radius: 10px;
+      box-shadow: 0 4px 9px #445964;
+      cursor: pointer;
+    }
+
+    .info {
+      padding-left: 2rem;
+
+
+      p {
+        white-space: pre-wrap;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .text {
+    padding: 0 4rem;
+    margin-bottom: 3rem;
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      padding-right: 4rem;
+    }
+  }
+
+  .images {
+    padding: 0 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        height: 35vh;
+        max-width: 30vw;
+        border-radius: 10px;
+        box-shadow: 0 4px 9px #445964;
+        margin: 0.5rem;
+        cursor: pointer;
+        object-fit: cover;
+      }
+    }
+  }
+}
