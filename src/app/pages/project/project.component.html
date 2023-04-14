@@ -24,6 +24,15 @@
         <h2>Main Techs</h2>
         <p>{{ techs }}</p>
       </div>
+      <div>
+        <h2>Links</h2>
+        <p>
+          <ng-container *ngFor="let link of project.links; let i = index">
+            <ng-container *ngIf="i !== 0"> |</ng-container>
+            <a class="link" [href]="link.link" target="_blank">{{ link.title }}</a>
+          </ng-container>
+        </p>
+      </div>
     </div>
   </div>
 
