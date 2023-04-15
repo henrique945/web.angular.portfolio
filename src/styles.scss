@@ -14,11 +14,40 @@
   }
 }
 
-.d-flex {
-  display: flex;
+:root {
+  --primary-color: #445964;
+  --secondary-color: #263138;
 }
 
-:root {
- --primary-color: #445964;
- --secondary-color: #263138;
+.toTopButton {
+  transition: all 0.3s ease-in-out;
+
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999;
+  width: 4rem;
+  height: 4rem;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  background: white;
+  box-shadow: 0 4px 9px var(--primary-color);
+
+  @media screen and (max-width: 768px) {
+    bottom: 50px;
+  }
+
+  img {
+    height: 55%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }

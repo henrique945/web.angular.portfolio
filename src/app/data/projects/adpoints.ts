@@ -13,10 +13,9 @@ export const adpoints: ProjectInterface = {
   coverImage: 'assets/imgs/projects/adpoints/adpoints1.png',
   developmentDate: '02/08/2019 ~ 18/10/2021',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
-    'You can create a campaign with questions related to your business and generate leads from the responses obtained.\n' +
-    'As a user, your goal is to complete as many campaigns as possible, stand out in the user rankings and win gifts.\n' +
-    'In the <b>administrative panel, graphs and reports</b> are displayed according to user information (age, gender, location) and their responses (by campaign).\n' +
-    '\n' +
+    'You can create a campaign with questions related to your business and generate leads from the responses obtained.\n\n' +
+    'As a user, your goal is to complete as many campaigns as possible, stand out in the user rankings and win gifts.\n\n' +
+    'In the <b>administrative panel, graphs and reports</b> are displayed according to user information (age, gender, location) and their responses (by campaign).\n\n' +
     'With Ad Points you can receive surveys, evaluate and help the company and in the end you can end up winning freebies for it. Cool, huh? Be part of this community and come win your toast too!\n',
   outcome: 'Project was completed without problems but there was not much engagement and dissemination of it.',
   imageUrls: [

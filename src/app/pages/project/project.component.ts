@@ -1,6 +1,7 @@
 //#region Imports
 
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { projects } from '../../data/projects';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
@@ -19,6 +20,8 @@ export class ProjectComponent implements OnInit {
   //#region Constructor
 
   constructor(
+    @Inject(DOCUMENT)
+    private readonly doc: Document,
     private readonly route: ActivatedRoute,
     private readonly router: Router,
   ) {
@@ -72,6 +75,11 @@ export class ProjectComponent implements OnInit {
     // TODO: implement Zoom Image Modal
   }
 
+  public topFunction(): void {
+    this.doc.body.scrollTop = 0;
+    this.doc.documentElement.scrollTop = 0;
+  }
+
   //#endregion
 
   //#region Private Functions
@@ -84,6 +92,23 @@ export class ProjectComponent implements OnInit {
     this.project.techs.forEach((tech, i) => {
       this.techs += (i !== 0 ? ', ' : '') + formattedTechEnum[tech];
     });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(): void {
+    this.toggleOnTop();
+  }
+
+  private toggleOnTop(): void {
+    const toTopButton = this.doc.getElementById('toTopBtn');
+
+    if (!toTopButton)
+      return;
+
+    toTopButton.style.display = 'none';
+
+    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
+      toTopButton.style.display = 'block';
   }
 
   //#endregion
