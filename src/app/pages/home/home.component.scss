@@ -18,7 +18,7 @@
   box-shadow: 0 4px 9px var(--primary-color);
 
   @media screen and (max-width: 768px) {
-    bottom: 100px;
+    bottom: 50px;
   }
 
   img {
@@ -39,12 +39,22 @@
   padding: 4.5rem 10rem 0;
   color: var(--primary-color);
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+
   .code {
     position: absolute;
     bottom: 0;
     right: 0;
     height: 20rem;
     transform: rotateY(180deg);
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .me {
@@ -55,6 +65,11 @@
     padding: 5rem 0;
     margin-right: 3rem;
 
+    @media screen and (max-width: 768px) {
+      padding: 2.2rem;
+      margin-right: 0;
+    }
+
     span {
       font-size: 1.3rem;
     }
@@ -64,9 +79,17 @@
       font-weight: 900;
       text-transform: uppercase;
       font-size: 2.5rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.3rem;
+      }
     }
 
     .social {
+      @media screen and (max-width: 768px) {
+        margin-top: 2rem;
+      }
+
       img {
         margin-right: 1rem;
         height: 2rem;
@@ -77,13 +100,156 @@
   .about {
     padding: 7rem 0;
 
+    @media screen and (max-width: 768px) {
+      padding: 2rem;
+    }
+
     p {
       font-size: 1.9rem;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.8rem;
+      }
     }
 
     .redirect {
       cursor: pointer;
+    }
+  }
+}
+
+.experience {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20rem);
+  min-height: calc(100vh - 5rem);
+  padding: 4.5rem 10rem 0;
+  color: #445964;
+
+  @media screen and (max-width: 768px) {
+    width: unset;
+    padding: 4rem 2rem 0;
+  }
+
+  .header {
+    display: flex;
+    margin-left: auto;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+
+    p {
+      text-align: right;
+      margin: auto 6rem 0 0;
+      font-weight: bold;
+      font-size: 1.4rem;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        margin: 1rem 0 0;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      text-align: right;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+
+      &:last-child {
+        color: black;
+      }
+    }
+  }
+
+  .positions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+      flex-direction: column;
+      flex-wrap: unset;
+    }
+
+    &--card {
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      margin: 2rem;
+      width: 25%;
+      box-shadow: 0 4px 9px #445964;
+
+      @media screen and (max-width: 768px) {
+        width: unset;
+        margin: 1rem;
+      }
+
+      h3 {
+        font-weight: 900;
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        color: white;
+      }
+
+      p {
+        color: white;
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 2rem 0;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .lower {
+    transform: translateY(3rem);
+
+    @media screen and (max-width: 768px) {
+      transform: translateY(0);
+    }
+  }
+
+  .quote {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      margin: 2rem 0;
+    }
+
+    img {
+      display: block;
+      height: 4rem;
+    }
+
+    p {
+      text-align: center;
+      max-width: 50%;
+      font-size: 1.3rem;
+
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+
+    strong {
+      font-weight: 900;
+      color: #263138;
+      font-size: 1.4rem;
     }
   }
 }
@@ -98,9 +264,19 @@
   color: #445964;
   margin-bottom: 2rem;
 
+  @media screen and (max-width: 768px) {
+    width: unset;
+    padding: 4rem 2rem 0;
+  }
+
   .header {
     display: flex;
     margin-right: auto;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-right: 0;
+    }
 
     h2 {
       margin: 0;
@@ -108,6 +284,10 @@
       font-size: 3rem;
       font-weight: 900;
       line-height: 1.1;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
 
       &:first-child {
         color: black;
@@ -119,12 +299,22 @@
       margin: auto 6rem 0;
       font-weight: bold;
       font-size: 1.4rem;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        margin: 1rem 0 0;
+      }
     }
   }
 
   .tags {
     display: flex;
     margin: 5rem 0 3rem;
+
+    @media screen and (max-width: 768px) {
+      margin: 3rem 0 3rem;
+      justify-content: center;
+    }
 
     .tag {
       padding: 0.7rem 1rem;
@@ -157,105 +347,21 @@
     .horizontal {
       width: 32rem;
       height: 16rem;
+
+      @media screen and (max-width: 768px){
+        width: 100%;
+        height: 12rem;
+      }
     }
 
     .vertical {
       width: 14rem;
       height: 25rem;
-    }
-  }
-}
 
-.experience {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 20rem);
-  min-height: calc(100vh - 5rem);
-  padding: 4.5rem 10rem 0;
-  color: #445964;
-
-  .header {
-    display: flex;
-    margin-left: auto;
-
-    p {
-      text-align: right;
-      margin: auto 6rem 0 0;
-      font-weight: bold;
-      font-size: 1.4rem;
-    }
-
-    h2 {
-      margin: 0;
-      text-align: right;
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.1;
-
-      &:last-child {
-        color: black;
+      @media screen and (max-width: 768px){
+        width: 100%;
+        height: 40rem;
       }
-    }
-  }
-
-  .positions {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 4rem 0;
-
-    &--card {
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      margin: 2rem;
-      width: 25%;
-      box-shadow: 0 4px 9px #445964;
-
-      h3 {
-        font-weight: 900;
-        font-size: 2rem;
-        text-align: center;
-        margin: 0;
-        color: white;
-      }
-
-      p {
-        color: white;
-        text-align: center;
-        font-size: 1.3rem;
-        margin: 2rem 0;
-        white-space: pre-wrap;
-      }
-    }
-  }
-
-  .lower {
-    transform: translateY(3rem);
-  }
-
-  .quote {
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    img {
-      display: block;
-      height: 4rem;
-    }
-
-    p {
-      text-align: center;
-      max-width: 50%;
-      font-size: 1.3rem;
-    }
-
-    strong {
-      font-weight: 900;
-      color: #263138;
-      font-size: 1.4rem;
     }
   }
 }
