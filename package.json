@@ -8,7 +8,8 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy:aws": "cross-env BUILD_CONFIG=production AWS_PROFILE=aws_henrique AWS_BUCKET_NAME=angular.portfolio AWS_CLOUDFRONT_ID=E3G406RILUE9RD node aws-deploy.js"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@angular/cli": "~15.0.3",
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
+    "cross-env": "^7.0.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
