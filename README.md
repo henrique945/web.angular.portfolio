@@ -61,12 +61,18 @@
     - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com (open contact modal)
 - [ ] Contact modal
     - [ ] Personal info 
-    - [ ] Whatsapp
-    - [ ] Email
+    - [x] Whatsapp
+    - [x] Email
 - [x] Mobile
   - [x] Navbar
   - [x] Home
   - [x] Projects
+- [ ] Add portfolio link everywhere
+  - [ ] Jobs Website
+  - [ ] LinkedIn
+  - [ ] CV
+  - [ ] Github
+  - [ ] StackOverflow (update profile)
 - [ ] Add accessibility systems
     - [ ] Libras
     - [ ] Sounds
@@ -90,7 +96,7 @@
     - [ ] Tests
     - [ ] Deploy
     - [ ] New integrations
-- [ ] Deploy Aws
+- [x] Deploy Aws
 
 ## Credits
 
