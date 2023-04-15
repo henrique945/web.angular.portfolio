@@ -2,7 +2,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { projects } from '../../data/projects/projects';
+import { projects } from '../../data/projects';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { formattedTechEnum } from '../../models/enums/tech.enum';
 import { ProjectInterface } from '../../models/interfaces/project.interface';

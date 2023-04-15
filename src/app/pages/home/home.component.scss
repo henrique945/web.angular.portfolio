@@ -15,7 +15,7 @@
   border-radius: 50%;
   user-select: none;
   background: white;
-  box-shadow: 0 4px 9px #445964;
+  box-shadow: 0 4px 9px var(--primary-color);
 
   @media screen and (max-width: 768px) {
     bottom: 100px;
@@ -37,7 +37,7 @@
   width: calc(100% - 20rem);
   min-height: calc(100vh - 6rem - 5rem);
   padding: 4.5rem 10rem 0;
-  color: #445964;
+  color: var(--primary-color);
 
   .code {
     position: absolute;

@@ -1,26 +1,26 @@
 <div class="project-detail">
   <div class="header">
-    <img [src]="project?.coverImage" alt="Cape">
+    <img [src]="project.coverImage" alt="Cape">
     <div class="info">
-      <h1>{{ project?.name || 'Project name'}}</h1>
-      <p [innerHTML]="project?.description"></p>
+      <h1>{{ project.name }}</h1>
+      <p [innerHTML]="project.description"></p>
     </div>
   </div>
 
   <div class="text">
     <h2>Outcome</h2>
-    <p>{{ project?.outcome }}</p>
+    <p>{{ project.outcome }}</p>
 
     <div class="d-flex">
       <div>
         <h2>Development date</h2>
-        <p>{{ project?.developmentDate }}</p>
+        <p>{{ project.developmentDate }}</p>
       </div>
       <div>
         <h2>Tags</h2>
         <p>{{ tags }}</p>
       </div>
-      <div>
+      <div class="block">
         <h2>Main Techs</h2>
         <p>{{ techs }}</p>
       </div>

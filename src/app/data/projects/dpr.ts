@@ -10,11 +10,10 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 export const dpr: ProjectInterface = {
   id: 'dpr',
   name: 'DPR',
-  coverImage: 'assets/imgs/projects/dpr/dpr1.png',
+  coverImage: 'assets/imgs/projects/dpr/dpr3.png',
   developmentDate: '09/04/2020 ~ 02/07/2020',
-  description: 'Developed in <b>Unity (C#)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n' +
-    '\n' +
-    'DPR is a training application for DPR telecommunications (Brazil) employees in a gamified environment.\n' +
+  description: 'Developed in <b>Unity (C#)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
+    '<b>DPR</b> is a training application for <b>DPR telecommunications (Brazil)</b> employees in a gamified environment.\n\n' +
     'With access to a mission board, several competitive challenges, activities to buy and much more.\n',
   outcome: 'Project for internal use by the DPR company, we do not have access to further results.',
   imageUrls: [

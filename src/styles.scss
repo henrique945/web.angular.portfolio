@@ -3,8 +3,21 @@
 * {
   font-family: monospace;
   scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: rgba(68, 89, 100, 0.2) 0 0 no-repeat padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color) 0 0 no-repeat padding-box;
+  }
 }
 
 .d-flex {
   display: flex;
+}
+
+:root {
+ --primary-color: #445964;
 }

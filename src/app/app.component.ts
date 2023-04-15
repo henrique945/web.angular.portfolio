@@ -1,6 +1,7 @@
 //#region Imports
 
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, Inject } from '@angular/core';
 
 //#endregion
 
@@ -9,8 +10,17 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  // TODO: style scroll
+export class AppComponent implements AfterViewInit {
+  constructor(
+    @Inject(DOCUMENT)
+    private readonly document: Document,
+  ) {
+  }
+
+  public ngAfterViewInit() {
+    this.document.getElementById('app')!.scrollTop = 0;
+  }
+
   // TODO: verify mobile screen
   // TODO: change language to English
 }
