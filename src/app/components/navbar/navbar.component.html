@@ -2,14 +2,24 @@
   <h2 routerLink="/home"><img src="assets/imgs/code-icon.svg"> Henrique Rodrigues</h2>
 
   <div class="menus">
-    <a href="/home#home">Home</a>
+    <a href="/home">Home</a>
     <a href="/home#exp">Experience</a>
     <a href="/home#projects">Project</a>
-    <a href="/home#home">Contact</a>
+    <a>Contact</a>
     <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
   </div>
 
-  <div class="mobile">
+  <div class="mobile" (click)="toggleMobileNavbar()">
     <img src="assets/imgs/menu.svg" alt="Menu">
   </div>
+</div>
+
+<div class="navbar--mobile" [class.navbar--mobile--open]="isMobileNavbarOpen">
+  <img (click)="toggleMobileNavbar()" class="close" src="assets/imgs/close.svg" alt="Close">
+
+  <a (click)="toggleMobileNavbar()" href="/home">Home</a>
+  <a (click)="toggleMobileNavbar()" href="/home#exp">Experience</a>
+  <a (click)="toggleMobileNavbar()" href="/home#projects">Project</a>
+  <a (click)="toggleMobileNavbar()">Contact</a>
+  <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
 </div>

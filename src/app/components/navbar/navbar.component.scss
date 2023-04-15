@@ -13,6 +13,52 @@
     padding: 0 1rem;
   }
 
+  &--mobile {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      right: -70vw;
+
+      width: 70vw;
+      min-height: 100vh;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: white;
+      box-shadow: 0 4px 20px #445964;
+      transition: all ease 0.3s;
+
+      &--open {
+        right: 0;
+      }
+
+      .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        cursor: pointer;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #445964;
+        margin: 1rem;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+  }
+
   h2 {
     display: flex;
     font-size: 2.2rem;

@@ -60,7 +60,7 @@ export class HomeComponent {
     }
   }
 
-  public redirectTo(anchor: string): void {
+  public navigateTo(anchor: string): void {
     this.doc.getElementById(anchor)?.scrollIntoView();
   }
 
