@@ -47,7 +47,7 @@
     - [x] QR Code to Whatsapp
     - [x] Experience Layout and quote
     - [x] Projects
-    - [ ] Cool and beautiful info
+    - [ ] Cool and beautiful info (graphs)
         - [ ] Total of projects
         - [ ] Total of technologies
 - [x] List projects with tags
@@ -58,20 +58,20 @@
     - [x] Project video or list of small images
         - [ ] Add zoom library 
     - [x] Used technologies
-    - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com
-- [ ] Add accessibility systems
-    - [ ] Libras
-    - [ ] Sounds
-    - [ ] Google Search
+    - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com (open contact modal)
 - [ ] Contact modal
     - [ ] Personal info 
     - [ ] Whatsapp
     - [ ] Email
-- [ ] Additional implementations
+- [ ] Mobile
+- [ ] Add accessibility systems
+    - [ ] Libras
+    - [ ] Sounds
+    - [ ] Google Search
+- [ ] Additional implementations (optional)
     - [ ] ThreeJs
     - [ ] Animations
     - [ ] Background parallax
-- [ ] Mobile
 - [ ] More
     - [ ] Articles
         - [ ] Connect with Disqus
@@ -79,11 +79,14 @@
         - [ ] Hints
         - [ ] Tutorials
         - [ ] Interesting things
+          - [ ] Python VS C++
+          - [ ] Games in Javascript
     - [ ] Codes
     - [ ] Playgrounds
     - [ ] 3D objects
     - [ ] Tests
     - [ ] Deploy
+    - [ ] New integrations
 
 ## Credits
 

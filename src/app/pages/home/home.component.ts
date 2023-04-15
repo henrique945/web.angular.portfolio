@@ -2,6 +2,7 @@
 
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { projects } from '../../data/projects';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT)
     private readonly doc: Document,
+    private readonly router: Router,
   ) {}
 
   //#endregion
@@ -61,23 +63,14 @@ export class HomeComponent implements OnInit {
 
   //#region Public Functions
 
-  @HostListener('window:scroll', ['$event'])
-  private onScroll(): void {
-    this.toggleOnTop();
+  public ngOnInit(): void {
+    this.listProjects = this.listProjects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);
+    this.listProjectsAux = this.listProjects;
   }
 
   public topFunction(): void {
     this.doc.body.scrollTop = 0;
     this.doc.documentElement.scrollTop = 0;
-  }
-
-  //#endregion
-
-  //#region Public Functions
-
-  public ngOnInit(): void {
-    this.listProjects = this.listProjects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);
-    this.listProjectsAux = this.listProjects;
   }
 
   public filterProjectByTag(tag: ProjectTagsEnum): void {
@@ -91,9 +84,18 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  public redirectTo(anchor: string): void {
+    this.doc.getElementById(anchor)?.scrollIntoView();
+  }
+
   //#endregion
 
   //#region Private Functions
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll(): void {
+    this.toggleOnTop();
+  }
 
   private toggleOnTop(): void {
     const toTopButton = this.doc.getElementById('toTopBtn');
