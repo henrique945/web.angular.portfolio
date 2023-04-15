@@ -34,19 +34,19 @@ export class HomeComponent implements OnInit {
     {
       name: 'Junior',
       description: 'Develop Junior at InfoJr from Unesp in Rio Claro acting as a web developer',
-      backgroundColor: '#263138',
+      backgroundColor: '#445964',
     },
     {
       name: 'Full-Stack Engineer at Liga Facens',
       description: '+4 years of experience building: \n\n' +
         '• Mobile apps built with Ionic/Angular (HTML5, SASS, Typescript) for a variety of businesses and government organizations.\n\n' +
         '• REST APIs architectured in NestJS (NodeJs + PostgresSQL) for deployment within AWS using AWS Lambda and integrating with services such as S3, Api Gateway, SQS, SNS, SES, Cloudfront',
-      backgroundColor: '#445964',
+      backgroundColor: '#263138',
     },
     {
       name: 'Partner',
       description: 'CTO Partner at Startup Educaprat, education platform',
-      backgroundColor: '#263138',
+      backgroundColor: '#445964',
     },
   ];
 
