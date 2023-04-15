@@ -63,7 +63,10 @@
     - [ ] Personal info 
     - [ ] Whatsapp
     - [ ] Email
-- [ ] Mobile
+- [x] Mobile
+  - [x] Navbar
+  - [x] Home
+  - [x] Projects
 - [ ] Add accessibility systems
     - [ ] Libras
     - [ ] Sounds
@@ -87,9 +90,8 @@
     - [ ] Tests
     - [ ] Deploy
     - [ ] New integrations
+- [ ] Deploy Aws
 
 ## Credits
 
 Direct credits and libs used on this project
-
-
