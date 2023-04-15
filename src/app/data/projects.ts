@@ -1,5 +1,6 @@
 //#region Imports
 
+import { ProjectInterface } from '../models/interfaces/project.interface';
 import { abb } from './projects/abb';
 import { adpoints } from './projects/adpoints';
 import { ayrtonSenna } from './projects/ayrton-senna';
@@ -16,7 +17,7 @@ import { villaFlora } from './projects/villa-flora';
 
 //#endregion
 
-export const projects = [
+export const projects: ProjectInterface[] = [
   abb,
   adpoints,
   ayrtonSenna,
@@ -31,3 +32,5 @@ export const projects = [
   learnbox,
   villaFlora,
 ];
+
+export const listProjects: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1)
