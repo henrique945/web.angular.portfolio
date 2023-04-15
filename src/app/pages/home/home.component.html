@@ -77,14 +77,14 @@
 
   <div class="tags">
     <ng-container *ngFor="let tag of listTags">
-      <div class="tag" [class.active]="currentTag === tag" (click)="currentTag = tag">
+      <div class="tag" [class.active]="currentTag === tag" (click)="filterProjectByTag(tag)">
         <span>{{ tag }}</span>
       </div>
     </ng-container>
   </div>
 
   <div class="list">
-    <ng-container *ngFor="let project of listProjects">
+    <ng-container *ngFor="let project of listProjectsAux">
       <div class="project"
            [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL"
            [class.vertical]="project.orientation === projectOrientation.VERTICAL"

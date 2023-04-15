@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
   public projectOrientation: typeof OrientationEnum = OrientationEnum;
 
   public listProjects: ProjectInterface[] = projects;
+  public listProjectsAux: ProjectInterface[] = [];
 
   //#endregion
 
@@ -76,6 +77,18 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit(): void {
     this.listProjects = this.listProjects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);
+    this.listProjectsAux = this.listProjects;
+  }
+
+  public filterProjectByTag(tag: ProjectTagsEnum): void {
+    this.currentTag = tag;
+
+    if (tag === ProjectTagsEnum.ALL) {
+      this.listProjectsAux = this.listProjects;
+    }
+    else {
+      this.listProjectsAux = this.listProjects.filter(project => project.tags.includes(tag));
+    }
   }
 
   //#endregion

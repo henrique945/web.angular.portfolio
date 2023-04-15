@@ -34,7 +34,7 @@
 
 ## Project checklist
 
-- [ ] Home
+- [x] Home
     - [x] Header
         - [x] Home
         - [x] Contact
@@ -45,17 +45,16 @@
     - [x] Social Medias
     - [x] QR Code to Whatsapp
     - [x] Experience Layout and quote
-    - [ ] Projects
+    - [x] Projects
     - [ ] Cool and beautiful info
         - [ ] Total of projects
         - [ ] Total of technologies
-- [ ] List projects with search and tags
-    - [ ] Search
-    - [ ] Tags
+- [x] List projects with tags
+    - [x] Tags
     - [x] List of project cards
 - [x] Project details
     - [x] Project description
-    - [ ] Project video or list of small images
+    - [x] Project video or list of small images
         - [ ] Add zoom library 
     - [x] Used technologies
     - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com
@@ -71,6 +70,7 @@
     - [ ] ThreeJs
     - [ ] Animations
     - [ ] Background parallax
+- [ ] Mobile
 - [ ] More
     - [ ] Articles
         - [ ] Connect with Disqus
@@ -83,7 +83,6 @@
     - [ ] 3D objects
     - [ ] Tests
     - [ ] Deploy
-    - [ ] Mobile
 
 ## Credits
 
