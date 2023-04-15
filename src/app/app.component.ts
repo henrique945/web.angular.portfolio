@@ -1,7 +1,7 @@
 //#region Imports
 
 import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
 //#endregion
 
@@ -10,17 +10,26 @@ import { AfterViewInit, Component, Inject } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
+
+  //#region Constructor
+
   constructor(
     @Inject(DOCUMENT)
-    private readonly document: Document,
-  ) {
-  }
+    private readonly doc: Document,
+  ) {}
 
-  public ngAfterViewInit() {
-    this.document.getElementById('app')!.scrollTop = 0;
-  }
+  //#endregion
+
+  //#region Public Functions
 
   // TODO: verify mobile screen
-  // TODO: change language to English
+
+  public ngOnInit(): void {
+    this.doc.body.scrollTop = 0;
+    this.doc.documentElement.scrollTop = 0;
+  }
+
+  //#endregion
+
 }

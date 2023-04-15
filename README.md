@@ -1,9 +1,9 @@
 # Portfolio
 
 ## Info
-- Author: Henrique Rodrigues
-- Contact: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
-- Website: ...
+- **Author**: Henrique Rodrigues
+- **Contact**: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
+- **Website**: ...
 
 ## Project Prints
 
@@ -27,6 +27,7 @@
 * Iquot - https://play.google.com/store/apps/details?id=com.liga.android.iquot
 * Learnbox - https://play.google.com/store/apps/details?id=liga.app.learnbox&pli=1
 * Villa Flora - https://site.totem-villa-flora.ligafacens.com/
+* 
 * UQR - https://www.universidadeuqr.com.br/
 * Yesno - https://play.google.com/store/apps/details?id=liga.app.yesno
 * Zoológico PZMQB - https://play.google.com/store/apps/details?id=com.liga.zoologico
