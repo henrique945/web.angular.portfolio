@@ -3,7 +3,7 @@
 ## Info
 - **Author**: Henrique Rodrigues
 - **Contact**: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
-- **Website**: ...
+- **Website**: henriquerod.com
 
 ## Project Prints
 
@@ -60,13 +60,16 @@
     - [x] Used technologies
     - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com (open contact modal)
 - [ ] Contact modal
-    - [ ] Personal info 
+    - [ ] Personal info - like ID card
     - [x] Whatsapp
     - [x] Email
-- [x] Mobile
-  - [x] Navbar
-  - [x] Home
-  - [x] Projects
+    - [ ] Projects Graph
+- [ ] Responsiveness
+  - [x] Mobile
+    - [x] Navbar
+    - [x] Home
+    - [x] Projects
+  - [ ] Other formats
 - [ ] Add portfolio link everywhere
   - [ ] Jobs Website
   - [ ] LinkedIn
@@ -97,6 +100,8 @@
     - [ ] Deploy
     - [ ] New integrations
 - [x] Deploy Aws
+  - [x] henriquerod.com
+  - [x] app.henriquerod.com
 
 ## Credits
 

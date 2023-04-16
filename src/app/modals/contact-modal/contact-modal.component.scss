@@ -1,0 +1,60 @@
+.contact {
+  display: flex;
+  padding: 2rem;
+
+  .left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -3.5rem;
+      width: 1px;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 0.7;
+    }
+
+    .profile {
+      $profileSize: 10rem;
+
+      width: $profileSize;
+      height: $profileSize;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 2rem;
+
+      .social {
+        margin-top: 2rem;
+
+        @media screen and (max-width: 768px) {
+          margin-top: 2rem;
+        }
+
+        img {
+          margin-right: 1rem;
+          height: 2rem;
+        }
+      }
+
+      span {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  .right {
+    padding-left: 5rem;
+  }
+}

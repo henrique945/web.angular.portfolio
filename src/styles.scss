@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/themes/modal';
 
 * {
   font-family: monospace;
@@ -11,6 +12,10 @@
 
   &::-webkit-scrollbar-thumb {
     background: var(--primary-color) 0 0 no-repeat padding-box;
+  }
+
+  a {
+    outline: none;
   }
 }
 
