@@ -59,11 +59,11 @@
         - [ ] Add zoom library 
     - [x] Used technologies
     - [ ] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com (open contact modal)
-- [ ] Contact modal
-    - [ ] Personal info - like ID card
+- [x] Contact modal
+    - [x] Personal info - like ID card
     - [x] Whatsapp
     - [x] Email
-    - [ ] Projects Graph
+    - [x] Projects Graph
 - [ ] Responsiveness
   - [x] Mobile
     - [x] Navbar

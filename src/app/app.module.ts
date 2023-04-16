@@ -2,6 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { defaultSimpleModalOptions, SimpleModalModule } from 'ngx-simple-modal';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,9 @@ import { ContactModalComponent } from './modals/contact-modal/contact-modal.comp
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
     SimpleModalModule.forRoot({ container: document.body }, {
       ...defaultSimpleModalOptions, ...{
         closeOnEscape: true,

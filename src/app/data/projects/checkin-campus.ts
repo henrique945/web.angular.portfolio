@@ -1,9 +1,14 @@
+//#region Imports
+
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { TechEnum } from '../../models/enums/tech.enum';
 import { ProjectInterface } from '../../models/interfaces/project.interface';
 
+//#endregion
+
 export const checkinCampus: ProjectInterface = {
+  isActive: true,
   id: 'checkinCampus',
   name: 'Checkin Campus',
   coverImage: 'assets/imgs/projects/checkinCampus/checkinCampus9.png',

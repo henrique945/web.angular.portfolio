@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const learnbox: ProjectInterface = {
+  isActive: true,
   id: 'learnbox',
   name: 'Learnbox',
   coverImage: 'assets/imgs/projects/learnbox/learnbox5.PNG',

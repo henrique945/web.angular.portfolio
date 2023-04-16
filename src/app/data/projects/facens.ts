@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const facens: ProjectInterface = {
+  isActive: true,
   id: 'facens',
   name: 'Facens',
   coverImage: 'assets/imgs/projects/facens/facens1.png',

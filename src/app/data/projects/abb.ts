@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const abb: ProjectInterface = {
+  isActive: true,
   id: 'abb',
   name: 'ABB',
   coverImage: 'assets/imgs/projects/abb/abb1.PNG',

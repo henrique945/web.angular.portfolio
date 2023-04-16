@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const fablab: ProjectInterface = {
+  isActive: true,
   id: 'fablab',
   name: 'Fablab',
   coverImage: 'assets/imgs/projects/fablab/fablab1.PNG',

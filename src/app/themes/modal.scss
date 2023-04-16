@@ -66,6 +66,11 @@ $_constant-border: 1px solid #cecece;
   display: inline-block;
   text-align: left;
 
+  @media screen and (max-width: 768px) {
+    max-width: 85vw;
+    height: 90vh;
+  }
+
   &-size-m {
     max-width: 992px;
   }

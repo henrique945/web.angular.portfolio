@@ -37,6 +37,7 @@ export class ProjectComponent implements OnInit {
   public listProjects: ProjectInterface[] = projects;
 
   public project: ProjectInterface = {
+    isActive: true,
     id: '',
     name: '',
     developmentDate: '',

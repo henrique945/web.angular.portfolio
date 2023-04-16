@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const ecologicatech: ProjectInterface = {
+  isActive: true,
   id: 'ecologicatech',
   name: 'Ecologicatech',
   coverImage: 'assets/imgs/projects/ecologicatech/eco9.PNG',

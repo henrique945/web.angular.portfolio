@@ -33,4 +33,6 @@ export const projects: ProjectInterface[] = [
   villaFlora,
 ];
 
-export const listProjects: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1)
+export const projectsSorted: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1)
+
+export const listProjects: ProjectInterface[] = projectsSorted.filter(project => project.isActive);

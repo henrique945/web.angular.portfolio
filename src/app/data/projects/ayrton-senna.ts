@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const ayrtonSenna: ProjectInterface = {
+  isActive: true,
   id: 'ayrtonSenna',
   name: 'Ayrton Senna',
   coverImage: 'assets/imgs/projects/ayrton-senna/ias3.PNG',

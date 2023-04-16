@@ -8,6 +8,7 @@ import { ProjectInterface } from '../../models/interfaces/project.interface';
 //#endregion
 
 export const adpoints: ProjectInterface = {
+  isActive: true,
   id: 'adpoints',
   name: 'Ad Points',
   coverImage: 'assets/imgs/projects/adpoints/adpoints1.png',

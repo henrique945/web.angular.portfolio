@@ -2,6 +2,7 @@
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { NgxEchartsModule } from 'ngx-echarts';
 import { ContactModalComponent } from './contact-modal.component';
 
 //#endregion
@@ -9,6 +10,7 @@ import { ContactModalComponent } from './contact-modal.component';
 @NgModule({
   imports: [
     CommonModule,
+    NgxEchartsModule,
   ],
   declarations: [
     ContactModalComponent,
