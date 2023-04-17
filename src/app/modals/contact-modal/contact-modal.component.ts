@@ -86,7 +86,7 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
   private loadGraphData(): any {
     return [
       { name: 'Ionic', value: this.countProjectsByTech(TechEnum.IONIC) },
-      { name: 'NestJs', value: this.countProjectsByTech(TechEnum.NESTJS) },
+      { name: 'NodeJs', value: this.countProjectsByTech(TechEnum.NESTJS) },
       { name: 'PWA', value: this.countProjectsByTech(TechEnum.PWA) },
       { name: 'Angular', value: this.countProjectsByTech(TechEnum.ANGULAR) },
       // { name: 'React', value: this.countProjectsByTech(TechEnum.REACT) },

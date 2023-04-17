@@ -3,7 +3,9 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SimpleModalService } from 'ngx-simple-modal';
 import { projects } from '../../data/projects';
+import { ContactModalComponent } from '../../modals/contact-modal/contact-modal.component';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { formattedTechEnum } from '../../models/enums/tech.enum';
 import { ProjectInterface } from '../../models/interfaces/project.interface';
@@ -24,6 +26,7 @@ export class ProjectComponent implements OnInit {
     private readonly doc: Document,
     private readonly route: ActivatedRoute,
     private readonly router: Router,
+    private readonly modal: SimpleModalService,
   ) {
     this.projectId = this.route.snapshot.params['id'] || '';
   }
@@ -79,6 +82,10 @@ export class ProjectComponent implements OnInit {
   public topFunction(): void {
     this.doc.body.scrollTop = 0;
     this.doc.documentElement.scrollTop = 0;
+  }
+
+  public openContactModal(): void {
+    this.modal.addModal(ContactModalComponent);
   }
 
   //#endregion

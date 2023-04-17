@@ -84,7 +84,7 @@
     margin-bottom: 3rem;
     text-align: center;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       padding: 0 3rem;
     }
 
@@ -106,10 +106,35 @@
         cursor: pointer;
         object-fit: cover;
 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 768px) {
           height: unset;
           max-width: 100%;
         }
+      }
+    }
+  }
+
+  .contact-me {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 75%;
+      height: 1px;
+      background: var(--primary-color);
+    }
+
+    p {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      text-align: center;
+
+      strong {
+        text-decoration: underline;
       }
     }
   }
