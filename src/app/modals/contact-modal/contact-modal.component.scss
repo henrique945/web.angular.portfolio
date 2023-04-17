@@ -3,8 +3,9 @@
   padding: 2rem;
 
   @media screen and (max-width: 768px) {
-    transform: rotate(90deg);
-    padding: 0;
+    flex-direction: column;
+    height: calc(100% - 4rem);
+    justify-content: center;
   }
 
   .left {
@@ -12,6 +13,12 @@
     display: flex;
     align-items: center;
     margin-right: 1rem;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
 
     &::after {
       content: '';
@@ -24,7 +31,11 @@
       opacity: 0.7;
 
       @media screen and (max-width: 768px) {
-        right: -1rem;
+        top: unset;
+        right: unset;
+        bottom: -2rem;
+        width: 100%;
+        height: 1px;
       }
     }
 
@@ -37,7 +48,6 @@
       object-fit: cover;
 
       @media screen and (max-width: 768px) {
-        display: none;
       }
     }
 
