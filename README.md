@@ -47,9 +47,6 @@
     - [x] QR Code to Whatsapp
     - [x] Experience Layout and quote
     - [x] Projects
-    - [ ] Cool and beautiful info (graphs)
-        - [ ] Total of projects
-        - [ ] Total of technologies
 - [x] List projects with tags
     - [x] Tags
     - [x] List of project cards
@@ -63,7 +60,7 @@
     - [x] Personal info - like ID card
     - [x] Whatsapp
     - [x] Email
-    - [x] Projects Graph
+    - [x] Projects Pie Graph
 - [ ] Responsiveness
   - [x] Mobile
     - [x] Navbar
