@@ -4,6 +4,7 @@
 
   @media screen and (max-width: 768px) {
     transform: rotate(90deg);
+    padding: 0;
   }
 
   .left {
@@ -21,6 +22,10 @@
       height: 100%;
       background: var(--primary-color);
       opacity: 0.7;
+
+      @media screen and (max-width: 768px) {
+        right: -1rem;
+      }
     }
 
     .profile {
@@ -42,6 +47,10 @@
       justify-content: center;
       padding-left: 2rem;
 
+      @media screen and (max-width: 768px) {
+        padding-left: 1rem;
+      }
+
       .social {
         margin-top: 2rem;
 
@@ -60,6 +69,10 @@
         margin-bottom: 0.75rem;
         color: var(--primary-color);
 
+        @media screen and (max-width: 768px) {
+          font-size: 1.1rem;
+        }
+
         b {
           color: var(--secondary-color);
         }
@@ -69,6 +82,10 @@
 
   .right {
     padding-left: 3rem;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+    }
 
     h2 {
       color: var(--secondary-color);
