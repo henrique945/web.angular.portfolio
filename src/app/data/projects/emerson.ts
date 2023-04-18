@@ -27,5 +27,5 @@ export const emerson: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 9,
+  position: 17,
 };

@@ -14,7 +14,7 @@ export const ecologicatech: ProjectInterface = {
   coverImage: 'assets/imgs/projects/ecologicatech/eco9.PNG',
   developmentDate: '13/03/2023 ~ 14/04/2023',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Google Maps API</b>.\n\n' +
-    'Project focused on the creation of events for companies and on replies to these events forms, with this data we can calculate the distance between locations and transport (using <b>Google Maps API</b>). And verify the amount of <b>CO2 emmited</b> in the planet. Thus knowing how many trees will be needed to combat the <b>CO2 emmited</b>.\n',
+    '<b>Ecologicatech</b> was developed for <b>Aguama</b>, environmental management and marketing company, the project focused on the creation of events for companies and on replies to these events forms, with this data we can calculate the distance between locations and transport (using <b>Google Maps API</b>). And verify the amount of <b>CO2 emmited</b> in the planet. Thus knowing how many trees will be needed to combat the <b>CO2 emmited</b>.\n',
   outcome: 'Project was used in real events, being the first one in a conference called "MMA Impact Brasil" (Mobile Marketing Association) in São Paulo - Brazil with several data obtained.',
   imageUrls: [
     'assets/imgs/projects/ecologicatech/eco1.PNG',
@@ -29,6 +29,7 @@ export const ecologicatech: ProjectInterface = {
   ],
   links: [
     { title: 'Control Panel', link: 'https://backoffice.ecologicatech.ligafacens.com/' },
+    { title: 'Aguama', link: 'https://www.aguama.com.br/' },
     { title: 'MMA', link: 'https://www.mmaglobal.com/' },
   ],
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],

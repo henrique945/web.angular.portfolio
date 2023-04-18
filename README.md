@@ -1,6 +1,7 @@
 # Portfolio
 
 ## Info
+
 - **Author**: Henrique Rodrigues
 - **Contact**: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
 - **Website**: [henriquerod.com](https://henriquerod.com)
@@ -28,41 +29,44 @@
 * Iquot - https://play.google.com/store/apps/details?id=com.liga.android.iquot
 * Learnbox - https://play.google.com/store/apps/details?id=liga.app.learnbox&pli=1
 * Villa Flora - https://site.totem-villa-flora.ligafacens.com/
-* 
-* UQR - https://www.universidadeuqr.com.br/
+* Nova Aula - https://www.novaaula.com/
 * Yesno - https://play.google.com/store/apps/details?id=liga.app.yesno
 * Zoológico PZMQB - https://play.google.com/store/apps/details?id=com.liga.zoologico
 * Vacina Votorantim - https://site.vacina-votorantim.ligafacens.com/
+*
+* UQR - https://www.universidadeuqr.com.br/
+* IQR - https://iqreducacao.com.br/
 
 ## Project checklist
 
 - [x] Home
-    - [x] Header
-        - [x] Home
-        - [x] Contact
-        - [x] Projects
-        - [x] Experience
-        - [ ] More
-    - [x] Contact info need to be visible
-    - [x] Social Medias
-    - [x] QR Code to Whatsapp
-    - [x] Experience Layout and quote
+  - [x] Header
+    - [x] Home
+    - [x] Contact
     - [x] Projects
+    - [x] Experience
+    - [ ] More
+  - [x] Contact info need to be visible
+  - [x] Social Medias
+  - [x] QR Code to Whatsapp
+  - [x] Experience Layout and quote
+  - [x] Projects
 - [x] List projects with tags
-    - [x] Tags
-    - [x] List of project cards
+  - [x] Tags
+  - [x] List of project cards
 - [x] Project details
-    - [x] Project description
-    - [x] Project video or list of small images
-        - [ ] Add zoom library 
-    - [x] Used technologies
-    - [x] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at henrique.rodrigues7@hotmail.com (open contact modal)
+  - [x] Project description
+  - [x] Project video or list of small images
+    - [ ] Add zoom library
+  - [x] Used technologies
+  - [x] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at
+    henrique.rodrigues7@hotmail.com (open contact modal)
 - [x] Contact modal
-    - [x] Personal info - like ID card
-    - [x] Whatsapp
-    - [x] Email
-    - [x] Projects Pie Graph
-    - [x] Open modal on query link
+  - [x] Personal info - like ID card
+  - [x] Whatsapp
+  - [x] Email
+  - [x] Projects Pie Graph
+  - [x] Open modal on query link
 - [ ] Responsiveness
   - [x] Mobile
     - [x] Navbar
@@ -76,28 +80,28 @@
   - [x] Github
   - [x] StackOverflow (update profile)
 - [ ] Add accessibility systems
-    - [ ] Libras
-    - [ ] Sounds
-    - [ ] Google Search
+  - [ ] Libras
+  - [ ] Sounds
+  - [ ] Google Search
 - [ ] Additional implementations (optional)
-    - [ ] ThreeJs
-    - [ ] Animations
-    - [ ] Background parallax
+  - [ ] ThreeJs
+  - [ ] Animations
+  - [ ] Background parallax
 - [ ] More
-    - [ ] Articles
-        - [ ] Connect with Disqus
-        - [ ] Scripts (Senna Kids + Emerson)
-        - [ ] Hints
-        - [ ] Tutorials
-        - [ ] Interesting things
-          - [ ] Python VS C++
-          - [ ] Games in Javascript
-    - [ ] Codes
-    - [ ] Playgrounds
-    - [ ] 3D objects
-    - [ ] Tests
-    - [ ] Deploy
-    - [ ] New integrations
+  - [ ] Articles
+    - [ ] Connect with Disqus
+    - [ ] Scripts (Senna Kids + Emerson)
+    - [ ] Hints
+    - [ ] Tutorials
+    - [ ] Interesting things
+      - [ ] Python VS C++
+      - [ ] Games in Javascript
+  - [ ] Codes
+  - [ ] Playgrounds
+  - [ ] 3D objects
+  - [ ] Tests
+  - [ ] Deploy
+  - [ ] New integrations
 - [x] Deploy Aws
   - [x] henriquerod.com
   - [x] app.henriquerod.com

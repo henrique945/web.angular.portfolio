@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import { SimpleModalComponent } from 'ngx-simple-modal';
-import { listProjects, projectsSorted } from '../../data/projects';
+import { listProjects, projects } from '../../data/projects';
 import { TechEnum } from '../../models/enums/tech.enum';
 
 //#endregion
@@ -111,7 +111,7 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
   }
 
   private countProjectsByTech(tech: TechEnum): number {
-    return projectsSorted.filter(project => project.techs.includes(tech)).length;
+    return projects.filter(project => project.techs.includes(tech)).length;
   }
 
   //#endregion

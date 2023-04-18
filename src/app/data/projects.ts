@@ -13,7 +13,11 @@ import { fablab } from './projects/fablab';
 import { facens } from './projects/facens';
 import { iquot } from './projects/iquot';
 import { learnbox } from './projects/learnbox';
+import { novaAula } from './projects/nova-aula';
+import { vaccine } from './projects/vaccine';
 import { villaFlora } from './projects/villa-flora';
+import { yesno } from './projects/yesno';
+import { zoo } from './projects/zoo';
 
 //#endregion
 
@@ -31,6 +35,10 @@ export const projects: ProjectInterface[] = [
   iquot,
   learnbox,
   villaFlora,
+  novaAula,
+  yesno,
+  zoo,
+  vaccine,
 ];
 
 export const projectsSorted: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1)
