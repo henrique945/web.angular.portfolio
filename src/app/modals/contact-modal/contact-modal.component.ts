@@ -1,12 +1,12 @@
 //#region Imports
 
 import { AfterViewInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import { SimpleModalComponent } from 'ngx-simple-modal';
 import { listProjects, projectsSorted } from '../../data/projects';
 import { TechEnum } from '../../models/enums/tech.enum';
-import { ProjectInterface } from '../../models/interfaces/project.interface';
 
 //#endregion
 
@@ -19,8 +19,12 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
 
   //#region Constructor
 
-  constructor() {
+  constructor(
+    private readonly router: Router,
+  ) {
     super();
+
+    this.router.navigate([], { queryParams: { modal: 'contact' } });
   }
 
   //#endregion
@@ -76,6 +80,7 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
   }
 
   public async closeModal(): Promise<void> {
+    this.router.navigate([], { queryParams: {} });
     await this.close();
   }
 

@@ -33,7 +33,7 @@ export class NavbarComponent {
     this.isMobileNavbarOpen = !this.isMobileNavbarOpen;
   }
 
-  public async openContactModal(): Promise<void> {
+  public openContactModal(): void {
     this.modal.addModal(ContactModalComponent);
   }
 

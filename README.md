@@ -62,6 +62,7 @@
     - [x] Whatsapp
     - [x] Email
     - [x] Projects Pie Graph
+    - [x] Open modal on query link
 - [ ] Responsiveness
   - [x] Mobile
     - [x] Navbar
@@ -70,10 +71,10 @@
   - [ ] Other formats
 - [ ] Add portfolio link everywhere
   - [ ] Jobs Website
-  - [ ] LinkedIn
+  - [x] LinkedIn
   - [ ] CV
-  - [ ] Github
-  - [ ] StackOverflow (update profile)
+  - [x] Github
+  - [x] StackOverflow (update profile)
 - [ ] Add accessibility systems
     - [ ] Libras
     - [ ] Sounds
