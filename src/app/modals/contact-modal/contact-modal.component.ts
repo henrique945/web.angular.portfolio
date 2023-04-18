@@ -94,7 +94,7 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
       { name: 'NodeJs', value: this.countProjectsByTech(TechEnum.NESTJS) },
       { name: 'PWA', value: this.countProjectsByTech(TechEnum.PWA) },
       { name: 'Angular', value: this.countProjectsByTech(TechEnum.ANGULAR) },
-      // { name: 'React', value: this.countProjectsByTech(TechEnum.REACT) },
+      { name: 'React', value: this.countProjectsByTech(TechEnum.REACT) },
       // { name: 'Unity', value: this.countProjectsByTech(TechEnum.UNITY) },
     ];
   }

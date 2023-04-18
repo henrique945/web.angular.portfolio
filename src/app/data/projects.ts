@@ -13,6 +13,8 @@ import { fablab } from './projects/fablab';
 import { facens } from './projects/facens';
 import { iquot } from './projects/iquot';
 import { learnbox } from './projects/learnbox';
+import { mundoFacens } from './projects/mundo-facens';
+import { mundoSbt } from './projects/mundo-sbt';
 import { novaAula } from './projects/nova-aula';
 import { vaccine } from './projects/vaccine';
 import { villaFlora } from './projects/villa-flora';
@@ -39,6 +41,8 @@ export const projects: ProjectInterface[] = [
   yesno,
   zoo,
   vaccine,
+  mundoFacens,
+  mundoSbt,
 ];
 
 export const projectsSorted: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1)

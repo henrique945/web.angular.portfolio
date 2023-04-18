@@ -33,6 +33,8 @@
 * Yesno - https://play.google.com/store/apps/details?id=liga.app.yesno
 * Zoológico PZMQB - https://play.google.com/store/apps/details?id=com.liga.zoologico
 * Vacina Votorantim - https://site.vacina-votorantim.ligafacens.com/
+* Mundo Facens - https://mundo.ligafacens.com/
+* Mundo SBT - https://sbtmmo.ligafacens.com/
 *
 * UQR - https://www.universidadeuqr.com.br/
 * IQR - https://iqreducacao.com.br/
