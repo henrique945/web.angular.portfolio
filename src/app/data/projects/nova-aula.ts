@@ -14,7 +14,7 @@ export const novaAula: ProjectInterface = {
   coverImage: 'assets/imgs/projects/nova-aula/novaaula4.PNG',
   developmentDate: '27/05/2020 ~ 23/11/2020',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> as a <b>PWA</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and <b>NgZorro</b>.\n\n' +
-    'The project is a <b>teaching platform</b>, with courses, classes and a forum for users to exchange knowledge.\n\n' +
+    'The project is a <b>teaching platform</b>, with courses, classes, a forum for users to exchange knowledge and a <b>chat based on Whatsapp</b>.\n\n' +
     'It has features such as questions, notes and class progress.\n',
   outcome: 'Completed but not used much in production.',
   imageUrls: [
@@ -23,7 +23,8 @@ export const novaAula: ProjectInterface = {
     'assets/imgs/projects/nova-aula/novaaula3.PNG',
     'assets/imgs/projects/nova-aula/novaaula4.PNG',
     'assets/imgs/projects/nova-aula/novaaula5.PNG',
-    'assets/imgs/projects/nova-aula/novaaula6.PNG',
+    'assets/imgs/projects/nova-aula/novaaula6.png',
+    'assets/imgs/projects/nova-aula/novaaula7.PNG',
   ],
   links: [
     { title: 'Site', link: 'https://www.novaaula.com/' },
