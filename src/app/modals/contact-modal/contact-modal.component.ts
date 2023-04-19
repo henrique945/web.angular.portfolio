@@ -23,8 +23,6 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
     private readonly router: Router,
   ) {
     super();
-
-    this.router.navigate([], { queryParams: { modal: 'contact' } });
   }
 
   //#endregion
@@ -80,7 +78,7 @@ export class ContactModalComponent extends SimpleModalComponent<void, void> impl
   }
 
   public async closeModal(): Promise<void> {
-    this.router.navigate([], { queryParams: {} });
+    await this.router.navigate([], { queryParams: {} });
     await this.close();
   }
 
