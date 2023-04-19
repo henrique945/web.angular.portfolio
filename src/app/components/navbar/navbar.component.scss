@@ -13,6 +13,24 @@
     padding: 0 1rem;
   }
 
+  &--mobile--blank {
+    display: none;
+
+    &--open {
+      @media screen and (max-width: 768px) {
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 30vw;
+        min-height: 100vh;
+        height: 100vh;
+      }
+    }
+  }
+
   &--mobile {
     display: none;
 

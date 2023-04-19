@@ -14,12 +14,14 @@
   </div>
 </div>
 
+<div class="navbar--mobile--blank" [class.navbar--mobile--blank--open]="isMobileNavbarOpen" (click)="toggleMobileNavbar()"></div>
+
 <div class="navbar--mobile" [class.navbar--mobile--open]="isMobileNavbarOpen">
   <img (click)="toggleMobileNavbar()" class="close" src="assets/imgs/close.svg" alt="Close">
 
   <a (click)="toggleMobileNavbar()" href="/home">Home</a>
   <a (click)="toggleMobileNavbar()" href="/home#exp">Experience</a>
-  <a (click)="toggleMobileNavbar()" href="/home#projects">Project</a>
+  <a (click)="toggleMobileNavbar()" href="/home#projects">Projects</a>
   <a (click)="toggleMobileNavbar(); openContactModal()">Contact</a>
   <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
 </div>

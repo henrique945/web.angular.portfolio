@@ -1,6 +1,7 @@
 //#region Imports
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SimpleModalService } from 'ngx-simple-modal';
 import { ContactModalComponent } from '../../modals/contact-modal/contact-modal.component';
 
@@ -16,7 +17,7 @@ export class NavbarComponent {
   //#region Constructor
 
   constructor(
-    private readonly modal: SimpleModalService,
+    private readonly router: Router,
   ) {}
 
   //#endregion
@@ -34,7 +35,7 @@ export class NavbarComponent {
   }
 
   public openContactModal(): void {
-    this.modal.addModal(ContactModalComponent);
+    this.router.navigate([], { queryParams: { modal: 'contact' } });
   }
 
   //#endregion
