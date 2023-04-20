@@ -1,10 +1,11 @@
 //#region Imports
 
 import { Component, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SimpleModalService } from 'ngx-simple-modal';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
+import { ImageZoomModalComponent } from './modals/image-zoom-modal/image-zoom-modal.component';
 
 //#endregion
 
@@ -19,14 +20,24 @@ export class AppComponent implements OnDestroy {
 
   constructor(
     private readonly route: ActivatedRoute,
+    private readonly router: Router,
     private readonly modal: SimpleModalService,
   ) {
     this.paramSubscription = this.route.queryParams.subscribe(param => {
       if (!param || !param['modal'])
         return;
 
-      if (param['modal'] === 'contact')
-        this.modal.addModal(ContactModalComponent);
+      const query: string = param['modal'];
+      if (query === 'contact')
+        this.modalObservable = this.modal.addModal(ContactModalComponent);
+      else if (query.includes('img'))
+        this.modalObservable = this.modal.addModal(ImageZoomModalComponent, {
+          src: query.split('|')[1],
+        });
+
+      this.modalSubscription = this.modalObservable.subscribe(_ => {
+        this.router.navigate([], { queryParams: {} });
+      });
     });
   }
 
@@ -36,12 +47,17 @@ export class AppComponent implements OnDestroy {
 
   public paramSubscription: Subscription;
 
+  public modalObservable: Observable<any> = new Observable<any>();
+
+  public modalSubscription!: Subscription;
+
   //#endregion
 
   //#region Public Functions
 
   public ngOnDestroy(): void {
     this.paramSubscription?.unsubscribe();
+    this.modalSubscription?.unsubscribe();
   }
 
   //#endregion

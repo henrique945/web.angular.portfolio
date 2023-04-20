@@ -4,7 +4,7 @@
 
 <div class="project-detail">
   <div class="header">
-    <img [src]="project.coverImage" alt="Cape">
+    <img (click)="openZoom(project.coverImage)" [src]="project.coverImage" alt="Cape">
     <div class="info">
       <h1>{{ project.name }}</h1>
       <p [innerHTML]="project.description"></p>

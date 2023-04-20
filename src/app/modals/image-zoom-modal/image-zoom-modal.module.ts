@@ -2,22 +2,19 @@
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { NavbarComponent } from './navbar.component';
+import { ImageZoomModalComponent } from './image-zoom-modal.component';
 
 //#endregion
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterLink,
   ],
   declarations: [
-    NavbarComponent,
+    ImageZoomModalComponent,
   ],
   exports: [
-    NavbarComponent,
+    ImageZoomModalComponent,
   ],
 })
-export class NavbarModule {}
-
+export class ImageZoomModalModule {}

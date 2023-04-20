@@ -74,9 +74,8 @@ export class ProjectComponent implements OnInit {
     this.formatTechs();
   }
 
-  public openZoom(image: string): void {
-    console.log(image);
-    // TODO: implement Zoom Image Modal
+  public async openZoom(image: string): Promise<void> {
+    await this.router.navigate([], { queryParams: { modal: 'img|' + image } });
   }
 
   public topFunction(): void {

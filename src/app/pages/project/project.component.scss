@@ -25,6 +25,8 @@
       @media screen and (max-width: 768px) {
         height: 100%;
         max-width: 100%;
+        cursor: none;
+        pointer-events: none;
       }
     }
 
@@ -109,6 +111,8 @@
         @media screen and (max-width: 768px) {
           height: unset;
           max-width: 100%;
+          cursor: none;
+          pointer-events: none;
         }
       }
     }

@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
+import { ContactModalModule } from './modals/contact-modal/contact-modal.module';
+import { ImageZoomModalModule } from './modals/image-zoom-modal/image-zoom-modal.module';
 
 //#endregion
 
@@ -29,6 +31,8 @@ import { ContactModalComponent } from './modals/contact-modal/contact-modal.comp
         autoFocus: true,
       },
     }),
+    ContactModalModule,
+    ImageZoomModalModule,
   ],
   entryComponents: [
     ContactModalComponent,

@@ -58,18 +58,10 @@ $_constant-border: 1px solid #cecece;
 .modal-content {
   background-color: #FFFFFF;
   border-radius: 4px;
-  margin: $_gutter-m auto;
-  max-width: 60vw;
   position: relative;
-  width: 100%;
   will-change: opacity;
   display: inline-block;
   text-align: left;
-
-  @media screen and (max-width: 768px) {
-    max-width: 85vw;
-    height: 90vh;
-  }
 
   &-size-m {
     max-width: 992px;
@@ -87,4 +79,20 @@ $_constant-border: 1px solid #cecece;
     height: 2.2rem;
     cursor: pointer;
   }
+}
+
+.modal-contact {
+  width: 100%;
+  max-width: 60vw;
+  margin: $_gutter-m auto;
+
+  @media screen and (max-width: 768px) {
+    max-width: 85vw;
+    height: 90vh;
+  }
+}
+
+.modal-image-zoom {
+  max-width: 100vw;
+  max-height: 100vh;
 }
