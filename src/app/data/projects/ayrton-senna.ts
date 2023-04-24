@@ -15,7 +15,7 @@ export const ayrtonSenna: ProjectInterface = {
   developmentDate: '07/11/2021 ~ 17/12/2021',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Deeplink</b> and <b>nsfwJs for sensitive content detection</b>.\n\n' +
     '<b>Creating trips dynamically by blocking</b>, the application aims to provide a light and hands-on journey that offers young people tools for: self-knowledge, planning, and skills development sponsored by the <b>Ayrton Senna Institute</b>.\n\n' +
-    'In addition to being able to <b>share</b> your trips on other social networks with <b>Deeplink</b> and check sensitive content.\n',
+    'In addition to being able to <b>share</b> your trips on other social networks with <b>Deeplink</b> and <b>check sensitive content</b>.\n',
   outcome: 'The app reached more than a thousand downloads on Play Store and there are no more updates from the institute.',
   imageUrls: [
     'assets/imgs/projects/ayrton-senna/ias1.PNG',

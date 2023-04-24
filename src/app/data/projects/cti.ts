@@ -27,5 +27,5 @@ export const cti: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB],
   techs: [TechEnum.ANGULAR],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 7,
+  position: 22,
 };
