@@ -35,6 +35,9 @@
 * Vacina Votorantim - https://site.vacina-votorantim.ligafacens.com/
 * Mundo Facens - https://mundo.ligafacens.com/
 * Mundo SBT - https://sbtmmo.ligafacens.com/
+* Falai - https://play.google.com/store/apps/details?id=com.liga.falai
+* NCursos - https://www.ncursosedu.com.br/
+* Asset Hub - https://acontece-facens.ligafacens.com/
 *
 * UQR - https://www.universidadeuqr.com.br/
 * IQR - https://iqreducacao.com.br/
@@ -59,7 +62,7 @@
 - [x] Project details
   - [x] Project description
   - [x] Project video or list of small images
-    - [ ] Add zoom library
+    - [x] Add zoom library
   - [x] Used technologies
   - [x] Let's talk - Wanna get in touch or talk about a project? Feel free to contact me ia email at
     henrique.rodrigues7@hotmail.com (open contact modal)
@@ -75,10 +78,10 @@
     - [x] Home
     - [x] Projects
   - [ ] Other formats
-- [ ] Add portfolio link everywhere
-  - [ ] Jobs Website
+- [x] Add portfolio link everywhere
+  - [x] Jobs Website
   - [x] LinkedIn
-  - [ ] CV
+  - [x] CV
   - [x] Github
   - [x] StackOverflow (update profile)
 - [ ] Add accessibility systems
