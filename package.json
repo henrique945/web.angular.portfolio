@@ -9,6 +9,7 @@
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "explorer": "source-map-explorer dist/**/*.js",
     "deploy:aws": "cross-env BUILD_CONFIG=production AWS_PROFILE=aws_henrique AWS_BUCKET_NAME=angular.portfolio AWS_CLOUDFRONT_ID=E3G406RILUE9RD node aws-deploy.js"
   },
   "private": true,
