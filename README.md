@@ -88,6 +88,10 @@
   - [ ] Libras
   - [ ] Sounds
   - [ ] Google Search
+    - [x] Performance ~ 99%
+    - [ ] Accessibility ~ 81%
+    - [x] Best Practices ~ 93%
+    - [ ] SEO ~ 82%
 - [ ] Additional implementations (optional)
   - [ ] ThreeJs
   - [ ] Animations
