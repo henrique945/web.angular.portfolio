@@ -87,11 +87,11 @@
 - [ ] Add accessibility systems
   - [ ] Libras
   - [ ] Sounds
-  - [ ] Google Search
+  - [ ] Google Search (report on *"assets/docs"*)
     - [x] Performance ~ 99%
-    - [ ] Accessibility ~ 81%
-    - [x] Best Practices ~ 93%
-    - [ ] SEO ~ 82%
+    - [x] Accessibility ~ 100%
+    - [x] Best Practices ~ 100%
+    - [x] SEO ~ 91%
 - [ ] Additional implementations (optional)
   - [ ] ThreeJs
   - [ ] Animations
