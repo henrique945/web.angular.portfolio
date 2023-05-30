@@ -19,6 +19,9 @@ import { mundoFacens } from './projects/mundo-facens';
 import { mundoSbt } from './projects/mundo-sbt';
 import { ncursos } from './projects/ncursos';
 import { novaAula } from './projects/nova-aula';
+import { poliedro } from './projects/poliedro';
+import { proton } from './projects/proton';
+import { terrex } from './projects/terrex';
 import { vaccine } from './projects/vaccine';
 import { villaFlora } from './projects/villa-flora';
 import { yesno } from './projects/yesno';
@@ -49,6 +52,9 @@ export const projects: ProjectInterface[] = [
   falai,
   ncursos,
   assetHub,
+  proton,
+  terrex,
+  poliedro,
 ];
 
 export const projectsSorted: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);

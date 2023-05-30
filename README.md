@@ -38,6 +38,9 @@
 * Falai - https://play.google.com/store/apps/details?id=com.liga.falai
 * NCursos - https://www.ncursosedu.com.br/
 * Asset Hub - https://acontece-facens.ligafacens.com/
+* Proton - https://apps.apple.com/br/app/proton/id1558126352
+* Terrex - https://tecnomyl.com.br/quem-somos/
+* Poliedro - https://play.google.com/store/apps/details?id=com.daitangroup.poliedro.activitymanager
 *
 * UQR - https://www.universidadeuqr.com.br/
 * IQR - https://iqreducacao.com.br/
