@@ -13,6 +13,7 @@
 ![](src/assets/port3.PNG)
 ![](src/assets/port4.PNG)
 ![](src/assets/port5.PNG)
+![](src/assets/port6.PNG)
 
 ## My projects reference
 
@@ -105,6 +106,7 @@
   - [ ] Articles
     - [ ] Connect with Disqus
     - [ ] Scripts (Senna Kids + Emerson)
+    - [ ] TCC - Plataforma de Freelance em Blockchain
     - [ ] Hints
     - [ ] Tutorials
     - [ ] Interesting things
