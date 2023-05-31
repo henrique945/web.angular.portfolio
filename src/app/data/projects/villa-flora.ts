@@ -32,5 +32,4 @@ export const villaFlora: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB],
   techs: [TechEnum.ANGULAR, TechEnum.PWA],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 10,
 };

@@ -34,5 +34,4 @@ export const falai: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR],
   orientation: OrientationEnum.VERTICAL,
-  position: 21,
 };

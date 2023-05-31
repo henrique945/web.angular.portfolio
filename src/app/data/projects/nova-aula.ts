@@ -33,5 +33,4 @@ export const novaAula: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.PWA],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 11,
 };

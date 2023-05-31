@@ -32,5 +32,4 @@ export const fablab: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 16,
 };

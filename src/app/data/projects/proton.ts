@@ -34,5 +34,4 @@ export const proton: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS, TechEnum.PWA],
   orientation: OrientationEnum.VERTICAL,
-  position: 24,
 };

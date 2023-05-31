@@ -22,6 +22,8 @@ import { novaAula } from './projects/nova-aula';
 import { poliedro } from './projects/poliedro';
 import { proton } from './projects/proton';
 import { terrex } from './projects/terrex';
+import { toolbox } from './projects/toolbox';
+import { usina } from './projects/usina';
 import { vaccine } from './projects/vaccine';
 import { villaFlora } from './projects/villa-flora';
 import { yesno } from './projects/yesno';
@@ -30,33 +32,33 @@ import { zoo } from './projects/zoo';
 //#endregion
 
 export const projects: ProjectInterface[] = [
+  ecologicatech,
+  ncursos,
+  usina,
   abb,
+  poliedro,
+  mundoSbt,
   adpoints,
   ayrtonSenna,
   checkinCampus,
+  zoo,
+  proton,
+  terrex,
+  falai,
+  iquot,
+  vaccine,
+  facens,
   cti,
   dpr,
-  ecologicatech,
   emerson,
   fablab,
-  facens,
-  iquot,
   learnbox,
   villaFlora,
   novaAula,
   yesno,
-  zoo,
-  vaccine,
   mundoFacens,
-  mundoSbt,
-  falai,
-  ncursos,
   assetHub,
-  proton,
-  terrex,
-  poliedro,
+  toolbox,
 ];
 
-export const projectsSorted: ProjectInterface[] = projects.sort((p1, p2) => p1.position >= p2.position ? 1 : -1);
-
-export const listProjects: ProjectInterface[] = projectsSorted.filter(project => project.isActive);
+export const listProjects: ProjectInterface[] = projects.filter(project => project.isActive);

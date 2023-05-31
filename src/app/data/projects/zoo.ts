@@ -40,5 +40,4 @@ export const zoo: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR],
   orientation: OrientationEnum.VERTICAL,
-  position: 9,
 };

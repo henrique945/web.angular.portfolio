@@ -38,5 +38,4 @@ export const adpoints: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
-  position: 1,
 };

@@ -29,5 +29,4 @@ export const mundoSbt: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS, ProjectTagsEnum.MOBILE],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 20,
 };

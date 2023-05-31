@@ -41,6 +41,8 @@
 * Proton - https://apps.apple.com/br/app/proton/id1558126352
 * Terrex - https://tecnomyl.com.br/quem-somos/
 * Poliedro - https://play.google.com/store/apps/details?id=com.daitangroup.poliedro.activitymanager
+* Usina Cultural - https://usinacultural.facens.br/
+* Toolbox - https://play.google.com/store/apps/details?id=com.liga.toolbox
 *
 * UQR - https://www.universidadeuqr.com.br/
 * IQR - https://iqreducacao.com.br/
@@ -90,7 +92,7 @@
 - [ ] Add accessibility systems
   - [ ] Libras
   - [ ] Sounds
-  - [ ] Google Search (report on *"assets/docs"*)
+  - [x] Google Search (report on *"assets/docs"*)
     - [x] Performance ~ 99%
     - [x] Accessibility ~ 100%
     - [x] Best Practices ~ 100%
@@ -108,6 +110,8 @@
     - [ ] Interesting things
       - [ ] Python VS C++
       - [ ] Games in Javascript
+      - [ ] Performance
+      - [ ] Web Vitals
   - [ ] Codes
   - [ ] Playgrounds
   - [ ] 3D objects

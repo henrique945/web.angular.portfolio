@@ -20,5 +20,4 @@ export interface ProjectInterface {
   tags: ProjectTagsEnum[];
   techs: TechEnum[];
   orientation: OrientationEnum;
-  position: number;
 }

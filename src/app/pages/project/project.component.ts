@@ -52,7 +52,6 @@ export class ProjectComponent implements OnInit {
     orientation: OrientationEnum.HORIZONTAL,
     tags: [],
     links: [],
-    position: 0,
   };
 
   public tags: string = '';

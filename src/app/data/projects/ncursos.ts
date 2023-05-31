@@ -29,5 +29,4 @@ export const ncursos: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 7,
 };

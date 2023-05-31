@@ -31,5 +31,4 @@ export const mundoFacens: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.REACT, TechEnum.PWA, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 19,
 };

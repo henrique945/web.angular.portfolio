@@ -34,5 +34,4 @@ export const poliedro: ProjectInterface = {
   tags: [ProjectTagsEnum.APIS],
   techs: [TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 27,
 };

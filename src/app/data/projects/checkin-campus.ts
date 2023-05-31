@@ -36,5 +36,4 @@ export const checkinCampus: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.WEB, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.PWA, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
-  position: 3,
 };

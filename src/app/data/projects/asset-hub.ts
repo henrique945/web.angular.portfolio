@@ -29,5 +29,4 @@ export const assetHub: ProjectInterface = {
   tags: [ProjectTagsEnum.WEB, ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.REACT, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
-  position: 23,
 };

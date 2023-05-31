@@ -38,5 +38,4 @@ export const ayrtonSenna: ProjectInterface = {
   tags: [ProjectTagsEnum.MOBILE, ProjectTagsEnum.APIS],
   techs: [TechEnum.IONIC, TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.VERTICAL,
-  position: 2,
 };
