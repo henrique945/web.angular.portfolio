@@ -103,6 +103,9 @@
   - [ ] Animations
   - [ ] Background parallax
 - [ ] More
+  - [ ] My Bootcamp
+  - [ ] My English Exchange
+  - [ ] Certificates
   - [ ] Articles
     - [ ] Connect with Disqus
     - [ ] Scripts (Senna Kids + Emerson)
