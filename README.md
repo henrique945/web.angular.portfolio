@@ -98,31 +98,27 @@
     - [x] Accessibility ~ 100%
     - [x] Best Practices ~ 100%
     - [x] SEO ~ 91%
-- [ ] Additional implementations (optional)
+- [ ] Additional implementations (button for optional feature for the future)
   - [ ] ThreeJs
   - [ ] Animations
   - [ ] Background parallax
 - [ ] More
-  - [ ] My Bootcamp
+  - [ ] My Bootcamp (classes)
   - [ ] My English Exchange
   - [ ] Certificates
   - [ ] Articles
-    - [ ] Connect with Disqus
+    - [ ] Connect with Disqus (integrations / APIs)
     - [ ] Scripts (Senna Kids + Emerson)
     - [ ] TCC - Plataforma de Freelance em Blockchain
     - [ ] Hints
     - [ ] Tutorials
-    - [ ] Interesting things
-      - [ ] Python VS C++
+    - [ ] Interesting things / codes
       - [ ] Games in Javascript
       - [ ] Performance
       - [ ] Web Vitals
-  - [ ] Codes
-  - [ ] Playgrounds
   - [ ] 3D objects
   - [ ] Tests
   - [ ] Deploy
-  - [ ] New integrations
 - [x] Deploy Aws
   - [x] henriquerod.com
   - [x] app.henriquerod.com
