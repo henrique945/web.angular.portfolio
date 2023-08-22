@@ -14,8 +14,8 @@ export const poliedro: ProjectInterface = {
   coverImage: 'assets/imgs/projects/poliedro/poliedro6.png',
   developmentDate: '14/06/2021 ~ 17/10/2021',
   description: 'Developed in <b>NestJs (NodeJs + PostgresSQL + MongoDB)</b> with <b>Poliedro APIs</b>.\n\n' +
-    'App for <b>Poliedro students and guardians</b> that allows access to school information such as <b>schedule</b>, <b>gradebook</b>, <b>messages</b>, <b>tasks</b>, <b>resolutions of material</b> and <b>performance in simulations, with feedbacks and performance analysis</b>.\n\n' +
-    'It is organized, easy and practical and had <b>more than 100,000 accesses</b>.',
+    'App for <b>Poliedro students and guardians</b> that allows access to school information such as <b>schedule</b>, <b>gradebook</b>, <b>messages</b>, <b>tasks</b>, <b>resolutions of material</b> and <b>performance in simulations, with feedback and performance analysis</b>.\n\n' +
+    'It is organized, easy and practical and has <b>more than 100,000 accesses</b>.',
   outcome: 'Project was a success with more than 100,000 downloads in the store.',
   imageUrls: [
     'assets/imgs/projects/poliedro/poliedro1.png',

@@ -13,7 +13,7 @@ export const facens: ProjectInterface = {
   name: 'Facens',
   coverImage: 'assets/imgs/projects/facens/facens1.png',
   developmentDate: '15/10/2019 ~ 15/10/2020',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens autentication system</b>.\n\n' +
+  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens authentication system</b>.\n\n' +
     'With the <b>FACENS app</b> you can view your grades, absences and class schedules.\n\n' +
     'In addition, you will be able to interact with <b>FACENS</b> events using a single application and access your <b>student ID card</b>.\n',
   outcome: 'The app was a hit with over 10,000 downloads and a 4.8/5 on the Play Store, everyone in college likes its practicality.',

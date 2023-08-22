@@ -13,7 +13,7 @@ export const toolbox: ProjectInterface = {
   name: 'Toolbox',
   coverImage: 'assets/imgs/projects/toolbox/toolbox2.PNG',
   developmentDate: '21/01/2021 ~ 30/10/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens/Newton university authentication system</b> using <b>NgZorro</b>, <b>PrimeNg</b> and <b>Boostrap</b>.\n\n' +
+  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens/Newton university authentication system</b> using <b>NgZorro</b>, <b>PrimeNg</b> and <b>Bootstrap</b>.\n\n' +
     'App developed to <b>control events and internal reports</b> of your company, <b>sending photos</b>, <b>describing events</b> and <b>adding responsible teams to solve the problem</b>.\n\n' +
     'With event system and <b>QRCode integration</b> showing information about the scanned occurrence.',
   outcome: 'The result was very good and even today it is widely used within Facens and Newton.',

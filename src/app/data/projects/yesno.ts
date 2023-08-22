@@ -13,7 +13,7 @@ export const yesno: ProjectInterface = {
   name: 'YesNo',
   coverImage: 'assets/imgs/projects/yesno/yesno6.jpeg',
   developmentDate: '09/03/2020 ~ 24/04/2020',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript) </b>acessing the <b>phone\'s contact list</b>.\n\n' +
+  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript) </b>accessing the <b>phone\'s contact list</b>.\n\n' +
     'It is possible to <b>create questions</b> by attaching images, request opinions from your <b>contact list</b>, <b>create groups</b> with friends and follow the <b>graphs</b> and <b>statistics</b> of the created questions.\n\n' +
     'Yesno, a way to give opinions and collect opinions about your day-to-day questions.\n',
   outcome: 'It had little adherence and was rarely used.',
