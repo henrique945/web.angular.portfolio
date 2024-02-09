@@ -6,10 +6,10 @@ import { PositionInterface } from '../../models/interfaces/position.interface';
 
 export const liga: PositionInterface = {
   isActive: true,
-  name: 'Full-Stack Engineer at Liga Facens',
-  description: '+4 years of experience building: \n\n' +
+  name: 'Full-Stack Developer at Liga Facens',
+  description: 'Liga Facens, a brazilian software house company, that I had +4 years of experience building: \n\n' +
     '• Mobile apps built with Ionic/Angular (HTML5, SASS, Typescript) for a variety of businesses and government organizations.\n\n' +
     '• REST APIs architectured in NestJS (NodeJs + PostgresSQL) for deployment within AWS using AWS Lambda and integrating with services such as S3, Api Gateway, SQS, SNS, SES, Cloudfront.',
-  backgroundColor: 'var(--secondary-color)',
-  position: 2,
+  backgroundColor: 'var(--primary-color)',
+  position: 1,
 };
