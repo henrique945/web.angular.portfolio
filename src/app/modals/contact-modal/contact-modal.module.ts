@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ContactModalComponent } from './contact-modal.component';
+import { SocialModule } from '../../components/social/social.module';
 
 //#endregion
 
@@ -11,6 +12,7 @@ import { ContactModalComponent } from './contact-modal.component';
   imports: [
     CommonModule,
     NgxEchartsModule,
+    SocialModule,
   ],
   declarations: [
     ContactModalComponent,
@@ -19,4 +21,5 @@ import { ContactModalComponent } from './contact-modal.component';
     ContactModalComponent,
   ],
 })
-export class ContactModalModule {}
+export class ContactModalModule {
+}

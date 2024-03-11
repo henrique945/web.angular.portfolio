@@ -38,7 +38,7 @@
     }
 
     span {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
 
     h1 {
@@ -48,31 +48,21 @@
       font-size: 2.5rem;
 
       @media screen and (max-width: 768px) {
-        font-size: 2.3rem;
-      }
-    }
-
-    .social {
-      @media screen and (max-width: 768px) {
-        margin-top: 2rem;
-      }
-
-      img {
-        margin-right: 1rem;
-        height: 2rem;
+        font-size: 2rem;
       }
     }
   }
 
   .about {
-    padding: 7rem 0;
+    padding: 5rem 0;
 
     @media screen and (max-width: 768px) {
-      padding: 2rem;
+      padding: 4rem 2rem;
     }
 
     p {
       font-size: 1.9rem;
+      line-height: 1.25;
       margin: 0;
 
       @media screen and (max-width: 768px) {

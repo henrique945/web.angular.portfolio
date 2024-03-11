@@ -46,9 +46,6 @@
       height: $profileSize;
       border-radius: 50%;
       object-fit: cover;
-
-      @media screen and (max-width: 768px) {
-      }
     }
 
     .info {
@@ -61,17 +58,8 @@
         padding-left: 1rem;
       }
 
-      .social {
+      app-social {
         margin-top: 2rem;
-
-        @media screen and (max-width: 768px) {
-          margin-top: 2rem;
-        }
-
-        img {
-          margin-right: 1rem;
-          height: 2rem;
-        }
       }
 
       span {

@@ -40,4 +40,5 @@ import { ImageZoomModalModule } from './modals/image-zoom-modal/image-zoom-modal
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

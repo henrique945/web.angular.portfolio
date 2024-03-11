@@ -28,6 +28,7 @@ import { vaccine } from './projects/vaccine';
 import { villaFlora } from './projects/villa-flora';
 import { yesno } from './projects/yesno';
 import { zoo } from './projects/zoo';
+import { tintim } from './projects/tintim';
 
 //#endregion
 
@@ -59,6 +60,7 @@ export const projects: ProjectInterface[] = [
   mundoFacens,
   assetHub,
   toolbox,
+  tintim,
 ];
 
 export const listProjects: ProjectInterface[] = projects.filter(project => project.isActive);
