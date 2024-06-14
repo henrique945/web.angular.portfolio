@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   width: calc(100% - 20rem);
-  min-height: calc(100vh - 6rem - 5rem);
-  padding: 4.5rem 10rem 0;
+  min-height: calc(100vh - 6rem);
+  padding: 0 10rem;
   color: var(--primary-color);
 
   @media screen and (max-width: 768px) {
@@ -16,7 +16,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    height: 20rem;
+    height: 18rem;
     transform: rotateY(180deg);
 
     @media screen and (max-width: 768px) {
@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 40%;
-    padding: 5rem 0;
+    padding: 4rem 0;
     margin-right: 3rem;
 
     @media screen and (max-width: 768px) {
@@ -54,14 +54,14 @@
   }
 
   .about {
-    padding: 5rem 0;
+    padding: 4rem 0;
 
     @media screen and (max-width: 768px) {
       padding: 4rem 2rem;
     }
 
     p {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
       line-height: 1.25;
       margin: 0;
 
