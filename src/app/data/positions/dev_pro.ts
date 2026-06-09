@@ -6,11 +6,12 @@ import { PositionInterface } from '../../models/interfaces/position.interface';
 
 export const dev_pro: PositionInterface = {
   isActive: true,
-  name: 'Software Engineer at Dev.Pro',
-  description: 'Dev.Pro, a distinguished global software development partner headquartered in the U.S., my contributions have been focused on:\n\n' +
-    '• Playing a pivotal role in the Xenial Data Management Cloud project for Global Payments Company.\n\n' +
-    '• Collaborating closely with my team to handle data management tasks for esteemed clients such as Taco Bell and Burger King, while also developing receipt email templates for CosMc’s, a subsidiary of McDonald’s.\n\n' +
-    '• Coding with Angular, NodeJs, MongoDB, and Javascript/Typescript, integrated with AWS Cloud infrastructure and CI/CD pipelines.',
+  name: 'Software Engineer at Dev.Pro (Mar 2023 – Sep 2023)',
+  description: 'Dev.Pro, a global software development partner headquartered in the US, where I contributed to:\n\n' +
+    '• The Xenial Data Management Cloud project for Global Payments, serving clients such as Taco Bell and Burger King.\n\n' +
+    '• Developing receipt email templates for CosMc\'s, a subsidiary of McDonald\'s.\n\n' +
+    '• Building features with Angular and Node.js, integrated with AWS Cloud infrastructure and CI/CD pipelines.\n\n' +
+    '• Writing automated tests including unit, integration and end-to-end coverage.',
   backgroundColor: 'var(--primary-color)',
-  position: 3,
+  position: 2,
 };

@@ -1,6 +1,10 @@
 //#region Imports
 
 import { ProjectInterface } from '../models/interfaces/project.interface';
+import { bolaoUol } from './projects/bolao-uol';
+import { eclub } from './projects/eclub';
+import { icanotes } from './projects/icanotes';
+import { uqr } from './projects/uqr';
 import { abb } from './projects/abb';
 import { adpoints } from './projects/adpoints';
 import { assetHub } from './projects/asset-hub';
@@ -33,6 +37,10 @@ import { tintim } from './projects/tintim';
 //#endregion
 
 export const projects: ProjectInterface[] = [
+  icanotes,
+  eclub,
+  bolaoUol,
+  uqr,
   ecologicatech,
   ncursos,
   usina,
