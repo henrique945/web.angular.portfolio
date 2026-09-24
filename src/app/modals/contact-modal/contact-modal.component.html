@@ -1,23 +1,45 @@
-<div class="modal-content modal-contact">
-  <img (click)="closeModal()" class="close" src="assets/imgs/close.svg" alt="Close">
+<div class="modal" (click)="onBackdropClick($event)">
+  <section #dialog class="modal-content modal-contact" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+    <button type="button" (click)="closeModal()" class="close icon-button" aria-label="Close contact dialog">
+      <img src="assets/imgs/close.svg" alt="">
+    </button>
 
-  <div class="contact">
-    <div class="left">
-      <img class="profile" src="assets/imgs/profile.png" alt="Henrique">
-      <div class="info">
-        <span><b>Name: <br></b> Henrique Rodrigues</span>
-        <span><b>E-mail: <br></b> henrique.rodrigues7@hotmail.com</span>
-        <span><b>Phone: <br></b> +55 11971908333</span>
+    <div class="contact">
+      <div class="left">
+        <img class="profile" src="assets/imgs/profile.webp" alt="Henrique Rodrigues" width="512" height="512">
+        <div class="info">
+          <h2 id="contact-title">Let's build something useful</h2>
+          <p class="availability">Available for international remote opportunities</p>
+          <dl>
+            <div><dt>Name</dt><dd>Henrique Rodrigues</dd></div>
+            <div><dt>Location</dt><dd>Brazil · UTC−3 · Remote</dd></div>
+          </dl>
+          <a href="mailto:henrique.rodrigues7@hotmail.com">henrique.rodrigues7&#64;hotmail.com</a>
+          <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>Download résumé</a>
 
-        <app-social></app-social>
+          <app-social></app-social>
+        </div>
+      </div>
+      <div class="right">
+        <h2>Project footprint</h2>
+        <div class="chart-row">
+          <div class="donut" [style.background]="chartBackground" role="img" [attr.aria-label]="chartLabel">
+            <div class="donut-center">
+              <strong>{{ projectsCount }}</strong>
+              <span>projects</span>
+            </div>
+          </div>
+          <ul class="legend" aria-hidden="true">
+            @for (stat of technologyStats; track stat.label) {
+              <li><span class="swatch" [style.background]="stat.color"></span><b>{{ stat.label }}</b><span>{{ stat.value }}</span></li>
+            }
+          </ul>
+        </div>
+        <div class="proof-row" aria-label="Career highlights">
+          <span><strong>7+ years</strong> in production</span>
+          <span><strong>20+ engineers</strong> led and mentored</span>
+        </div>
       </div>
     </div>
-    <div class="right">
-      <h2>Projects</h2>
-      <div class="container">
-        <div id="chart" class="graph" echarts [options]="charOption"></div>
-        <strong>{{ projectsCount }}</strong>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>

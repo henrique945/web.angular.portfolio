@@ -11,9 +11,9 @@ export enum TechEnum {
 export const formattedTechEnum: Record<TechEnum, string> = {
   [TechEnum.ANGULAR]: 'Angular',
   [TechEnum.IONIC]: 'Ionic',
-  [TechEnum.NESTJS]: 'NestJs',
+  [TechEnum.NESTJS]: 'NestJS',
   [TechEnum.PWA]: 'PWA',
   [TechEnum.REACT]: 'React',
   [TechEnum.FLUTTER]: 'Flutter',
   [TechEnum.UNITY]: 'Unity',
-}
+};

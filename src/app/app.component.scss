@@ -3,3 +3,25 @@
   min-height: 100vh;
   overflow-y: auto;
 }
+
+main {
+  min-height: calc(100vh - 6.5rem);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 10rem;
+  color: white;
+  background: var(--secondary-color);
+
+  a {
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}

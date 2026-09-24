@@ -1,7 +1,11 @@
-<div class="modal-content modal-image-zoom">
-  <img (click)="closeModal()" class="close" src="assets/imgs/close.svg" alt="Close">
+<div class="modal" (click)="onBackdropClick($event)">
+<section class="modal-content modal-image-zoom" role="dialog" aria-modal="true" aria-label="Project image preview">
+  <button #closeButton type="button" (click)="closeModal()" class="close icon-button" aria-label="Close image preview">
+    <img src="assets/imgs/close.svg" alt="">
+  </button>
 
   <div class="image">
-    <img [src]="src" alt="Imagem">
+    <img [src]="src" alt="Expanded project screenshot">
   </div>
+</section>
 </div>

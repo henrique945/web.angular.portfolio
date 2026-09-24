@@ -1,27 +1,26 @@
-<div class="navbar">
-  <h2 routerLink="/home"><img src="assets/imgs/code-icon.svg" alt="Code"> Henrique Rodrigues</h2>
+<header class="navbar">
+  <a class="brand" routerLink="/" aria-label="Henrique Rodrigues, home"><img src="assets/imgs/code-icon.svg" alt="" width="123" height="102"> Henrique Rodrigues</a>
 
-  <div class="menus">
-    <a href="/home">Home</a>
-    <a href="/home#exp">Experience</a>
-    <a href="/home#projects">Project</a>
-    <a (click)="openContactModal()">Contact</a>
+  <nav class="menus" aria-label="Main navigation">
+    <a routerLink="/">Home</a>
+    <a routerLink="/" fragment="exp">Experience</a>
+    <a routerLink="/" fragment="projects">Projects</a>
+    <button type="button" (click)="openContactModal()">Contact</button>
     <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
-  </div>
+  </nav>
 
-  <div class="mobile" (click)="toggleMobileNavbar()">
-    <img src="assets/imgs/menu.svg" alt="Menu">
-  </div>
-</div>
+  <button type="button" class="mobile icon-button" (click)="toggleMobileNavbar()" [attr.aria-expanded]="isMobileNavbarOpen" aria-controls="mobile-navigation" aria-label="Open navigation menu">
+    <img src="assets/imgs/menu.svg" alt="" width="24" height="24">
+  </button>
+</header>
 
 <div class="navbar--mobile--blank" [class.navbar--mobile--blank--open]="isMobileNavbarOpen" (click)="toggleMobileNavbar()"></div>
 
-<div class="navbar--mobile" [class.navbar--mobile--open]="isMobileNavbarOpen">
-  <img (click)="toggleMobileNavbar()" class="close" src="assets/imgs/close.svg" alt="Close">
-
-  <a (click)="toggleMobileNavbar()" href="/home">Home</a>
-  <a (click)="toggleMobileNavbar()" href="/home#exp">Experience</a>
-  <a (click)="toggleMobileNavbar()" href="/home#projects">Projects</a>
-  <a (click)="toggleMobileNavbar(); openContactModal()">Contact</a>
+<nav id="mobile-navigation" aria-label="Mobile navigation" class="navbar--mobile" [class.navbar--mobile--open]="isMobileNavbarOpen" [attr.aria-hidden]="!isMobileNavbarOpen">
+  <button type="button" (click)="toggleMobileNavbar()" class="close icon-button" aria-label="Close navigation menu"><img src="assets/imgs/close.svg" alt="" width="24" height="24"></button>
+  <a (click)="toggleMobileNavbar()" routerLink="/">Home</a>
+  <a (click)="toggleMobileNavbar()" routerLink="/" fragment="exp">Experience</a>
+  <a (click)="toggleMobileNavbar()" routerLink="/" fragment="projects">Projects</a>
+  <button type="button" (click)="toggleMobileNavbar(); openContactModal()">Contact</button>
   <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
-</div>
+</nav>

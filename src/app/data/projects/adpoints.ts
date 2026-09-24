@@ -11,7 +11,7 @@ export const adpoints: ProjectInterface = {
   isActive: true,
   id: 'adpoints',
   name: 'Ad Points',
-  coverImage: 'assets/imgs/projects/adpoints/adpoints1.png',
+  coverImage: 'assets/imgs/projects/adpoints/adpoints1.thumb.webp',
   developmentDate: '02/08/2019 ~ 18/10/2021',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
     'You can create a campaign with questions related to your business and generate leads from the responses obtained.\n\n' +
@@ -20,15 +20,15 @@ export const adpoints: ProjectInterface = {
     'With Ad Points you can receive surveys, evaluate and help the company and in the end you can end up winning freebies for it. Cool, huh? Be part of this community and come win your toast too!\n',
   outcome: 'Project was completed without problems but there was not much engagement and dissemination of it.',
   imageUrls: [
-    'assets/imgs/projects/adpoints/adpoints1.png',
-    'assets/imgs/projects/adpoints/adpoints2.png',
-    'assets/imgs/projects/adpoints/adpoints3.png',
-    'assets/imgs/projects/adpoints/adpoints4.png',
-    'assets/imgs/projects/adpoints/adpoints5.PNG',
-    'assets/imgs/projects/adpoints/adpoints6.PNG',
-    'assets/imgs/projects/adpoints/adpoints7.PNG',
-    'assets/imgs/projects/adpoints/adpoints8.PNG',
-    'assets/imgs/projects/adpoints/adpoints9.PNG',
+    'assets/imgs/projects/adpoints/adpoints1.webp',
+    'assets/imgs/projects/adpoints/adpoints2.webp',
+    'assets/imgs/projects/adpoints/adpoints3.webp',
+    'assets/imgs/projects/adpoints/adpoints4.webp',
+    'assets/imgs/projects/adpoints/adpoints5.webp',
+    'assets/imgs/projects/adpoints/adpoints6.webp',
+    'assets/imgs/projects/adpoints/adpoints7.webp',
+    'assets/imgs/projects/adpoints/adpoints8.webp',
+    'assets/imgs/projects/adpoints/adpoints9.webp',
   ],
   links: [
     { title: 'Play Store', link: 'https://play.google.com/store/apps/details?id=liga.app.adpoints' },

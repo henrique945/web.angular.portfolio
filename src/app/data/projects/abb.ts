@@ -11,16 +11,16 @@ export const abb: ProjectInterface = {
   isActive: true,
   id: 'abb',
   name: 'ABB',
-  coverImage: 'assets/imgs/projects/abb/abb1.PNG',
+  coverImage: 'assets/imgs/projects/abb/abb1.thumb.webp',
   developmentDate: '06/12/2021 ~ 17/01/2022',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and accessing <b>AWS S3 with AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
     'Site to download the most recent <b>Virtual Reality training</b> from the <b>multinational company ABB</b> that works in energy and automation technologies.\n\n' +
     'It is possible to switch between 3 different languages (EN, ES, PT) and download the apk of approximately <b>1gb</b> to be played on the VR glasses using the <b>AWS S3</b> file container.\n',
   outcome: 'Despite being simple, direct and functional, the site was widely used by ABB\'s internal team.',
   imageUrls: [
-    'assets/imgs/projects/abb/abb1.PNG',
-    'assets/imgs/projects/abb/abb2.PNG',
-    'assets/imgs/projects/abb/abb3.PNG',
+    'assets/imgs/projects/abb/abb1.webp',
+    'assets/imgs/projects/abb/abb2.webp',
+    'assets/imgs/projects/abb/abb3.webp',
   ],
   links: [
     { title: 'Site', link: 'https://www.abb-download.ligafacens.com/' },

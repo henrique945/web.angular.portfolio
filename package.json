@@ -1,41 +1,55 @@
 {
   "name": "portfolio",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "henrique.rodrigues7@hotmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4000",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
+    "generate:seo": "node generate-seo.js",
+    "optimize:images": "node optimize-images.js",
+    "build:prod": "npm run build:static",
+    "build:static": "npm run generate:seo && ng run portfolio:prerender:production && node prepare-static-output.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless && npm run test:static",
+    "test:static": "node verify-static-build.js",
     "explorer": "source-map-explorer dist/**/*.js",
-    "deploy:aws": "cross-env BUILD_CONFIG=production AWS_PROFILE=aws_henrique AWS_BUCKET_NAME=angular.portfolio AWS_CLOUDFRONT_ID=E3G406RILUE9RD node aws-deploy.js"
+    "deploy:aws": "cross-env BUILD_CONFIG=production AWS_PROFILE=aws_henrique AWS_BUCKET_NAME=angular.portfolio AWS_CLOUDFRONT_ID=E3G406RILUE9RD node aws-deploy.js",
+    "dev:ssr": "ng run portfolio:serve-ssr",
+    "serve:ssr": "node dist/portfolio/server/main.js",
+    "build:ssr": "ng build && ng run portfolio:server",
+    "prerender": "npm run build:static"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=20.19.0 <23"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^15.0.0",
-    "@angular/common": "^15.0.0",
-    "@angular/compiler": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/forms": "^15.0.0",
-    "@angular/platform-browser": "^15.0.0",
-    "@angular/platform-browser-dynamic": "^15.0.0",
-    "@angular/router": "^15.0.0",
-    "ngx-echarts": "^15.0.3",
-    "ngx-simple-modal": "^1.4.17",
+    "@angular/animations": "^21.2.24",
+    "@angular/common": "^21.2.24",
+    "@angular/compiler": "^21.2.24",
+    "@angular/core": "^21.2.24",
+    "@angular/forms": "^21.2.24",
+    "@angular/platform-browser": "^21.2.24",
+    "@angular/platform-browser-dynamic": "^21.2.24",
+    "@angular/platform-server": "^21.2.24",
+    "@angular/router": "^21.2.24",
+    "@angular/ssr": "^21.2.24",
+    "compression": "^1.8.2",
+    "express": "^5.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.0.3",
-    "@angular/cli": "~15.0.3",
-    "@angular/compiler-cli": "^15.0.0",
+    "@angular-devkit/build-angular": "^21.2.24",
+    "@angular/cli": "~21.2.24",
+    "@angular/compiler-cli": "^21.2.24",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.1",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^20.17.19",
     "cross-env": "^7.0.3",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
@@ -43,6 +57,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.8.2"
+    "sharp": "^0.35.4",
+    "typescript": "~5.9.3"
   }
 }

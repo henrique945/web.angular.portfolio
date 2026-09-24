@@ -6,6 +6,30 @@
 - **Contact**: henrique.rodrigues7@hotmail.com / +55 (11) 971908333
 - **Website**: [henriquerod.com](https://henriquerod.com)
 
+## Development
+
+The application uses Angular 21 LTS and prerenders the home page plus every active project route.
+
+```bash
+npm install
+npm start
+npm run test:ci
+npm run build:static
+```
+
+`npm run generate:seo` derives `robots.txt`, `sitemap.xml` and the prerender route list from active project data. `npm run optimize:images` converts new project screenshots to WebP, generates orientation-aware thumbnails, validates the output and removes the converted PNG/JPG sources. The Git history remains the recovery source for originals.
+
+## AWS deployment
+
+`npm run deploy:aws` builds the static output, syncs `dist/portfolio/browser` to S3, fixes content types/cache headers and updates the configured CloudFront distribution. The included viewer-request function:
+
+- redirects `/home` to `/` with HTTP 301;
+- resolves extensionless prerendered routes to their `index.html` files;
+- keeps `robots.txt`, `sitemap.xml` and assets untouched;
+- serves `404.html` with an actual 404 response for missing routes.
+
+Set `CONFIGURE_CLOUDFRONT=false` to upload without changing the distribution. The deployment identity needs permission to manage CloudFront Functions and update the distribution when routing configuration is enabled.
+
 ## Project Prints
 
 ![](src/assets/port1.PNG)

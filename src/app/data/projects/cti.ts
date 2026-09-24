@@ -11,15 +11,15 @@ export const cti: ProjectInterface = {
   isActive: true,
   id: 'cti',
   name: 'Movimento CTI',
-  coverImage: 'assets/imgs/projects/cti/cti1.PNG',
+  coverImage: 'assets/imgs/projects/cti/cti1.thumb.webp',
   developmentDate: '29/03/2020 ~ 09/11/2020',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> with <b>Firebase</b>.\n\n' +
     'Display site for a Pilates and aesthetics clinic.\n',
   outcome: 'Fast development website with the iam to show the image of the clinic.',
   imageUrls: [
-    'assets/imgs/projects/cti/cti1.PNG',
-    'assets/imgs/projects/cti/cti2.PNG',
-    'assets/imgs/projects/cti/cti3.PNG',
+    'assets/imgs/projects/cti/cti1.webp',
+    'assets/imgs/projects/cti/cti2.webp',
+    'assets/imgs/projects/cti/cti3.webp',
   ],
   links: [
     { title: 'Site', link: 'https://clinicamovimento.firebaseapp.com/' },

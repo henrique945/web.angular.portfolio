@@ -11,19 +11,19 @@ export const dpr: ProjectInterface = {
   isActive: true,
   id: 'dpr',
   name: 'DPR',
-  coverImage: 'assets/imgs/projects/dpr/dpr3.png',
+  coverImage: 'assets/imgs/projects/dpr/dpr3.thumb.webp',
   developmentDate: '09/04/2020 ~ 02/07/2020',
   description: 'Developed in <b>Unity (C#)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
     '<b>DPR</b> is a training application for <b>DPR telecommunications (Brazil)</b> employees in a gamified environment.\n\n' +
     'With access to a mission board, several competitive challenges, activities to buy and much more.\n',
   outcome: 'Project for internal use by the DPR company, we do not have access to further results.',
   imageUrls: [
-    'assets/imgs/projects/dpr/dpr1.png',
-    'assets/imgs/projects/dpr/dpr2.png',
-    'assets/imgs/projects/dpr/dpr3.png',
-    'assets/imgs/projects/dpr/dpr4.png',
-    'assets/imgs/projects/dpr/dpr5.png',
-    'assets/imgs/projects/dpr/dpr6.png',
+    'assets/imgs/projects/dpr/dpr1.webp',
+    'assets/imgs/projects/dpr/dpr2.webp',
+    'assets/imgs/projects/dpr/dpr3.webp',
+    'assets/imgs/projects/dpr/dpr4.webp',
+    'assets/imgs/projects/dpr/dpr5.webp',
+    'assets/imgs/projects/dpr/dpr6.webp',
   ],
   links: [
     { title: 'Play Store', link: 'https://play.google.com/store/apps/details?id=com.liga.trainingdpr/' },

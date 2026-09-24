@@ -11,17 +11,17 @@ export const ncursos: ProjectInterface = {
   isActive: true,
   id: 'ncursos',
   name: 'NCursos',
-  coverImage: 'assets/imgs/projects/ncursos/ncursos1.PNG',
+  coverImage: 'assets/imgs/projects/ncursos/ncursos1.thumb.webp',
   developmentDate: '16/08/2021 ~ 27/05/2022',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens university authentication system</b> and <b>Hotjar Analytics</b>.\n\n' +
     '<b>NCursos</b> is a course platform focused on college students with several features for learning and creating content, like <b>classes</b> and <b>tracks</b>.\n',
   outcome: 'The platform had average results, selling some of the registered courses and raising students.',
   imageUrls: [
-    'assets/imgs/projects/ncursos/ncursos1.PNG',
-    'assets/imgs/projects/ncursos/ncursos2.PNG',
-    'assets/imgs/projects/ncursos/ncursos3.PNG',
-    'assets/imgs/projects/ncursos/ncursos4.PNG',
-    'assets/imgs/projects/ncursos/ncursos5.PNG',
+    'assets/imgs/projects/ncursos/ncursos1.webp',
+    'assets/imgs/projects/ncursos/ncursos2.webp',
+    'assets/imgs/projects/ncursos/ncursos3.webp',
+    'assets/imgs/projects/ncursos/ncursos4.webp',
+    'assets/imgs/projects/ncursos/ncursos5.webp',
   ],
   links: [
     { title: 'Site', link: 'https://www.ncursosedu.com.br/' },

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'app/themes/modal';
+@use 'app/themes/modal';
 
 * {
   font-family: monospace;
@@ -14,14 +14,49 @@
     background: var(--primary-color) 0 0 no-repeat padding-box;
   }
 
-  a {
-    outline: none;
-  }
+  box-sizing: border-box;
 }
 
 :root {
   --primary-color: #445964;
   --secondary-color: #263138;
+}
+
+html {
+  scroll-padding-top: 2rem;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+}
+
+a, button {
+  &:focus-visible {
+    outline: 3px solid #0b6bcb;
+    outline-offset: 4px;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  color: white;
+  background: var(--secondary-color);
+  transform: translateY(-200%);
+
+  &:focus { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 .toTopButton {

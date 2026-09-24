@@ -2,7 +2,6 @@
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { NgxEchartsModule } from 'ngx-echarts';
 import { ContactModalComponent } from './contact-modal.component';
 import { SocialModule } from '../../components/social/social.module';
 
@@ -11,7 +10,6 @@ import { SocialModule } from '../../components/social/social.module';
 @NgModule({
   imports: [
     CommonModule,
-    NgxEchartsModule,
     SocialModule,
   ],
   declarations: [

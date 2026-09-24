@@ -11,14 +11,14 @@ export const uqr: ProjectInterface = {
   isActive: true,
   id: 'uqr',
   name: 'UQR Educação',
-  coverImage: 'assets/imgs/projects/uqr/uqr-login.png',
+  coverImage: 'assets/imgs/projects/uqr/uqr-login.thumb.webp',
   developmentDate: '2022 ~ 2023',
   description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgreSQL)</b> with <b>AWS Cloud</b>.\n\n' +
     'White-label educational platform for the real estate market, deployed as <b>Universidade UQR</b> and <b>IQR Educação</b> — two branded tenants on the same architecture.\n\n' +
     'The platform includes course catalogs, video lessons, user progress tracking and a customized learning experience per tenant.',
   outcome: 'Platform deployed and actively used for online courses and educational content delivery across both brands.',
   imageUrls: [
-    'assets/imgs/projects/uqr/uqr-login.png',
+    'assets/imgs/projects/uqr/uqr-login.webp',
   ],
   links: [
     { title: 'Universidade UQR', link: 'https://www.universidadeuqr.com.br/' },

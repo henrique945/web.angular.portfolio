@@ -37,9 +37,9 @@ import { tintim } from './projects/tintim';
 //#endregion
 
 export const projects: ProjectInterface[] = [
+  bolaoUol,
   icanotes,
   eclub,
-  bolaoUol,
   uqr,
   ecologicatech,
   ncursos,

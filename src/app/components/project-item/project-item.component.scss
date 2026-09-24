@@ -1,3 +1,9 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .project {
   position: relative;
   width: 100%;
@@ -11,6 +17,12 @@
   overflow: hidden;
   box-shadow: 0 4px 9px #445964;
   border-radius: 10px;
+  color: white;
+  text-decoration: none;
+
+  &.featured {
+    height: 100%;
+  }
 
   .gradient {
     z-index: 5;
@@ -18,6 +30,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     height: 100%;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(19, 24, 28, 0.60) 95%);
@@ -29,15 +43,39 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  strong {
+  .content {
     z-index: 10;
     position: relative;
+    width: 100%;
+    padding: 1rem;
     color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
+
+    span {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    strong {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    p {
+      display: none;
+      margin: 0.5rem auto 0;
+      max-width: 34rem;
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid #101820;
+    outline-offset: 4px;
   }
 }

@@ -1,6 +1,22 @@
-<div class="project" [routerLink]="'/project/' + project.id">
-  <img [src]="project.coverImage" alt="Capa">
+<a class="project"
+   [class.featured]="project.featured"
+   [class.horizontal]="project.orientation === orientation.HORIZONTAL"
+   [class.vertical]="project.orientation === orientation.VERTICAL"
+   [routerLink]="['/project', project.id]">
+  <img [src]="project.coverImage"
+       [alt]="project.name + ' project preview'"
+       loading="lazy"
+       decoding="async"
+       [attr.width]="project.orientation === orientation.VERTICAL ? 540 : 960"
+       [attr.height]="project.orientation === orientation.VERTICAL ? 960 : 480">
   <div class="gradient"></div>
-
-  <strong>{{ project.name }}</strong>
-</div>
+  <div class="content">
+    @if (project.role) {
+      <span>{{ project.role }}</span>
+    }
+    <strong>{{ project.name }}</strong>
+    @if (project.summary) {
+      <p>{{ project.summary }}</p>
+    }
+  </div>
+</a>

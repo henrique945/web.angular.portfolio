@@ -6,12 +6,15 @@ import { PositionInterface } from '../../models/interfaces/position.interface';
 
 export const icanotes: PositionInterface = {
   isActive: true,
-  name: 'Senior Software Engineer at ICANotes (Sep 2023 – Present)',
-  description: 'ICANotes, a US behavioral healthcare EHR SaaS platform, where I contribute to:\n\n' +
-    '• Enhancing behavioral health Electronic Health Records (EHR), streamlining note-taking for therapists, psychiatrists and psychologists.\n\n' +
-    '• Working on billing and insurance workflows, including Electronic Remittance Advice (ERA) processing for American insurance companies.\n\n' +
-    '• Building and maintaining features with TypeScript, Angular, NestJS, Node.js, MySQL and AWS.\n\n' +
-    '• Collaborating remotely with US stakeholders, participating in architecture discussions and code reviews.',
+  role: 'Senior Software Engineer',
+  company: 'ICANotes',
+  period: 'Sep 2023 – Present',
+  summary: 'US behavioral healthcare EHR SaaS platform.',
+  achievements: [
+    'Build billing, insurance and payment workflows used by behavioral health practices across the US.',
+    'Develop ERA processing and revenue-cycle features with Angular, NestJS, Node.js, MySQL and AWS.',
+    'Collaborate remotely with US stakeholders on architecture decisions and code reviews.',
+  ],
   backgroundColor: 'var(--secondary-color)',
   position: 1,
 };

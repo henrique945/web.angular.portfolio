@@ -1,65 +1,34 @@
-//#region Imports
-
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SimpleModalService } from 'ngx-simple-modal';
-import { Observable, Subscription } from 'rxjs';
-import { ContactModalComponent } from './modals/contact-modal/contact-modal.component';
-import { ImageZoomModalComponent } from './modals/image-zoom-modal/image-zoom-modal.component';
-
-//#endregion
+import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnDestroy {
-
-  //#region Constructor
+  public activeModal: 'contact' | 'image' | null = null;
+  public imageSrc: string = '';
+  private readonly paramSubscription: Subscription;
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
-    private readonly modal: SimpleModalService,
   ) {
     this.paramSubscription = this.route.queryParams.subscribe(param => {
-      if (!param || !param['modal'])
-        return;
-
-      const query: string = param['modal'];
-      if (query === 'contact')
-        this.modalObservable = this.modal.addModal(ContactModalComponent);
-      else if (query.includes('img'))
-        this.modalObservable = this.modal.addModal(ImageZoomModalComponent, {
-          src: query.split('|')[1],
-        });
-
-      this.modalSubscription = this.modalObservable.subscribe(_ => {
-        this.router.navigate([], { queryParams: {} });
-      });
+      const query = String(param['modal'] || '');
+      this.activeModal = query === 'contact' ? 'contact' : query.startsWith('img|') ? 'image' : null;
+      this.imageSrc = this.activeModal === 'image' ? query.slice(4) : '';
     });
   }
 
-  //#endregion
-
-  //#region Private Properties
-
-  public paramSubscription: Subscription;
-
-  public modalObservable: Observable<any> = new Observable<any>();
-
-  public modalSubscription!: Subscription;
-
-  //#endregion
-
-  //#region Public Functions
-
-  public ngOnDestroy(): void {
-    this.paramSubscription?.unsubscribe();
-    this.modalSubscription?.unsubscribe();
+  public closeModal(): void {
+    void this.router.navigate([], { queryParams: {}, replaceUrl: true });
   }
 
-  //#endregion
-
+  public ngOnDestroy(): void {
+    this.paramSubscription.unsubscribe();
+  }
 }

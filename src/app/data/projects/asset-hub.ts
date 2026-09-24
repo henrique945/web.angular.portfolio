@@ -11,7 +11,7 @@ export const assetHub: ProjectInterface = {
   isActive: true,
   id: 'assetHub',
   name: 'Asset Hub',
-  coverImage: 'assets/imgs/projects/hub/hub1.PNG',
+  coverImage: 'assets/imgs/projects/hub/hub1.thumb.webp',
   developmentDate: '08/08/2022 ~ 04/12/2022',
   description: 'Developed in <b>React (Typescript JSX)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens university authentication system</b>.\n\n' +
     'In the <b>Asset Hub</b>, the sectors of the company <b>Facens</b> can create and share their <b>projects</b> and <b>resources</b> among their users, all <b>filtered by tags and smart searches</b>.\n\n' +
@@ -19,9 +19,9 @@ export const assetHub: ProjectInterface = {
     'The <b>3d models can be viewed within the website</b>, without having to download them.\n',
   outcome: 'Project widely used internally and with positive feedback regarding the ease and practicality of searching for resources.',
   imageUrls: [
-    'assets/imgs/projects/hub/hub1.PNG',
-    'assets/imgs/projects/hub/hub2.PNG',
-    'assets/imgs/projects/hub/hub3.PNG',
+    'assets/imgs/projects/hub/hub1.webp',
+    'assets/imgs/projects/hub/hub2.webp',
+    'assets/imgs/projects/hub/hub3.webp',
   ],
   links: [
     { title: 'Site', link: 'https://acontece-facens.ligafacens.com/' },

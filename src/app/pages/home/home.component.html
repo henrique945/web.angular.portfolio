@@ -1,86 +1,102 @@
-<button (click)="topFunction()" id="toTopBtn" class="toTopButton">
-  <img src="assets/imgs/arrow-up.svg" alt="Para o topo">
+<button (click)="topFunction()" id="toTopBtn" class="toTopButton" type="button" aria-label="Back to top">
+  <img src="assets/imgs/arrow-up.svg" alt="">
 </button>
 
-<div id="home" class="home">
-  <img class="code" src="assets/imgs/qrcode.png" alt="Qr Code">
-
+<section id="home" class="home" aria-labelledby="hero-title">
   <div class="me">
     <div>
-      <span>Hello,</span>
-      <h1>I am passionate about programming and I'd love to develop solutions to your problems</h1>
-      <span>Welcome to my portfolio</span>
+      <p class="eyebrow">Hello, I'm Henrique Rodrigues</p>
+      <h1 id="hero-title">Senior Full-Stack Engineer <span>Angular / React · Node.js · AWS</span></h1>
+      <p class="lead">I build reliable cloud products for healthcare, media and education, combining hands-on engineering with technical leadership.</p>
+      <ul class="proof" aria-label="Career highlights">
+        <li><strong>7+ years</strong> in production software</li>
+        <li><strong>40+ products</strong> delivered</li>
+        <li><strong>20+ engineers</strong> led and mentored</li>
+      </ul>
+      <div class="actions">
+        <a class="primary" href="#featured-projects">View selected work</a>
+        <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>Download résumé</a>
+        <button type="button" (click)="openContactModal()">Contact</button>
+      </div>
     </div>
-
     <app-social></app-social>
   </div>
 
-  <div class="about">
-    <p>
-      I'm <b>Henrique Rodrigues</b>, a Computer Engineering graduate from Facens, and a <b>Senior Software Engineer | AWS | Full Stack</b> with <b>7+ years</b> of experience building scalable web apps and cloud-native systems.
-      Throughout my career, I've demonstrated <b>leadership</b> prowess by spearheading teams of over <b>20 developers</b>,
-      successfully delivering more than <b class="redirect" (click)="navigateTo('projects')">40 projects</b> across
-      healthcare, education, government and media.<br><br>
-      Currently at <b>ICANotes</b>, a US behavioral healthcare EHR platform, where I build <b>billing and payment workflows</b>
-      for therapists and clinics nationwide.
-    </p>
-  </div>
-</div>
-
-
-<div id="exp" class="experience">
-  <div class="header">
-    <p>My journey is always<br>developing, learning and innovating</p>
-    <div>
-      <h2>Professional</h2>
-      <h2>Experience</h2>
+  <div class="intro-aside">
+    <div class="about">
+      <p class="eyebrow">Based in Brazil · UTC−3 · Working remotely worldwide</p>
+      <h2>Engineering with product context</h2>
+      <p>I turn complex workflows into maintainable products. My recent work includes billing and insurance systems for a US behavioral healthcare platform, while earlier roles covered high-traffic sports products, multi-tenant applications and technical leadership.</p>
+      <p>I care about pragmatic architecture, accessible interfaces, observable systems and teams that share knowledge.</p>
     </div>
+
+    <a class="code" href="https://wa.me/5511971908333" target="_blank" rel="noopener noreferrer" aria-label="Scan or click to contact Henrique on WhatsApp">
+      <img src="assets/imgs/qrcode.webp" alt="WhatsApp QR code" width="592" height="659">
+      <span>Scan or click to chat</span>
+    </a>
+  </div>
+</section>
+
+<section id="exp" class="experience" aria-labelledby="experience-title">
+  <div class="section-header align-right">
+    <p>Building, learning and leading through real product challenges.</p>
+    <h2 id="experience-title">Professional<br><span>Experience</span></h2>
   </div>
 
   <div class="positions">
-    <ng-container *ngFor="let position of listPositions; let i = index">
-      <div class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
-        <h3>{{ position.name }}</h3>
-        <p [innerHTML]="position.description"></p>
-      </div>
-    </ng-container>
+    @for (position of listPositions; track position; let i = $index) {
+      <article class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
+        <p class="period">{{ position.period }}</p>
+        <h3>{{ position.role }}</h3>
+        <strong>{{ position.company }}</strong>
+        <p>{{ position.summary }}</p>
+        <ul>
+          @for (achievement of position.achievements; track achievement) {
+            <li>{{ achievement }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </div>
+</section>
+
+<section id="projects" class="projects" aria-labelledby="portfolio-title">
+  <div class="section-header">
+    <h2 id="portfolio-title"><span>Selected</span><br>Work</h2>
+    <p>Case studies selected for product impact, scale and technical ownership.</p>
   </div>
 
-  <div class="quote">
-    <img src="assets/imgs/quote.svg" alt="Frase">
-    <p>
-      "The <b>illiterate of the 21st century</b> will not be those who cannot <b>read and write</b>, but those who
-      cannot <b>learn, unlearn, and relearn</b>"
-    </p>
-    <strong>~ Alvin Toffler</strong>
-  </div>
-</div>
-
-<div id="projects" class="projects">
-  <div class="header">
-    <div>
-      <h2>My</h2>
-      <h2>Portfolio</h2>
-    </div>
-    <p>These are some of the jobs and <br>projects I've developed</p>
+  <div id="featured-projects" class="featured-list">
+    @for (project of featuredProjects; track project) {
+      <article class="featured-project" [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL" [class.vertical]="project.orientation === projectOrientation.VERTICAL">
+        <app-project-item [project]="project"></app-project-item>
+        <ul aria-label="Project outcomes">
+          @for (metric of project.metrics; track metric) {
+            <li>{{ metric }}</li>
+          }
+        </ul>
+      </article>
+    }
   </div>
 
-  <div class="tags">
-    <ng-container *ngFor="let tag of listTags">
-      <div class="tag" [class.active]="currentTag === tag" (click)="filterProjectByTag(tag)">
-        <span>{{ tag }}</span>
-      </div>
-    </ng-container>
+  <div class="archive-header">
+    <h2>More projects</h2>
+    <p>Explore additional products by platform.</p>
   </div>
 
-  <div class="list">
-    <ng-container *ngFor="let project of listProjectsAux">
-      <div class="project"
-           [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL"
-           [class.vertical]="project.orientation === projectOrientation.VERTICAL"
-      >
+  <div class="tags" aria-label="Filter projects">
+    @for (tag of listTags; track tag) {
+      <button type="button" class="tag" [class.active]="currentTag === tag" [attr.aria-pressed]="currentTag === tag" (click)="filterProjectByTag(tag)">
+        {{ tag }}
+      </button>
+    }
+  </div>
+
+  <div class="list" aria-live="polite">
+    @for (project of listProjectsAux; track project) {
+      <div class="project" [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL" [class.vertical]="project.orientation === projectOrientation.VERTICAL">
         <app-project-item [project]="project"></app-project-item>
       </div>
-    </ng-container>
+    }
   </div>
-</div>
+</section>

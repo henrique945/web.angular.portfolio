@@ -20,4 +20,11 @@ export interface ProjectInterface {
   tags: ProjectTagsEnum[];
   techs: TechEnum[];
   orientation: OrientationEnum;
+  summary?: string;
+  role?: string;
+  contributions?: string[];
+  metrics?: string[];
+  featured?: boolean;
+  seoDescription?: string;
+  socialImage?: string;
 }

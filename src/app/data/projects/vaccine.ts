@@ -11,7 +11,7 @@ export const vaccine: ProjectInterface = {
   isActive: true,
   id: 'vaccine',
   name: 'Vacina Votorantim',
-  coverImage: 'assets/imgs/projects/vaccine/vaccine4.PNG',
+  coverImage: 'assets/imgs/projects/vaccine/vaccine4.thumb.webp',
   developmentDate: '24/03/2021 ~ 20/05/2021',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> as a <b>PWA</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
     '<b>PWA</b> developed for the city of <b>Votorantim - SP, Brazil to schedule the covid vaccine</b>.\n\n' +
@@ -19,12 +19,12 @@ export const vaccine: ProjectInterface = {
     'The <b>Database</b> accumulated more than <b>100gb of more than 65k users information</b> (car license, user photo and national ID card).\n',
   outcome: 'The software was widely and extensively used, and served more than half of the city\'s population (more than 65k inhabitants).',
   imageUrls: [
-    'assets/imgs/projects/vaccine/vaccine1.PNG',
-    'assets/imgs/projects/vaccine/vaccine2.PNG',
-    'assets/imgs/projects/vaccine/vaccine3.PNG',
-    'assets/imgs/projects/vaccine/vaccine4.PNG',
-    'assets/imgs/projects/vaccine/vaccine5.PNG',
-    'assets/imgs/projects/vaccine/vaccine6.PNG',
+    'assets/imgs/projects/vaccine/vaccine1.webp',
+    'assets/imgs/projects/vaccine/vaccine2.webp',
+    'assets/imgs/projects/vaccine/vaccine3.webp',
+    'assets/imgs/projects/vaccine/vaccine4.webp',
+    'assets/imgs/projects/vaccine/vaccine5.webp',
+    'assets/imgs/projects/vaccine/vaccine6.webp',
   ],
   links: [
     { title: 'Site', link: 'https://site.vacina-votorantim.ligafacens.com/' },

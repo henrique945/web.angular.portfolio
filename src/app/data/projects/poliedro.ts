@@ -11,20 +11,20 @@ export const poliedro: ProjectInterface = {
   isActive: true,
   id: 'poliedro',
   name: 'Poliedro P+ Kids',
-  coverImage: 'assets/imgs/projects/poliedro/poliedro6.png',
+  coverImage: 'assets/imgs/projects/poliedro/poliedro6.thumb.webp',
   developmentDate: '14/06/2021 ~ 17/10/2021',
   description: 'Developed in <b>NestJs (NodeJs + PostgresSQL + MongoDB)</b> with <b>Poliedro APIs</b>.\n\n' +
     'App for <b>Poliedro students and guardians</b> that allows access to school information such as <b>schedule</b>, <b>gradebook</b>, <b>messages</b>, <b>tasks</b>, <b>resolutions of material</b> and <b>performance in simulations, with feedback and performance analysis</b>.\n\n' +
     'It is organized, easy and practical and has <b>more than 100,000 accesses</b>.',
   outcome: 'Project was a success with more than 100,000 downloads in the store.',
   imageUrls: [
-    'assets/imgs/projects/poliedro/poliedro1.png',
-    'assets/imgs/projects/poliedro/poliedro2.png',
-    'assets/imgs/projects/poliedro/poliedro3.png',
-    'assets/imgs/projects/poliedro/poliedro4.png',
-    'assets/imgs/projects/poliedro/poliedro5.png',
-    'assets/imgs/projects/poliedro/poliedro6.png',
-    'assets/imgs/projects/poliedro/poliedro7.png',
+    'assets/imgs/projects/poliedro/poliedro1.webp',
+    'assets/imgs/projects/poliedro/poliedro2.webp',
+    'assets/imgs/projects/poliedro/poliedro3.webp',
+    'assets/imgs/projects/poliedro/poliedro4.webp',
+    'assets/imgs/projects/poliedro/poliedro5.webp',
+    'assets/imgs/projects/poliedro/poliedro6.webp',
+    'assets/imgs/projects/poliedro/poliedro7.webp',
   ],
   links: [
     { title: 'Play Store', link: 'https://play.google.com/store/apps/details?id=com.daitangroup.poliedro.activitymanager' },

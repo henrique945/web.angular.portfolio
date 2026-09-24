@@ -11,7 +11,7 @@ export const iquot: ProjectInterface = {
   isActive: true,
   id: 'iquot',
   name: 'Iquot',
-  coverImage: 'assets/imgs/projects/iquot/iquot7.PNG',
+  coverImage: 'assets/imgs/projects/iquot/iquot7.thumb.webp',
   developmentDate: '17/01/2022 ~ 14/03/2022',
   description: 'Developed in <b>NestJs (NodeJs + PostgresQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Aws SNS for SMS messages</b> and <b>Google Maps API (Geocoding)</b>.\n\n' +
     'The iquot system offers a new way to request a quote for materials for your work in a practical and quick way.\n\n' +
@@ -20,13 +20,13 @@ export const iquot: ProjectInterface = {
     'We also use another <b>routine to notify users</b> when a new quote is added. And, when the budget is accepted, everyone involved receives an <b>SMS notification on their mobile (Aws SNS)</b>.\n',
   outcome: 'Despite being interesting and the various technologies used, the system did not have great adherence to the public.',
   imageUrls: [
-    'assets/imgs/projects/iquot/iquot1.PNG',
-    'assets/imgs/projects/iquot/iquot2.png',
-    'assets/imgs/projects/iquot/iquot3.png',
-    'assets/imgs/projects/iquot/iquot4.png',
-    'assets/imgs/projects/iquot/iquot5.png',
-    'assets/imgs/projects/iquot/iquot6.PNG',
-    'assets/imgs/projects/iquot/iquot7.PNG',
+    'assets/imgs/projects/iquot/iquot1.webp',
+    'assets/imgs/projects/iquot/iquot2.webp',
+    'assets/imgs/projects/iquot/iquot3.webp',
+    'assets/imgs/projects/iquot/iquot4.webp',
+    'assets/imgs/projects/iquot/iquot5.webp',
+    'assets/imgs/projects/iquot/iquot6.webp',
+    'assets/imgs/projects/iquot/iquot7.webp',
   ],
   links: [
     { title: 'Play Store', link: 'https://play.google.com/store/apps/details?id=com.liga.android.iquot' },

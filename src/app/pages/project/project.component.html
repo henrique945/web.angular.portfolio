@@ -1,55 +1,75 @@
-<button (click)="topFunction()" id="toTopBtn" class="toTopButton">
-  <img src="assets/imgs/arrow-up.svg" alt="Para o topo">
+<button (click)="topFunction()" id="toTopBtn" class="toTopButton" type="button" aria-label="Back to top">
+  <img src="assets/imgs/arrow-up.svg" alt="">
 </button>
 
-<div class="project-detail">
-  <div class="header">
-    <img (click)="openZoom(project.coverImage)" [src]="project.coverImage" alt="Cape">
+<article class="project-detail">
+  <header class="header" [class.header--vertical]="project.orientation === verticalOrientation">
+    <button type="button" class="cover" [class.cover--vertical]="project.orientation === verticalOrientation" (click)="openZoom(project.coverImage)" [attr.aria-label]="'Open a larger preview of ' + project.name">
+      <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === verticalOrientation ? 540 : 960" [attr.height]="project.orientation === verticalOrientation ? 960 : 480" fetchpriority="high">
+    </button>
     <div class="info">
+      @if (project.role) {
+        <p class="eyebrow">{{ project.role }}</p>
+      }
       <h1>{{ project.name }}</h1>
-      <p [innerHTML]="project.description"></p>
+      @if (project.summary) {
+        <p class="summary">{{ project.summary }}</p>
+      }
+      <div class="legacy-description" [innerHTML]="project.description"></div>
     </div>
-  </div>
+  </header>
 
-  <div class="text">
-    <h2>Outcome</h2>
+  @if (project.contributions?.length) {
+    <section class="case-study" aria-labelledby="contribution-title">
+      <div>
+        <h2 id="contribution-title">My contribution</h2>
+        <ul>@for (contribution of project.contributions; track contribution) {
+          <li>{{ contribution }}</li>
+        }</ul>
+      </div>
+      @if (project.metrics?.length) {
+        <div>
+          <h2>Evidence</h2>
+          <ul class="metrics">@for (metric of project.metrics; track metric) {
+            <li>{{ metric }}</li>
+          }</ul>
+        </div>
+      }
+    </section>
+  }
+
+  <section class="text" aria-labelledby="outcome-title">
+    <h2 id="outcome-title">Outcome</h2>
     <p>{{ project.outcome }}</p>
 
-    <div class="text--container">
-      <div>
-        <h2>Development date</h2>
-        <p>{{ project.developmentDate }}</p>
-      </div>
-      <div>
-        <h2>Tags</h2>
-        <p>{{ tags }}</p>
-      </div>
-      <div class="block">
-        <h2>Main Techs</h2>
-        <p>{{ techs }}</p>
-      </div>
-      <div>
-        <h2>Links</h2>
-        <p>
-          <ng-container *ngFor="let link of project.links; let i = index">
-            <ng-container *ngIf="i !== 0"> |</ng-container>
-            <a class="link" [href]="link.link" target="_blank">{{ link.title }}</a>
-          </ng-container>
-        </p>
-      </div>
-    </div>
-  </div>
+    <dl class="facts">
+      <div><dt>Development date</dt><dd>{{ project.developmentDate }}</dd></div>
+      <div><dt>Tags</dt><dd>{{ tags }}</dd></div>
+      <div><dt>Main technologies</dt><dd>{{ techs }}</dd></div>
+      @if (project.links.length) {
+        <div>
+          <dt>Links</dt>
+          <dd>@for (link of project.links; track link) {
+            <a class="link" [href]="link.link" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+          }</dd>
+        </div>
+      }
+    </dl>
+  </section>
 
-  <div class="images">
-    <h2>Images</h2>
+  <section class="images" aria-labelledby="images-title">
+    <h2 id="images-title">Project gallery</h2>
     <div class="container">
-      <ng-container *ngFor="let image of project.imageUrls">
-        <img (click)="openZoom(image)" [src]="image" alt="Image">
-      </ng-container>
+      @for (image of project.imageUrls; track image; let i = $index) {
+        <button type="button" class="gallery-item" [class.gallery-item--portrait]="portraitGalleryImages.has(image)" (click)="openZoom(image)" [attr.aria-label]="'Open ' + project.name + ' screenshot ' + (i + 1)">
+          <img [src]="image" [alt]="project.name + ' screenshot ' + (i + 1)" (load)="setGalleryImageOrientation(image, $event)" loading="lazy" decoding="async" width="640" height="360">
+        </button>
+      }
     </div>
-  </div>
+  </section>
 
-  <div class="contact-me" (click)="openContactModal()">
-    <p>Let's talk - Wanna get in touch or talk about a project? Feel free to <strong>contact me</strong>.</p>
+  <div class="contact-me">
+    <p>Interested in the way I approach product engineering?</p>
+    <button type="button" (click)="openContactModal()">Let's talk</button>
   </div>
-</div>
+</article>

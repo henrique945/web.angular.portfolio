@@ -2,15 +2,14 @@
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { SimpleModalService } from 'ngx-simple-modal';
-import { ContactModalComponent } from '../../modals/contact-modal/contact-modal.component';
 
 //#endregion
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    standalone: false
 })
 export class NavbarComponent {
 
@@ -35,7 +34,7 @@ export class NavbarComponent {
   }
 
   public openContactModal(): void {
-    this.router.navigate([], { queryParams: { modal: 'contact' } });
+    void this.router.navigate([], { queryParams: { modal: 'contact' } });
   }
 
   //#endregion

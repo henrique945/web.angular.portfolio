@@ -1,7 +1,10 @@
 export interface PositionInterface {
   isActive: boolean;
-  name: string;
-  description: string;
+  role: string;
+  company: string;
+  period: string;
+  summary: string;
+  achievements: string[];
   backgroundColor: string;
   position: number;
 }

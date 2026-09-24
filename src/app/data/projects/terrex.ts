@@ -11,7 +11,7 @@ export const terrex: ProjectInterface = {
   isActive: true,
   id: 'terrex',
   name: 'Terrex',
-  coverImage: 'assets/imgs/projects/terrex/terrex2.PNG',
+  coverImage: 'assets/imgs/projects/terrex/terrex2.thumb.webp',
   developmentDate: '04/07/2022 ~ 17/10/2022',
   description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>plugfield</b> and <b>foreca</b>.\n\n' +
     'Project where a <b>farmer delimits his land by GPS</b> or drawing on a map and chooses the <b>planting cycles</b> that will be planted, developed for <b>Tecnomyl (Brasil Distribuidora de Produtos Agrícolas Ltda)</b>.\n\n' +
@@ -19,15 +19,15 @@ export const terrex: ProjectInterface = {
     'In addition to a wonderful interface and several functionalities about your crop cycle and terrain, there is a <b>routine in the Aws (Event Bridge)</b> to periodically send notifications to the user about instructions necessary for your plantation to remain healthy.\n',
   outcome: 'Despite the different theme and excellent development of the project, the client decided to postpone its launch.',
   imageUrls: [
-    'assets/imgs/projects/terrex/terrex1.png',
-    'assets/imgs/projects/terrex/terrex2.PNG',
-    'assets/imgs/projects/terrex/terrex3.PNG',
-    'assets/imgs/projects/terrex/terrex4.PNG',
-    'assets/imgs/projects/terrex/terrex5.PNG',
-    'assets/imgs/projects/terrex/terrex6.PNG',
-    'assets/imgs/projects/terrex/terrex7.PNG',
-    'assets/imgs/projects/terrex/terrex8.PNG',
-    'assets/imgs/projects/terrex/terrex9.PNG',
+    'assets/imgs/projects/terrex/terrex1.webp',
+    'assets/imgs/projects/terrex/terrex2.webp',
+    'assets/imgs/projects/terrex/terrex3.webp',
+    'assets/imgs/projects/terrex/terrex4.webp',
+    'assets/imgs/projects/terrex/terrex5.webp',
+    'assets/imgs/projects/terrex/terrex6.webp',
+    'assets/imgs/projects/terrex/terrex7.webp',
+    'assets/imgs/projects/terrex/terrex8.webp',
+    'assets/imgs/projects/terrex/terrex9.webp',
   ],
   links: [
     { title: 'Plugfield', link: 'https://portal.plugfield.com.br/' },

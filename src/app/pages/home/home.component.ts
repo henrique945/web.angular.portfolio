@@ -1,90 +1,58 @@
-//#region Imports
 
-import { DOCUMENT } from '@angular/common';
-import { Component, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, DOCUMENT } from '@angular/core';
+import { Router } from '@angular/router';
 import { listPositions } from '../../data/positions';
 import { listProjects } from '../../data/projects';
 import { OrientationEnum } from '../../models/enums/orientation.enum';
 import { ProjectTagsEnum } from '../../models/enums/project-tags.enum';
 import { PositionInterface } from '../../models/interfaces/position.interface';
 import { ProjectInterface } from '../../models/interfaces/project.interface';
-
-//#endregion
+import { SeoService } from '../../seo.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: false
 })
-export class HomeComponent {
-
-  //#region Constructor
+export class HomeComponent implements OnInit {
+  public readonly listPositions: PositionInterface[] = listPositions;
+  public readonly listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
+  public readonly projectOrientation = OrientationEnum;
+  public readonly featuredProjects = listProjects.filter(project => project.featured);
+  public readonly archiveProjects = listProjects.filter(project => !project.featured);
+  public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
+  public listProjectsAux: ProjectInterface[] = this.archiveProjects;
 
   constructor(
-    @Inject(DOCUMENT)
-    private readonly doc: Document,
+    @Inject(DOCUMENT) private readonly document: Document,
+    private readonly router: Router,
+    private readonly seo: SeoService,
   ) {}
 
-  //#endregion
-
-  //#region Public Properties
-
-  public listPositions: PositionInterface[] = listPositions;
-
-  public listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
-
-  public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
-
-  public projectOrientation: typeof OrientationEnum = OrientationEnum;
-
-  public listProjects: ProjectInterface[] = listProjects;
-  public listProjectsAux: ProjectInterface[] = listProjects;
-
-  //#endregion
-
-  //#region Public Functions
+  public ngOnInit(): void {
+    this.seo.setHomeMetadata();
+  }
 
   public topFunction(): void {
-    this.doc.body.scrollTop = 0;
-    this.doc.documentElement.scrollTop = 0;
+    this.document.defaultView?.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   public filterProjectByTag(tag: ProjectTagsEnum): void {
     this.currentTag = tag;
-
-    if (tag === ProjectTagsEnum.ALL) {
-      this.listProjectsAux = this.listProjects;
-    }
-    else {
-      this.listProjectsAux = this.listProjects.filter(project => project.tags.includes(tag));
-    }
+    this.listProjectsAux = tag === ProjectTagsEnum.ALL
+      ? this.archiveProjects
+      : this.archiveProjects.filter(project => project.tags.includes(tag));
   }
 
-  public navigateTo(anchor: string): void {
-    this.doc.getElementById(anchor)?.scrollIntoView();
+  public openContactModal(): void {
+    void this.router.navigate([], { queryParams: { modal: 'contact' } });
   }
 
-  //#endregion
-
-  //#region Private Functions
-
-  @HostListener('window:scroll', ['$event'])
-  private onScroll(): void {
-    this.toggleOnTop();
+  @HostListener('window:scroll')
+  public onScroll(): void {
+    const button = this.document.getElementById('toTopBtn');
+    if (button)
+      button.style.display = (this.document.defaultView?.scrollY || 0) > 300 ? 'block' : 'none';
   }
-
-  private toggleOnTop(): void {
-    const toTopButton = this.doc.getElementById('toTopBtn');
-
-    if (!toTopButton)
-      return;
-
-    toTopButton.style.display = 'none';
-
-    if (this.doc.body.scrollTop > 100 || this.doc.documentElement.scrollTop > 100)
-      toTopButton.style.display = 'block';
-  }
-
-  //#endregion
-
 }
