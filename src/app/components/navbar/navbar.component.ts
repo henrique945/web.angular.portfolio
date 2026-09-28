@@ -93,8 +93,12 @@ export class NavbarComponent implements OnDestroy {
     this.lastFocusedElement = this.document.activeElement as HTMLElement | null;
     this.isMobileNavbarOpen = true;
     this.document.body.style.overflow = 'hidden';
-    this.document.defaultView?.requestAnimationFrame(() =>
-      this.drawer?.nativeElement.querySelector<HTMLElement>('button, a')?.focus());
+    const view = this.document.defaultView;
+    const focusFirstItem = () => this.drawer?.nativeElement.querySelector<HTMLElement>('button, a')?.focus();
+    if (typeof view?.requestAnimationFrame === 'function')
+      view.requestAnimationFrame(focusFirstItem);
+    else
+      focusFirstItem();
   }
 
   private updateActiveSection(): void {

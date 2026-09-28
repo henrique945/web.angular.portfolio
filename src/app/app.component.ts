@@ -41,9 +41,7 @@ export class AppComponent implements OnDestroy {
 
     this.subscriptions.add(this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-    ).subscribe(() => {
-      this.document.defaultView?.requestAnimationFrame(() => this.updateScrollTopVisibility());
-    }));
+    ).subscribe(() => this.scheduleScrollTopUpdate()));
   }
 
   @HostListener('window:scroll')
@@ -82,6 +80,14 @@ export class AppComponent implements OnDestroy {
 
   public ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+  }
+
+  private scheduleScrollTopUpdate(): void {
+    const view = this.document.defaultView;
+    if (typeof view?.requestAnimationFrame === 'function')
+      view.requestAnimationFrame(() => this.updateScrollTopVisibility());
+    else
+      this.updateScrollTopVisibility();
   }
 
   private updateScrollTopVisibility(): void {

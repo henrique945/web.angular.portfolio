@@ -47,7 +47,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.listProjectsAux = tag === ProjectTagsEnum.ALL
       ? this.archiveProjects
       : this.archiveProjects.filter(project => project.tags.includes(tag));
-    this.document.defaultView?.requestAnimationFrame(() => this.revealVisibleItems());
+    const view = this.document.defaultView;
+    if (typeof view?.requestAnimationFrame === 'function')
+      view.requestAnimationFrame(() => this.revealVisibleItems());
+    else
+      this.revealVisibleItems();
   }
 
   public openContactModal(): void {
