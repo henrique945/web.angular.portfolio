@@ -1,26 +1,43 @@
-<header class="navbar">
-  <a class="brand" routerLink="/" aria-label="Henrique Rodrigues, home"><img src="assets/imgs/code-icon.svg" alt="" width="123" height="102"> Henrique Rodrigues</a>
+<header class="nav" [class.is-scrolled]="isScrolled">
+  <div class="nav__inner">
+    <a class="nav__brand" routerLink="/" aria-label="Henrique Rodrigues, home">
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22"><path d="M9.4 6.2 4.6 12l4.8 5.8M14.6 6.2 19.4 12l-4.8 5.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+      <span>Henrique Rodrigues</span>
+    </a>
 
-  <nav class="menus" aria-label="Main navigation">
-    <a routerLink="/">Home</a>
-    <a routerLink="/" fragment="exp">Experience</a>
-    <a routerLink="/" fragment="projects">Projects</a>
-    <button type="button" (click)="openContactModal()">Contact</button>
-    <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a routerLink="/" [class.is-active]="activeSection === 'top'">Home</a>
+      <a routerLink="/" fragment="exp" [class.is-active]="activeSection === 'exp'">Experience</a>
+      <a routerLink="/" fragment="projects" [class.is-active]="activeSection === 'projects'">Projects</a>
+      <button type="button" class="nav__link" [class.is-active]="activeSection === 'contact'" (click)="openContactModal()">Contact</button>
+      <a class="nav__cv" href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
+    </nav>
+
+    <button type="button" class="nav__toggle" (click)="toggleMobileNavbar()" [attr.aria-expanded]="isMobileNavbarOpen" aria-controls="mobile-navigation" [attr.aria-label]="isMobileNavbarOpen ? 'Close navigation menu' : 'Open navigation menu'">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  @if (isMobileNavbarOpen) {
+    <div class="nav__scrim" (click)="closeMobileNavbar()"></div>
+  }
+  <nav #drawer id="mobile-navigation" class="drawer" [class.is-open]="isMobileNavbarOpen" aria-label="Mobile" [attr.aria-hidden]="!isMobileNavbarOpen">
+    <div class="drawer__head">
+      <span class="mono">Menu</span>
+      <button type="button" class="drawer__close" (click)="closeMobileNavbar()" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+      </button>
+    </div>
+    <ul class="drawer__list">
+      <li><span class="mono">01</span><a routerLink="/" (click)="closeMobileNavbar(false)">Home</a></li>
+      <li><span class="mono">02</span><a routerLink="/" fragment="exp" (click)="closeMobileNavbar(false)">Experience</a></li>
+      <li><span class="mono">03</span><a routerLink="/" fragment="projects" (click)="closeMobileNavbar(false)">Projects</a></li>
+      <li><span class="mono">04</span><button type="button" (click)="openContactModal()">Contact</button></li>
+      <li><span class="mono">05</span><a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>Download CV</a></li>
+    </ul>
+    <div class="drawer__foot mono">
+      <a href="mailto:henrique.rodrigues7@hotmail.com">henrique.rodrigues7&#64;hotmail.com</a>
+      <a href="https://wa.me/5511971908333" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
   </nav>
-
-  <button type="button" class="mobile icon-button" (click)="toggleMobileNavbar()" [attr.aria-expanded]="isMobileNavbarOpen" aria-controls="mobile-navigation" aria-label="Open navigation menu">
-    <img src="assets/imgs/menu.svg" alt="" width="24" height="24">
-  </button>
 </header>
-
-<div class="navbar--mobile--blank" [class.navbar--mobile--blank--open]="isMobileNavbarOpen" (click)="toggleMobileNavbar()"></div>
-
-<nav id="mobile-navigation" aria-label="Mobile navigation" class="navbar--mobile" [class.navbar--mobile--open]="isMobileNavbarOpen" [attr.aria-hidden]="!isMobileNavbarOpen">
-  <button type="button" (click)="toggleMobileNavbar()" class="close icon-button" aria-label="Close navigation menu"><img src="assets/imgs/close.svg" alt="" width="24" height="24"></button>
-  <a (click)="toggleMobileNavbar()" routerLink="/">Home</a>
-  <a (click)="toggleMobileNavbar()" routerLink="/" fragment="exp">Experience</a>
-  <a (click)="toggleMobileNavbar()" routerLink="/" fragment="projects">Projects</a>
-  <button type="button" (click)="toggleMobileNavbar(); openContactModal()">Contact</button>
-  <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
-</nav>

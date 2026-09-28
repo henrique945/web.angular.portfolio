@@ -11,11 +11,11 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     router = jasmine.createSpyObj<Router>('Router', ['navigate']);
     seo = jasmine.createSpyObj<SeoService>('SeoService', ['setHomeMetadata']);
-    component = new HomeComponent(document, router, seo);
+    component = new HomeComponent(document, 'browser', router, seo);
   });
 
   it('keeps the three strategic projects featured', () => {
-    expect(component.featuredProjects.map(project => project.id)).toEqual(['icanotes', 'eclub', 'bolao-uol']);
+    expect(component.featuredProjects.map(project => project.id)).toEqual(['bolao-uol', 'icanotes', 'eclub']);
   });
 
   it('filters only the secondary project archive', () => {

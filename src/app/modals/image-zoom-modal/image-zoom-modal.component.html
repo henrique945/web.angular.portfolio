@@ -1,11 +1,16 @@
-<div class="modal" (click)="onBackdropClick($event)">
-<section class="modal-content modal-image-zoom" role="dialog" aria-modal="true" aria-label="Project image preview">
-  <button #closeButton type="button" (click)="closeModal()" class="close icon-button" aria-label="Close image preview">
-    <img src="assets/imgs/close.svg" alt="">
-  </button>
-
-  <div class="image">
-    <img [src]="src" alt="Expanded project screenshot">
-  </div>
-</section>
+<div class="lightbox">
+  <div class="lightbox__scrim" (click)="closeModal()"></div>
+  <figure #dialog class="lightbox__stage" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button #closeButton class="lightbox__close" type="button" aria-label="Close image preview" (click)="closeModal()">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image" [disabled]="activeIndex === 0" (click)="previous()">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+    </button>
+    <img class="lightbox__img" [src]="source" [alt]="caption">
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image" [disabled]="activeIndex === sources.length - 1" (click)="next()">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+    </button>
+    <figcaption class="lightbox__caption mono">{{ caption }}</figcaption>
+  </figure>
 </div>

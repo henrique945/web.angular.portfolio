@@ -1,20 +1,49 @@
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<div id="app" class="app">
+<div class="app">
   <app-navbar></app-navbar>
 
   <main id="main-content" tabindex="-1">
     <router-outlet></router-outlet>
   </main>
 
-  <footer>
-    <span>Henrique Rodrigues · Senior Full-Stack Engineer</span>
-    <a href="mailto:henrique.rodrigues7@hotmail.com">Get in touch</a>
+  <button
+    type="button"
+    class="to-top"
+    [class.is-visible]="showScrollTop && !activeModal"
+    (click)="scrollToTop()"
+    [attr.tabindex]="showScrollTop && !activeModal ? null : -1"
+    [attr.aria-hidden]="showScrollTop && !activeModal ? null : true"
+    aria-label="Back to top">
+    <img src="assets/imgs/arrow-up.svg" alt="" width="26" height="28">
+  </button>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__id">
+        <p class="mono">Henrique Rodrigues</p>
+        <p class="footer__role">Senior Full-Stack Engineer · Angular / React · Node.js · AWS</p>
+      </div>
+      <nav class="footer__links" aria-label="Contact">
+        <a href="mailto:henrique.rodrigues7@hotmail.com">Email</a>
+        <a href="https://wa.me/5511971908333" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/henrique-rodrigues7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/henrique945" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>CV</a>
+      </nav>
+    </div>
+    <p class="footer__note mono">Based in Brazil · UTC−3 · Working remotely worldwide</p>
   </footer>
 
   @if (activeModal === 'contact') {
     <app-contact-modal (closed)="closeModal()"></app-contact-modal>
   }
-  @if (activeModal === 'image') {
-    <app-image-zoom-modal [src]="imageSrc" (closed)="closeModal()"></app-image-zoom-modal>
+  @if (activeModal === 'image' && imageSources.length) {
+    <app-image-zoom-modal
+      [sources]="imageSources"
+      [captions]="imageCaptions"
+      [activeIndex]="activeImageIndex"
+      (activeIndexChange)="selectImage($event)"
+      (closed)="closeModal()">
+    </app-image-zoom-modal>
   }
 </div>

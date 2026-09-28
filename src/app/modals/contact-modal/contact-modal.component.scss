@@ -1,24 +1,48 @@
+.modal { background: rgba(11, 18, 22, 0.88); }
+
+.modal-content {
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-overlay);
+}
+
+.modal-content .close {
+  z-index: 2;
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-xs);
+  background: var(--paper);
+
+  &:hover { border-color: var(--ink); background: var(--paper-2); }
+}
+
 .contact {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.9fr);
   align-items: stretch;
-  padding: 2.5rem;
-  color: var(--primary-color);
+  padding: clamp(28px, 5vw, 64px);
+  color: var(--ink);
 
   .left {
     display: flex;
     min-width: 0;
     align-items: center;
-    gap: 2rem;
-    padding-right: 3rem;
-    border-right: 1px solid rgba(68, 89, 100, 0.55);
+    gap: clamp(20px, 4vw, 40px);
+    padding-right: clamp(24px, 5vw, 56px);
+    border-right: 1px solid var(--line);
   }
 
   .profile {
-    width: 11rem;
-    height: 11rem;
-    flex: 0 0 11rem;
-    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    flex: 0 0 10rem;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
     object-fit: cover;
   }
 
@@ -28,46 +52,13 @@
     flex-direction: column;
     align-items: flex-start;
 
-    h2 {
-      max-width: 22rem;
-      margin: 0 0 0.5rem;
-      color: var(--secondary-color);
-      font-size: 1.6rem;
-    }
-
-    .availability {
-      margin: 0 0 1rem;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
-
-    dl {
-      display: grid;
-      gap: 0.6rem;
-      margin: 0 0 0.85rem;
-
-      div {
-        display: grid;
-        gap: 0.15rem;
-      }
-
-      dt {
-        color: var(--secondary-color);
-        font-weight: 900;
-      }
-
-      dd { margin: 0; }
-    }
-
-    > a {
-      max-width: 100%;
-      margin-bottom: 0.65rem;
-      color: var(--primary-color);
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
-
-    app-social { margin-top: 1.2rem; }
+    h2 { max-width: 22rem; margin: 0 0 10px; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    .availability { margin: 0 0 20px; color: var(--copper-deep); font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase; }
+    dl { display: grid; gap: 10px; margin: 0 0 18px; }
+    dt { color: var(--ink-muted); font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; }
+    dd { margin: 0; }
+    > a { margin-bottom: 8px; color: var(--copper-deep); overflow-wrap: anywhere; }
+    app-social { margin-top: 18px; }
   }
 
   .right {
@@ -75,119 +66,33 @@
     min-width: 0;
     flex-direction: column;
     justify-content: center;
-    padding-left: 3rem;
-
-    h2 {
-      margin: 0 0 1.5rem;
-      color: var(--secondary-color);
-      text-align: center;
-    }
+    padding-left: clamp(24px, 5vw, 56px);
+    h2 { margin: 0 0 24px; text-align: center; }
   }
 }
 
-.chart-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+.chart-row { display: flex; align-items: center; justify-content: center; gap: 28px; }
+.donut { display: grid; width: 12rem; height: 12rem; flex: 0 0 12rem; place-items: center; border-radius: 50%; }
+.donut-center { display: flex; width: 7rem; height: 7rem; align-items: center; justify-content: center; flex-direction: column; border-radius: 50%; background: var(--paper); }
+.donut-center strong { color: var(--ink); font-size: 2.7rem; line-height: 1; }
+.donut-center span { color: var(--ink-soft); font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; }
+.legend { display: grid; min-width: 9rem; gap: 10px; }
+.legend li { display: grid; grid-template-columns: .75rem 1fr auto; align-items: center; gap: 8px; }
+.swatch { width: .75rem; height: .75rem; border-radius: 50%; }
+.proof-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.proof-row > span { padding: 14px; border-left: 2px solid var(--copper); background: var(--paper-2); font-size: .85rem; }
+.proof-row strong { display: block; color: var(--ink); }
+
+@media (max-width: 1000px) {
+  .contact { grid-template-columns: 1fr; }
+  .contact .left { padding: 0 0 28px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .contact .right { padding: 28px 0 0; }
 }
 
-.donut {
-  display: grid;
-  width: 13rem;
-  height: 13rem;
-  flex: 0 0 13rem;
-  place-items: center;
-  border-radius: 50%;
-
-  &-center {
-    display: flex;
-    width: 7.5rem;
-    height: 7.5rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 50%;
-    background: white;
-
-    strong {
-      color: var(--secondary-color);
-      font-size: 2.7rem;
-      line-height: 1;
-    }
-
-    span { font-weight: 700; }
-  }
-}
-
-.legend {
-  display: grid;
-  min-width: 9rem;
-  gap: 0.65rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  li {
-    display: grid;
-    grid-template-columns: 0.75rem 1fr auto;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .swatch {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-  }
-}
-
-.proof-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-
-  > span {
-    padding: 0.75rem;
-    border-left: 3px solid var(--primary-color);
-    background: #f3f5f6;
-    font-size: 0.85rem;
-  }
-
-  strong {
-    display: block;
-    color: var(--secondary-color);
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .contact {
-    grid-template-columns: 1fr;
-
-    .left {
-      padding: 0 0 2rem;
-      border-right: 0;
-      border-bottom: 1px solid rgba(68, 89, 100, 0.55);
-    }
-
-    .right { padding: 2rem 0 0; }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .contact {
-    padding: 3.5rem 1.25rem 1.5rem;
-
-    .left {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .info { align-items: center; }
-  }
-
+@media (max-width: 600px) {
+  .contact { padding: 64px 20px 24px; }
+  .contact .left { flex-direction: column; text-align: center; }
+  .contact .info { align-items: center; }
   .chart-row { flex-direction: column; }
   .proof-row { grid-template-columns: 1fr; }
 }

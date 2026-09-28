@@ -33,6 +33,7 @@ export class ContactModalComponent implements AfterViewInit, OnDestroy {
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
     this.previouslyFocusedElement = this.document.activeElement as HTMLElement | null;
+    this.document.body.style.overflow = 'hidden';
   }
 
   //#endregion
@@ -63,6 +64,7 @@ export class ContactModalComponent implements AfterViewInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
+    this.document.body.style.overflow = '';
     this.previouslyFocusedElement?.focus();
   }
 

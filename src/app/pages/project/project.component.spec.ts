@@ -7,7 +7,7 @@ describe('ProjectComponent', () => {
     const route = { snapshot: { params: { id: projectId } } } as unknown as ActivatedRoute;
     const router = jasmine.createSpyObj<Router>('Router', ['navigate', 'navigateByUrl']);
     const seo = jasmine.createSpyObj<SeoService>('SeoService', ['setProjectMetadata']);
-    return { component: new ProjectComponent(document, route, router, seo), router, seo };
+    return { component: new ProjectComponent(document, 'browser', route, router, seo), router, seo };
   }
 
   it('resolves a project and applies project metadata', () => {

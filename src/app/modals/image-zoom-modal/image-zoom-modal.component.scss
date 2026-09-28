@@ -1,11 +1,1 @@
-.image {
-  max-width: 95vw;
-  max-height: 95vh;
-
-  img {
-    display: block;
-    max-width: 95vw;
-    max-height: 95vh;
-    object-fit: contain;
-  }
-}
+:host { position: fixed; inset: 0; z-index: 200; }

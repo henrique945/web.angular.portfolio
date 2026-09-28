@@ -1,24 +1,19 @@
 .social {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 2rem;
-  }
+  gap: 8px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 
   a {
-    display: inline-flex;
-    width: 2rem;
-    height: 2rem;
-    align-items: center;
-    justify-content: center;
+    display: inline-grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: var(--r-xs);
+    transition: border-color var(--fast) var(--ease), background-color var(--fast) var(--ease), transform var(--fast) var(--ease);
   }
 
-  img {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    object-fit: contain;
-  }
+  a:hover { border-color: var(--ink); background: var(--paper-2); transform: translateY(-2px); }
+  img { width: 18px; height: 18px; object-fit: contain; opacity: .85; }
 }

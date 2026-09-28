@@ -1,102 +1,114 @@
-<button (click)="topFunction()" id="toTopBtn" class="toTopButton" type="button" aria-label="Back to top">
-  <img src="assets/imgs/arrow-up.svg" alt="">
-</button>
-
-<section id="home" class="home" aria-labelledby="hero-title">
-  <div class="me">
-    <div>
-      <p class="eyebrow">Hello, I'm Henrique Rodrigues</p>
-      <h1 id="hero-title">Senior Full-Stack Engineer <span>Angular / React · Node.js · AWS</span></h1>
-      <p class="lead">I build reliable cloud products for healthcare, media and education, combining hands-on engineering with technical leadership.</p>
-      <ul class="proof" aria-label="Career highlights">
-        <li><strong>7+ years</strong> in production software</li>
-        <li><strong>40+ products</strong> delivered</li>
-        <li><strong>20+ engineers</strong> led and mentored</li>
-      </ul>
-      <div class="actions">
-        <a class="primary" href="#featured-projects">View selected work</a>
-        <a href="assets/docs/Henrique_Rodrigues_CV.pdf" download>Download résumé</a>
-        <button type="button" (click)="openContactModal()">Contact</button>
-      </div>
+<section class="hero" id="top">
+  <div class="hero__intro reveal">
+    <p class="eyebrow">Hello, I'm Henrique Rodrigues</p>
+    <h1 class="display">Senior Full-Stack Engineer<span>Angular / React · Node.js · AWS</span></h1>
+    <p class="lead">I build reliable cloud products for healthcare, media and education, combining hands-on engineering with technical leadership.</p>
+    <ul class="proof">
+      <li><span class="proof__num mono">7+ years</span><span class="proof__label">in production software</span></li>
+      <li><span class="proof__num mono">40+ products</span><span class="proof__label">delivered</span></li>
+      <li><span class="proof__num mono">20+ engineers</span><span class="proof__label">led and mentored</span></li>
+    </ul>
+    <div class="actions">
+      <a class="btn btn--primary" href="#featured">View selected work</a>
+      <a class="btn" href="assets/docs/Henrique_Rodrigues_CV.pdf" download>Download résumé</a>
     </div>
     <app-social></app-social>
   </div>
 
-  <div class="intro-aside">
-    <div class="about">
+  <aside class="hero__aside reveal" id="contact">
+    <div class="note">
       <p class="eyebrow">Based in Brazil · UTC−3 · Working remotely worldwide</p>
-      <h2>Engineering with product context</h2>
+      <h2 class="title">Engineering with product context</h2>
       <p>I turn complex workflows into maintainable products. My recent work includes billing and insurance systems for a US behavioral healthcare platform, while earlier roles covered high-traffic sports products, multi-tenant applications and technical leadership.</p>
       <p>I care about pragmatic architecture, accessible interfaces, observable systems and teams that share knowledge.</p>
     </div>
+    <button class="chat" type="button" (click)="openContactModal()">
+      <img src="assets/imgs/qrcode.webp" alt="WhatsApp QR code" width="120" height="134">
+      <span class="mono">Open contact options</span>
+    </button>
+  </aside>
+</section>
 
-    <a class="code" href="https://wa.me/5511971908333" target="_blank" rel="noopener noreferrer" aria-label="Scan or click to contact Henrique on WhatsApp">
-      <img src="assets/imgs/qrcode.webp" alt="WhatsApp QR code" width="592" height="659">
-      <span>Scan or click to chat</span>
-    </a>
+<section class="band" id="exp">
+  <div class="wrap">
+    <header class="section-head section-head--right">
+      <p class="eyebrow">Building, learning and leading through real product challenges.</p>
+      <h2 class="headline">Professional Experience</h2>
+    </header>
+    <ol class="timeline">
+      @for (position of listPositions; track position.company) {
+        <li class="timeline__item reveal">
+          <p class="timeline__period mono">{{ position.period }}</p>
+          <div class="timeline__body">
+            <h3 class="title">{{ position.role }}</h3>
+            <p class="timeline__org mono">{{ position.company }}</p>
+            <p class="timeline__desc">{{ position.summary }}</p>
+            <ul class="timeline__list">
+              @for (achievement of position.achievements; track achievement) {
+                <li>{{ achievement }}</li>
+              }
+            </ul>
+          </div>
+        </li>
+      }
+    </ol>
   </div>
 </section>
 
-<section id="exp" class="experience" aria-labelledby="experience-title">
-  <div class="section-header align-right">
-    <p>Building, learning and leading through real product challenges.</p>
-    <h2 id="experience-title">Professional<br><span>Experience</span></h2>
-  </div>
+<section class="work" id="projects">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 class="headline">Selected Work</h2>
+      <p class="eyebrow">A focused selection of systems where product constraints, scale and engineering decisions mattered.</p>
+    </header>
 
-  <div class="positions">
-    @for (position of listPositions; track position; let i = $index) {
-      <article class="positions--card" [style.background]="position.backgroundColor" [class.lower]="i % 2 === 0">
-        <p class="period">{{ position.period }}</p>
-        <h3>{{ position.role }}</h3>
-        <strong>{{ position.company }}</strong>
-        <p>{{ position.summary }}</p>
-        <ul>
-          @for (achievement of position.achievements; track achievement) {
-            <li>{{ achievement }}</li>
-          }
-        </ul>
-      </article>
-    }
-  </div>
-</section>
+    <div class="featured" id="featured">
+      @for (project of featuredProjects; track project.id) {
+        <article class="feature reveal">
+          <a class="feature__media" [routerLink]="['/project', project.id]">
+            <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === projectOrientation.VERTICAL ? 540 : 960" [attr.height]="project.orientation === projectOrientation.VERTICAL ? 960 : 480" loading="lazy" decoding="async">
+          </a>
+          <div class="feature__body">
+            @if (project.role) { <p class="eyebrow">{{ project.role }}</p> }
+            <h3 class="title"><a [routerLink]="['/project', project.id]">{{ project.name }}</a></h3>
+            <p class="feature__desc">{{ project.summary }}</p>
+            @if (project.metrics?.length) {
+              <div class="chip-row">
+                @for (metric of project.metrics; track metric) { <span class="chip chip--static">{{ metric }}</span> }
+              </div>
+            }
+            <a class="link-more mono" [routerLink]="['/project', project.id]">Read case study<span aria-hidden="true"> →</span></a>
+          </div>
+        </article>
+      }
+    </div>
 
-<section id="projects" class="projects" aria-labelledby="portfolio-title">
-  <div class="section-header">
-    <h2 id="portfolio-title"><span>Selected</span><br>Work</h2>
-    <p>Case studies selected for product impact, scale and technical ownership.</p>
-  </div>
+    <header class="archive-head">
+      <h2 class="headline">Project Archive</h2>
+      <p class="eyebrow">More applications, platforms and experiments delivered across healthcare, education, media and industry.</p>
+    </header>
+    <div class="filters" aria-label="Filter projects">
+      @for (tag of listTags; track tag) {
+        <button type="button" class="chip" [class.is-active]="currentTag === tag" [attr.aria-pressed]="currentTag === tag" (click)="filterProjectByTag(tag)">{{ tag }}</button>
+      }
+    </div>
+    <p class="archive__count mono" aria-live="polite">{{ listProjectsAux.length }} {{ listProjectsAux.length === 1 ? 'project' : 'projects' }}</p>
 
-  <div id="featured-projects" class="featured-list">
-    @for (project of featuredProjects; track project) {
-      <article class="featured-project" [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL" [class.vertical]="project.orientation === projectOrientation.VERTICAL">
-        <app-project-item [project]="project"></app-project-item>
-        <ul aria-label="Project outcomes">
-          @for (metric of project.metrics; track metric) {
-            <li>{{ metric }}</li>
-          }
-        </ul>
-      </article>
-    }
-  </div>
-
-  <div class="archive-header">
-    <h2>More projects</h2>
-    <p>Explore additional products by platform.</p>
-  </div>
-
-  <div class="tags" aria-label="Filter projects">
-    @for (tag of listTags; track tag) {
-      <button type="button" class="tag" [class.active]="currentTag === tag" [attr.aria-pressed]="currentTag === tag" (click)="filterProjectByTag(tag)">
-        {{ tag }}
-      </button>
-    }
-  </div>
-
-  <div class="list" aria-live="polite">
-    @for (project of listProjectsAux; track project) {
-      <div class="project" [class.horizontal]="project.orientation === projectOrientation.HORIZONTAL" [class.vertical]="project.orientation === projectOrientation.VERTICAL">
-        <app-project-item [project]="project"></app-project-item>
-      </div>
-    }
+    <ul class="archive">
+      @for (project of listProjectsAux; track project.id; let index = $index) {
+        <li class="archive__item reveal">
+          <a class="pcard" [class.pcard--portrait]="project.orientation === projectOrientation.VERTICAL" [routerLink]="['/project', project.id]">
+            <span class="pcard__media">
+              <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === projectOrientation.VERTICAL ? 540 : 960" [attr.height]="project.orientation === projectOrientation.VERTICAL ? 960 : 480" loading="lazy" decoding="async">
+            </span>
+            <span class="pcard__body">
+              <span class="pcard__index mono">{{ (index + 1).toString().padStart(2, '0') }}</span>
+              <span class="pcard__name">{{ project.name }}</span>
+              <span class="pcard__meta mono">{{ projectTags(project) }}</span>
+            </span>
+          </a>
+        </li>
+      }
+    </ul>
   </div>
 </section>
