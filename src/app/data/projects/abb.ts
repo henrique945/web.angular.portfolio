@@ -13,10 +13,9 @@ export const abb: ProjectInterface = {
   name: 'ABB',
   coverImage: 'assets/imgs/projects/abb/abb1.thumb.webp',
   developmentDate: '06/12/2021 ~ 17/01/2022',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and accessing <b>AWS S3 with AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
-    'Site to download the most recent <b>Virtual Reality training</b> from the <b>multinational company ABB</b> that works in energy and automation technologies.\n\n' +
-    'It is possible to switch between 3 different languages (EN, ES, PT) and download the apk of approximately <b>1gb</b> to be played on the VR glasses using the <b>AWS S3</b> file container.\n',
-  outcome: 'Despite being simple, direct and functional, the site was widely used by ABB\'s internal team.',
+  description: 'An <b>Angular</b> portal for distributing ABB’s latest virtual-reality training package through <b>AWS Lambda and S3</b>.\n\n' +
+    'The portal supports English, Spanish and Portuguese and gives employees a direct way to download the approximately <b>1 GB</b> Android package used by the VR headset.',
+  outcome: 'Delivered a focused internal distribution channel for ABB’s virtual-reality training package.',
   imageUrls: [
     'assets/imgs/projects/abb/abb1.webp',
     'assets/imgs/projects/abb/abb2.webp',

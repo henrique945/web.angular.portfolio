@@ -16,7 +16,18 @@ describe('ProjectComponent', () => {
 
     expect(component.project.id).toBe('icanotes');
     expect(component.techs).toContain('Angular');
+    expect(component.engineeringImprovements.length).toBeGreaterThan(0);
+    expect(component.imageCaptions.length).toBe(component.project.imageUrls.length);
+    expect(component.coverCaption.length).toBeGreaterThan(0);
     expect(seo.setProjectMetadata).toHaveBeenCalledWith(component.project);
+  });
+
+  it('creates accessible caption fallbacks for legacy projects', () => {
+    const { component } = create('uqr');
+    component.ngOnInit();
+
+    expect(component.coverCaption).toBe(`${component.project.name} project overview`);
+    expect(component.imageCaptions[0]).toBe(`${component.project.name} product view 1`);
   });
 
   it('sends unknown projects to the not-found page', () => {

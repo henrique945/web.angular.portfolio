@@ -13,9 +13,9 @@ export const ncursos: ProjectInterface = {
   name: 'NCursos',
   coverImage: 'assets/imgs/projects/ncursos/ncursos1.thumb.webp',
   developmentDate: '16/08/2021 ~ 27/05/2022',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens university authentication system</b> and <b>Hotjar Analytics</b>.\n\n' +
-    '<b>NCursos</b> is a course platform focused on college students with several features for learning and creating content, like <b>classes</b> and <b>tracks</b>.\n',
-  outcome: 'The platform had average results, selling some of the registered courses and raising students.',
+  description: '<b>NCursos</b> is an online course platform for university students, built with <b>Angular, NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'It supports course and learning-track creation, integrates with Facens authentication and uses Hotjar to understand user behavior.',
+  outcome: 'The platform launched, generated course sales and enrolled students, although adoption remained moderate.',
   imageUrls: [
     'assets/imgs/projects/ncursos/ncursos1.webp',
     'assets/imgs/projects/ncursos/ncursos2.webp',

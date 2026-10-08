@@ -13,11 +13,9 @@ export const proton: ProjectInterface = {
   name: 'Proton',
   coverImage: 'assets/imgs/projects/proton/proton5.thumb.webp',
   developmentDate: '03/08/2020 ~ 05/07/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> as an <b>App</b> and a <b>PWA</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Apple and Facebook login</b> and with <b>support of RSS Feed</b>.\n\n' +
-    'App developed for the users to be able to navigate between their <b>news focused on the financial market</b> at the request of the client <b>Carol Paiffer (Shark Tank) - ATOM S/A</b>.\n\n' +
-    'The news was <b>dynamically updated by the Aws routine (Event Bridge)</b> based on <b>RSS feeds</b> from notifiers such as <b>BBC</b>, <b>Globo</b> and <b>Uol</b>.\n\n' +
-    'The user could read, comment, like and save the news for later.\n',
-  outcome: 'The app did not have much publicity and public adherence.',
+  description: '<b>Proton</b> is a financial-news app and PWA built for ATOM S/A with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>. It supports Apple and Facebook sign-in.\n\n' +
+    '<b>EventBridge</b> refreshes content from RSS feeds including BBC, Globo and UOL, and users can read, comment on, like and save articles.',
+  outcome: 'The app launched, but limited promotion constrained its public reach and adoption.',
   imageUrls: [
     'assets/imgs/projects/proton/proton1.webp',
     'assets/imgs/projects/proton/proton2.webp',

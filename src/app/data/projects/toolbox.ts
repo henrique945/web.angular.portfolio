@@ -13,10 +13,9 @@ export const toolbox: ProjectInterface = {
   name: 'Toolbox',
   coverImage: 'assets/imgs/projects/toolbox/toolbox2.thumb.webp',
   developmentDate: '21/01/2021 ~ 30/10/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens/Newton university authentication system</b> using <b>NgZorro</b>, <b>PrimeNg</b> and <b>Bootstrap</b>.\n\n' +
-    'App developed to <b>control events and internal reports</b> of your company, <b>sending photos</b>, <b>describing events</b> and <b>adding responsible teams to solve the problem</b>.\n\n' +
-    'With event system and <b>QRCode integration</b> showing information about the scanned occurrence.',
-  outcome: 'The result was very good and even today it is widely used within Facens and Newton.',
+  description: '<b>Toolbox</b> is an incident and internal-reporting platform for Facens and Newton, built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'Users document occurrences with descriptions and photos, assign responsible teams and retrieve event details through QR codes. The product integrates with both universities’ authentication systems.',
+  outcome: 'The platform continued to support internal workflows at Facens and Newton after delivery.',
   imageUrls: [
     'assets/imgs/projects/toolbox/toolbox1.webp',
     'assets/imgs/projects/toolbox/toolbox2.webp',

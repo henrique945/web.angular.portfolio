@@ -5,11 +5,12 @@
     </nav>
 
     <header class="detail__head" [class.is-vertical]="project.orientation === verticalOrientation">
-      <div class="detail__media">
-        <button type="button" class="detail__cover reveal" (click)="openZoom(0)" [attr.aria-label]="'Open a larger preview of ' + project.name">
-          <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === verticalOrientation ? 540 : 960" [attr.height]="project.orientation === verticalOrientation ? 960 : 480" fetchpriority="high">
+      <figure class="detail__media reveal">
+        <button type="button" class="detail__cover" (click)="openZoom(0)" [attr.aria-label]="'Open a larger preview: ' + coverCaption">
+          <img [src]="project.coverImage" [alt]="coverCaption" width="960" height="600" fetchpriority="high">
         </button>
-      </div>
+        <figcaption class="detail__caption mono">{{ coverCaption }}</figcaption>
+      </figure>
       <div class="detail__info reveal">
         @if (project.role) { <p class="eyebrow">{{ project.role }}</p> }
         <h1 class="display">{{ project.name }}</h1>
@@ -23,22 +24,47 @@
     </header>
   </div>
 
-  @if (project.contributions?.length) {
-    <section class="band band--case" aria-labelledby="contribution-title">
-      <div class="wrap case">
-        <div class="case__col">
-          <h2 id="contribution-title" class="headline">My contribution</h2>
-          <ul class="case__list">
-            @for (contribution of project.contributions; track contribution) { <li>{{ contribution }}</li> }
-          </ul>
-        </div>
-        @if (project.metrics?.length) {
-          <div class="case__col case__col--evidence">
-            <h2 class="headline">Evidence</h2>
-            <ul class="case__list case__list--metrics">
-              @for (metric of project.metrics; track metric) { <li>{{ metric }}</li> }
+  @if (hasCaseDetails) {
+    <section class="band band--case" aria-label="Case study details">
+      <div class="wrap case-study">
+        @if (challengeParagraphs.length) {
+          <section class="case-block case-block--wide" aria-labelledby="challenge-title">
+            <p class="eyebrow">Context</p>
+            <h2 id="challenge-title" class="headline">Challenge</h2>
+            <div class="case-block__copy">
+              @for (paragraph of challengeParagraphs; track paragraph) { <p>{{ paragraph }}</p> }
+            </div>
+          </section>
+        }
+
+        @if (engineeringImprovements.length) {
+          <section class="case-block" aria-labelledby="improvements-title">
+            <p class="eyebrow">Execution</p>
+            <h2 id="improvements-title" class="headline">Engineering improvements</h2>
+            <ul class="case__list">
+              @for (improvement of engineeringImprovements; track improvement) { <li>{{ improvement }}</li> }
             </ul>
-          </div>
+          </section>
+        }
+
+        @if (architectureDecisions.length) {
+          <section class="case-block" aria-labelledby="decisions-title">
+            <p class="eyebrow">Trade-offs</p>
+            <h2 id="decisions-title" class="headline">Architecture decisions</h2>
+            <ul class="case__list">
+              @for (decision of architectureDecisions; track decision) { <li>{{ decision }}</li> }
+            </ul>
+          </section>
+        }
+
+        @if (evidence.length) {
+          <section class="case-block case-block--evidence" aria-labelledby="evidence-title">
+            <p class="eyebrow">Measured and verified</p>
+            <h2 id="evidence-title" class="headline">Evidence</h2>
+            <ul class="case__list case__list--metrics">
+              @for (metric of evidence; track metric) { <li>{{ metric }}</li> }
+            </ul>
+          </section>
         }
       </div>
     </section>
@@ -46,6 +72,7 @@
 
   <div class="wrap">
     <section class="detail__outcome" aria-labelledby="outcome-title">
+      <p class="eyebrow">Delivered value</p>
       <h2 id="outcome-title" class="headline">Outcome</h2>
       <p class="lead">{{ project.outcome }}</p>
       <dl class="facts">
@@ -67,13 +94,19 @@
 
     @if (project.imageUrls.length) {
       <section class="detail__gallery" aria-labelledby="images-title">
-        <h2 id="images-title" class="headline">Project gallery</h2>
+        <header class="gallery__head">
+          <p class="eyebrow">Product views and engineering evidence</p>
+          <h2 id="images-title" class="headline">Project gallery</h2>
+        </header>
         <ul class="gallery">
           @for (image of project.imageUrls; track image; let index = $index) {
             <li>
-              <button type="button" class="gallery__item reveal" (click)="openZoom(index + 1)" [attr.aria-label]="'Open ' + project.name + ' screenshot ' + (index + 1)">
-                <img [src]="image" [alt]="project.name + ' screenshot ' + (index + 1)" loading="lazy" decoding="async">
-              </button>
+              <figure class="gallery__figure reveal">
+                <button type="button" class="gallery__item" (click)="openZoom(index + 1)" [attr.aria-label]="'Open a larger preview: ' + imageCaptions[index]">
+                  <img [src]="image" [alt]="imageCaptions[index]" loading="lazy" decoding="async">
+                </button>
+                <figcaption class="gallery__caption">{{ imageCaptions[index] }}</figcaption>
+              </figure>
             </li>
           }
         </ul>

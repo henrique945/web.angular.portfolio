@@ -13,10 +13,9 @@ export const novaAula: ProjectInterface = {
   name: 'Nova Aula',
   coverImage: 'assets/imgs/projects/nova-aula/novaaula4.thumb.webp',
   developmentDate: '27/05/2020 ~ 23/11/2020',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> as a <b>PWA</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and <b>NgZorro</b>.\n\n' +
-    'The project is a <b>teaching platform</b>, with courses, classes, a forum for users to exchange knowledge and a <b>chat based on Whatsapp</b>.\n\n' +
-    'It has features such as questions, notes and class progress.\n',
-  outcome: 'Completed but not used much in production.',
+  description: '<b>Nova Aula</b> is an education PWA built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>, with Ng Zorro for its administration interface.\n\n' +
+    'The platform includes courses and classes, a community forum, chat, questions, notes and class-progress tracking.',
+  outcome: 'The product was completed, but production adoption remained limited.',
   imageUrls: [
     'assets/imgs/projects/nova-aula/novaaula1.webp',
     'assets/imgs/projects/nova-aula/novaaula2.webp',

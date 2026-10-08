@@ -19,8 +19,17 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   public readonly listPositions: PositionInterface[] = listPositions;
   public readonly listTags: ProjectTagsEnum[] = Object.values(ProjectTagsEnum);
   public readonly projectOrientation = OrientationEnum;
-  public readonly featuredProjects = listProjects.filter(project => project.featured);
-  public readonly archiveProjects = listProjects.filter(project => !project.featured);
+  public readonly primaryProjects = this.selectProjects(
+    ['icanotes', 'controleaki', 'bolao-uol', 'eclub'],
+    'primary',
+  );
+  public readonly impactProjects = this.selectProjects(
+    ['poliedro', 'vaccine', 'checkinCampus'],
+    'impact',
+  );
+  public readonly featuredProjects = this.primaryProjects;
+  public readonly archiveProjects = listProjects.filter(project =>
+    !this.primaryProjects.includes(project) && !this.impactProjects.includes(project));
   public currentTag: ProjectTagsEnum = ProjectTagsEnum.ALL;
   public listProjectsAux: ProjectInterface[] = this.archiveProjects;
 
@@ -62,6 +71,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     return project.tags.join(', ');
   }
 
+  public projectSummary(project: ProjectInterface): string {
+    return project.summary || project.outcome;
+  }
+
   public ngOnDestroy(): void {
     this.revealObserver?.disconnect();
     this.document.documentElement.classList.remove('js');
@@ -96,5 +109,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private revealVisibleItems(): void {
     Array.from(this.document.querySelectorAll('.reveal')).forEach(element => element.classList.add('is-visible'));
+  }
+
+  private selectProjects(ids: string[], tier: ProjectInterface['featureTier']): ProjectInterface[] {
+    const explicitProjects = ids
+      .map(id => listProjects.find(project => project.id === id))
+      .filter((project): project is ProjectInterface => Boolean(project));
+    const additionalTierProjects = listProjects.filter(project =>
+      project.featureTier === tier && !explicitProjects.includes(project));
+
+    return [...explicitProjects, ...additionalTierProjects];
   }
 }

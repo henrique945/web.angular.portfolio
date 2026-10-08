@@ -33,29 +33,31 @@ import { villaFlora } from './projects/villa-flora';
 import { yesno } from './projects/yesno';
 import { zoo } from './projects/zoo';
 import { tintim } from './projects/tintim';
+import { controleAki } from './projects/controleaki';
 
 //#endregion
 
 export const projects: ProjectInterface[] = [
-  bolaoUol,
   icanotes,
+  controleAki,
+  bolaoUol,
   eclub,
+  poliedro,
+  vaccine,
+  checkinCampus,
   uqr,
   ecologicatech,
   ncursos,
   usina,
   abb,
-  poliedro,
   mundoSbt,
   adpoints,
   ayrtonSenna,
-  checkinCampus,
   zoo,
   proton,
   terrex,
   falai,
   iquot,
-  vaccine,
   facens,
   cti,
   dpr,

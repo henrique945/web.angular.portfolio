@@ -13,11 +13,9 @@ export const mundoFacens: ProjectInterface = {
   name: 'Mundo Facens',
   coverImage: 'assets/imgs/projects/mundo-facens/mundo5.thumb.webp',
   developmentDate: '20/10/2022 ~ 25/01/2023',
-  description: 'Developed in <b>(Typescript JSX)</b> as a <b>PWA</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
-    'Project developed for <b>Facens university</b> for the engineering week.\n\n' +
-    'Students can answer <b>questions</b>, <b>videos</b> and <b>mini-games</b> to increase their score in their final grade.\n\n' +
-    'The project aims to develop students and expand their knowledge and curiosities in exchange for a better grade.\n\n',
-  outcome: 'Approximately 4k university students used and participated in the activity.',
+  description: '<b>Mundo Facens</b> is a <b>React PWA</b> with a <b>NestJS and PostgreSQL</b> backend on AWS, created for the university’s engineering week.\n\n' +
+    'Students completed questions, videos and mini-games that expanded their subject knowledge and contributed to their final score.',
+  outcome: 'Approximately 4,000 university students participated in the activity.',
   imageUrls: [
     'assets/imgs/projects/mundo-facens/mundo1.webp',
     'assets/imgs/projects/mundo-facens/mundo2.webp',

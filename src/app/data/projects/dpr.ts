@@ -13,10 +13,9 @@ export const dpr: ProjectInterface = {
   name: 'DPR',
   coverImage: 'assets/imgs/projects/dpr/dpr3.thumb.webp',
   developmentDate: '09/04/2020 ~ 02/07/2020',
-  description: 'Developed in <b>Unity (C#)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
-    '<b>DPR</b> is a training application for <b>DPR telecommunications (Brazil)</b> employees in a gamified environment.\n\n' +
-    'With access to a mission board, several competitive challenges, activities to buy and much more.\n',
-  outcome: 'Project for internal use by the DPR company, we do not have access to further results.',
+  description: '<b>DPR</b> is a gamified training application for employees of the Brazilian telecommunications company. It combines a <b>Unity</b> client with <b>NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'The experience includes a mission board, competitive challenges and unlockable activities.',
+  outcome: 'Delivered for DPR’s internal use; later adoption data was not available to the delivery team.',
   imageUrls: [
     'assets/imgs/projects/dpr/dpr1.webp',
     'assets/imgs/projects/dpr/dpr2.webp',

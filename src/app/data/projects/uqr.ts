@@ -13,8 +13,7 @@ export const uqr: ProjectInterface = {
   name: 'UQR Educação',
   coverImage: 'assets/imgs/projects/uqr/uqr-login.thumb.webp',
   developmentDate: '2022 ~ 2023',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgreSQL)</b> with <b>AWS Cloud</b>.\n\n' +
-    'White-label educational platform for the real estate market, deployed as <b>Universidade UQR</b> and <b>IQR Educação</b> — two branded tenants on the same architecture.\n\n' +
+  description: 'A white-label education platform for the real-estate market built with <b>Angular, NestJS, PostgreSQL</b> and <b>AWS</b>. It was deployed as <b>Universidade UQR</b> and <b>IQR Educação</b>, two branded tenants on the same architecture.\n\n' +
     'The platform includes course catalogs, video lessons, user progress tracking and a customized learning experience per tenant.',
   outcome: 'Platform deployed and actively used for online courses and educational content delivery across both brands.',
   imageUrls: [

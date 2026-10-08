@@ -13,11 +13,9 @@ export const assetHub: ProjectInterface = {
   name: 'Asset Hub',
   coverImage: 'assets/imgs/projects/hub/hub1.thumb.webp',
   developmentDate: '08/08/2022 ~ 04/12/2022',
-  description: 'Developed in <b>React (Typescript JSX)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Facens university authentication system</b>.\n\n' +
-    'In the <b>Asset Hub</b>, the sectors of the company <b>Facens</b> can create and share their <b>projects</b> and <b>resources</b> among their users, all <b>filtered by tags and smart searches</b>.\n\n' +
-    'Tightly integrated with <b>AWS Storage (S3)</b>, where users can <b>save 3d assets, audios, photos and videos</b>, facilitating their reuse in other projects.\n\n' +
-    'The <b>3d models can be viewed within the website</b>, without having to download them.\n',
-  outcome: 'Project widely used internally and with positive feedback regarding the ease and practicality of searching for resources.',
+  description: '<b>Asset Hub</b> is a searchable internal catalog built with <b>React, NestJS, PostgreSQL</b> and <b>AWS Lambda and S3</b>, integrated with Facens authentication.\n\n' +
+    'Teams can publish projects and reusable 3D assets, audio, images and videos, organize them with tags and preview 3D models directly in the browser.',
+  outcome: 'The catalog was used internally, with positive feedback about making shared resources easier to find and reuse.',
   imageUrls: [
     'assets/imgs/projects/hub/hub1.webp',
     'assets/imgs/projects/hub/hub2.webp',

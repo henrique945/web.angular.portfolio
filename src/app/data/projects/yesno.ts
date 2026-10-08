@@ -13,10 +13,9 @@ export const yesno: ProjectInterface = {
   name: 'YesNo',
   coverImage: 'assets/imgs/projects/yesno/yesno6.thumb.webp',
   developmentDate: '09/03/2020 ~ 24/04/2020',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript) </b>accessing the <b>phone\'s contact list</b>.\n\n' +
-    'It is possible to <b>create questions</b> by attaching images, request opinions from your <b>contact list</b>, <b>create groups</b> with friends and follow the <b>graphs</b> and <b>statistics</b> of the created questions.\n\n' +
-    'Yesno, a way to give opinions and collect opinions about your day-to-day questions.\n',
-  outcome: 'It had little adherence and was rarely used.',
+  description: '<b>YesNo</b> is an <b>Ionic/Angular</b> polling app that connects with a user’s phone contacts.\n\n' +
+    'Users can create image-based questions, request opinions from contacts, organize friends into groups and review response charts and statistics.',
+  outcome: 'The app was released, but adoption and recurring usage remained low.',
   imageUrls: [
     'assets/imgs/projects/yesno/yesno1.webp',
     'assets/imgs/projects/yesno/yesno2.webp',

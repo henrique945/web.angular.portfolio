@@ -13,10 +13,9 @@ export const usina: ProjectInterface = {
   name: 'Usina Cultural',
   coverImage: 'assets/imgs/projects/usina/usina3.thumb.webp',
   developmentDate: '21/01/2021 ~ 30/10/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and <b>integrated with Google, Apple and Facebook Login</b>.\n\n' +
-    'Developed for the <b>city hall of Sorocaba - São Paulo, Brazil</b> and its event space, "<b>Cultural Plant</b>".\n\n' +
-    'The platform promotes <b>activities</b>, <b>events</b> and <b>artists</b> and focuses on sharing <b>culture</b>, <b>entrepreneurship</b> and <b>sustainability</b>.\n\n',
-  outcome: 'Beautiful and intuitive website with excellent results, being used a lot by the city\'s pollution.',
+  description: '<b>Usina Cultural</b> is a public culture platform for the city of Sorocaba and its Usina Cultural venue. It was built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>, with Google, Apple and Facebook sign-in.\n\n' +
+    'The platform publishes activities, events and artist profiles focused on culture, entrepreneurship and sustainability.',
+  outcome: 'Delivered as a public digital channel for the city’s cultural programming and venue.',
   imageUrls: [
     'assets/imgs/projects/usina/usina1.webp',
     'assets/imgs/projects/usina/usina2.webp',

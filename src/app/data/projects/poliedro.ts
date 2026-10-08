@@ -13,10 +13,8 @@ export const poliedro: ProjectInterface = {
   name: 'Poliedro P+ Kids',
   coverImage: 'assets/imgs/projects/poliedro/poliedro6.thumb.webp',
   developmentDate: '14/06/2021 ~ 17/10/2021',
-  description: 'Developed in <b>NestJs (NodeJs + PostgresSQL + MongoDB)</b> with <b>Poliedro APIs</b>.\n\n' +
-    'App for <b>Poliedro students and guardians</b> that allows access to school information such as <b>schedule</b>, <b>gradebook</b>, <b>messages</b>, <b>tasks</b>, <b>resolutions of material</b> and <b>performance in simulations, with feedback and performance analysis</b>.\n\n' +
-    'It is organized, easy and practical and has <b>more than 100,000 accesses</b>.',
-  outcome: 'Project was a success with more than 100,000 downloads in the store.',
+  description: '<b>Poliedro P+ Kids</b> gives students and guardians access to schedules, grades, messages, assignments, learning materials and performance analysis. I developed backend services and integrations with <b>NestJS, PostgreSQL</b> and <b>MongoDB</b>.',
+  outcome: 'Backend services supported an education platform serving more than 100,000 users.',
   imageUrls: [
     'assets/imgs/projects/poliedro/poliedro1.webp',
     'assets/imgs/projects/poliedro/poliedro2.webp',
@@ -34,4 +32,33 @@ export const poliedro: ProjectInterface = {
   tags: [ProjectTagsEnum.APIS],
   techs: [TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
+  featured: true,
+  featureTier: 'impact',
+  summary: 'Backend services for an education platform serving 100,000+ users.',
+  role: 'Backend Engineer',
+  contributions: [
+    'Built NestJS APIs for student and guardian workflows.',
+    'Integrated platform data across PostgreSQL, MongoDB and Poliedro services.',
+  ],
+  metrics: ['100,000+ users', 'Education platform', 'PostgreSQL + MongoDB'],
+  challenge: 'Expose academic information from multiple systems through a practical experience for a large community of students and guardians.',
+  improvements: [
+    'Built APIs for schedules, grades, messages, assignments and learning materials.',
+    'Integrated academic data used by student and guardian experiences.',
+    'Supported performance and simulation feedback workflows at platform scale.',
+  ],
+  decisions: [
+    'Used NestJS to organize backend APIs and integrations.',
+    'Worked with PostgreSQL and MongoDB to support the platform’s different data needs.',
+  ],
+  coverCaption: 'Poliedro P+ experience for students and guardians.',
+  imageCaptions: [
+    'Student-facing academic overview.',
+    'Learning content and school information.',
+    'Academic activities available through the platform.',
+    'Student progress and performance information.',
+    'Guardian and student communication experience.',
+    'Poliedro P+ navigation across academic services.',
+    'Mobile access to the education platform.',
+  ],
 };

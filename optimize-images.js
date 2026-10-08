@@ -51,10 +51,10 @@ async function run() {
         .rotate()
         .resize(isVertical
           ? { width: 540, height: 960, fit: 'cover', position: 'attention' }
-          : { width: 960, height: 480, fit: 'cover', position: 'attention' })
+          : { width: 960, height: 600, fit: 'cover', position: 'attention' })
         .webp({ quality: 78, effort: 5, smartSubsample: true })
         .toFile(thumbnailPath);
-      await assertWebp(thumbnailPath, isVertical ? 540 / 960 : 2);
+      await assertWebp(thumbnailPath, isVertical ? 540 / 960 : 960 / 600);
       optimizedBytes += fs.statSync(thumbnailPath).size;
     }
 

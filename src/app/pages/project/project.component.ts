@@ -32,6 +32,13 @@ export class ProjectComponent implements OnInit, AfterViewInit, OnDestroy {
   public tags = '';
   public techs = '';
   public descriptionParagraphs: string[] = [];
+  public challengeParagraphs: string[] = [];
+  public engineeringImprovements: string[] = [];
+  public architectureDecisions: string[] = [];
+  public evidence: string[] = [];
+  public imageCaptions: string[] = [];
+  public coverCaption = '';
+  public hasCaseDetails = false;
   public readonly verticalOrientation = OrientationEnum.VERTICAL;
 
   private revealObserver?: IntersectionObserver;
@@ -57,6 +64,21 @@ export class ProjectComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tags = project.tags.join(', ');
     this.techs = project.techs.map(tech => formattedTechEnum[tech]).join(', ');
     this.descriptionParagraphs = project.description.split(/\n\s*\n/).map(paragraph => paragraph.trim()).filter(Boolean);
+    this.challengeParagraphs = (project.challenge || '').split(/\n\s*\n/).map(paragraph => paragraph.trim()).filter(Boolean);
+    this.engineeringImprovements = project.improvements?.length
+      ? project.improvements
+      : project.contributions || [];
+    this.architectureDecisions = project.decisions || [];
+    this.evidence = project.metrics || [];
+    this.coverCaption = project.coverCaption || `${project.name} project overview`;
+    this.imageCaptions = project.imageUrls.map((_, index) =>
+      project.imageCaptions?.[index] || `${project.name} product view ${index + 1}`);
+    this.hasCaseDetails = Boolean(
+      this.challengeParagraphs.length
+      || this.engineeringImprovements.length
+      || this.architectureDecisions.length
+      || this.evidence.length,
+    );
     this.seo.setProjectMetadata(project);
   }
 

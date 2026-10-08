@@ -1,11 +1,14 @@
-<section class="hero" id="top">
+<section class="hero" id="top" aria-labelledby="hero-title">
   <div class="hero__intro reveal">
     <p class="eyebrow">Hello, I'm Henrique Rodrigues</p>
-    <h1 class="display">Senior Full-Stack Engineer<span>Angular / React · Node.js · AWS</span></h1>
-    <p class="lead">I build reliable cloud products for healthcare, media and education, combining hands-on engineering with technical leadership.</p>
-    <ul class="proof">
+    <h1 id="hero-title" class="display">
+      Senior Software Engineer
+      <span>Angular / React · Node.js · AWS</span>
+    </h1>
+    <p class="lead">I build and improve scalable cloud products for complex, regulated and high-traffic environments.</p>
+    <ul class="proof" aria-label="Career highlights">
       <li><span class="proof__num mono">7+ years</span><span class="proof__label">in production software</span></li>
-      <li><span class="proof__num mono">40+ products</span><span class="proof__label">delivered</span></li>
+      <li><span class="proof__num mono">47s → 9s p95</span><span class="proof__label">measured under k6 load</span></li>
       <li><span class="proof__num mono">20+ engineers</span><span class="proof__label">led and mentored</span></li>
     </ul>
     <div class="actions">
@@ -15,25 +18,24 @@
     <app-social></app-social>
   </div>
 
-  <aside class="hero__aside reveal" id="contact">
+  <aside class="hero__aside reveal" id="contact" aria-label="Engineering approach and contact">
     <div class="note">
       <p class="eyebrow">Based in Brazil · UTC−3 · Working remotely worldwide</p>
       <h2 class="title">Engineering with product context</h2>
-      <p>I turn complex workflows into maintainable products. My recent work includes billing and insurance systems for a US behavioral healthcare platform, while earlier roles covered high-traffic sports products, multi-tenant applications and technical leadership.</p>
-      <p>I care about pragmatic architecture, accessible interfaces, observable systems and teams that share knowledge.</p>
+      <p>I turn complex workflows into maintainable products, with a focus on pragmatic architecture, reliability and clear outcomes.</p>
     </div>
-    <button class="chat" type="button" (click)="openContactModal()">
-      <img src="assets/imgs/qrcode.webp" alt="WhatsApp QR code" width="120" height="134">
+    <button class="chat" type="button" (click)="openContactModal()" aria-label="Open contact options">
+      <img src="assets/imgs/qrcode.webp" alt="" width="120" height="134">
       <span class="mono">Open contact options</span>
     </button>
   </aside>
 </section>
 
-<section class="band" id="exp">
+<section class="band" id="exp" aria-labelledby="experience-title">
   <div class="wrap">
     <header class="section-head section-head--right">
-      <p class="eyebrow">Building, learning and leading through real product challenges.</p>
-      <h2 class="headline">Professional Experience</h2>
+      <p class="eyebrow">Building, improving and leading through real product constraints.</p>
+      <h2 id="experience-title" class="headline">Professional Experience</h2>
     </header>
     <ol class="timeline">
       @for (position of listPositions; track position.company) {
@@ -55,60 +57,85 @@
   </div>
 </section>
 
-<section class="work" id="projects">
+<section class="work" id="projects" aria-labelledby="selected-work-title">
   <div class="wrap">
     <header class="section-head">
-      <h2 class="headline">Selected Work</h2>
-      <p class="eyebrow">A focused selection of systems where product constraints, scale and engineering decisions mattered.</p>
+      <h2 id="selected-work-title" class="headline">Selected Work</h2>
+      <p class="eyebrow">Selected systems where scale and engineering decisions mattered.</p>
     </header>
 
     <div class="featured" id="featured">
-      @for (project of featuredProjects; track project.id) {
+      @for (project of primaryProjects; track project.id) {
         <article class="feature reveal">
-          <a class="feature__media" [routerLink]="['/project', project.id]">
-            <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === projectOrientation.VERTICAL ? 540 : 960" [attr.height]="project.orientation === projectOrientation.VERTICAL ? 960 : 480" loading="lazy" decoding="async">
+          <a class="feature__media" [class.feature__media--portrait]="project.orientation === projectOrientation.VERTICAL" [routerLink]="['/project', project.id]" [attr.aria-label]="'Read the ' + project.name + ' case study'">
+            <img [src]="project.coverImage" [alt]="project.coverCaption || (project.name + ' project preview')" width="960" height="600" loading="lazy" decoding="async">
           </a>
           <div class="feature__body">
             @if (project.role) { <p class="eyebrow">{{ project.role }}</p> }
             <h3 class="title"><a [routerLink]="['/project', project.id]">{{ project.name }}</a></h3>
-            <p class="feature__desc">{{ project.summary }}</p>
-            @if (project.metrics?.length) {
-              <div class="chip-row">
-                @for (metric of project.metrics; track metric) { <span class="chip chip--static">{{ metric }}</span> }
-              </div>
-            }
+            <p class="feature__desc">{{ projectSummary(project) }}</p>
             <a class="link-more mono" [routerLink]="['/project', project.id]">Read case study<span aria-hidden="true"> →</span></a>
           </div>
         </article>
       }
     </div>
 
-    <header class="archive-head">
-      <h2 class="headline">Project Archive</h2>
-      <p class="eyebrow">More applications, platforms and experiments delivered across healthcare, education, media and industry.</p>
-    </header>
-    <div class="filters" aria-label="Filter projects">
-      @for (tag of listTags; track tag) {
-        <button type="button" class="chip" [class.is-active]="currentTag === tag" [attr.aria-pressed]="currentTag === tag" (click)="filterProjectByTag(tag)">{{ tag }}</button>
-      }
-    </div>
-    <p class="archive__count mono" aria-live="polite">{{ listProjectsAux.length }} {{ listProjectsAux.length === 1 ? 'project' : 'projects' }}</p>
+    @if (impactProjects.length) {
+      <section class="impact" aria-labelledby="impact-title">
+        <header class="impact__head">
+          <p class="eyebrow">Additional production impact</p>
+          <h2 id="impact-title" class="headline">Systems built for meaningful scale</h2>
+        </header>
+        <ul class="impact-grid">
+          @for (project of impactProjects; track project.id) {
+            <li class="impact-grid__item reveal">
+              <article class="impact-card">
+                <a class="impact-card__media" [class.impact-card__media--portrait]="project.orientation === projectOrientation.VERTICAL" [routerLink]="['/project', project.id]" tabindex="-1" aria-hidden="true">
+                  <img [src]="project.coverImage" alt="" width="640" height="400" loading="lazy" decoding="async">
+                </a>
+                <div class="impact-card__body">
+                  @if (project.metrics?.length) {
+                    <p class="impact-card__metric mono">{{ project.metrics?.[0] }}</p>
+                  }
+                  <h3 class="title"><a [routerLink]="['/project', project.id]">{{ project.name }}</a></h3>
+                  <p>{{ projectSummary(project) }}</p>
+                  <a class="link-more mono" [routerLink]="['/project', project.id]">View project<span aria-hidden="true"> →</span></a>
+                </div>
+              </article>
+            </li>
+          }
+        </ul>
+      </section>
+    }
 
-    <ul class="archive">
-      @for (project of listProjectsAux; track project.id; let index = $index) {
-        <li class="archive__item reveal">
-          <a class="pcard" [class.pcard--portrait]="project.orientation === projectOrientation.VERTICAL" [routerLink]="['/project', project.id]">
-            <span class="pcard__media">
-              <img [src]="project.coverImage" [alt]="project.name + ' project preview'" [attr.width]="project.orientation === projectOrientation.VERTICAL ? 540 : 960" [attr.height]="project.orientation === projectOrientation.VERTICAL ? 960 : 480" loading="lazy" decoding="async">
-            </span>
-            <span class="pcard__body">
-              <span class="pcard__index mono">{{ (index + 1).toString().padStart(2, '0') }}</span>
-              <span class="pcard__name">{{ project.name }}</span>
-              <span class="pcard__meta mono">{{ projectTags(project) }}</span>
-            </span>
-          </a>
-        </li>
-      }
-    </ul>
+    <section class="archive-section" aria-labelledby="archive-title">
+      <header class="archive-head">
+        <h2 id="archive-title" class="headline">Project Archive</h2>
+        <p class="eyebrow">More applications, platforms and experiments across healthcare, education, media and industry.</p>
+      </header>
+      <div class="filters" aria-label="Filter archived projects">
+        @for (tag of listTags; track tag) {
+          <button type="button" class="chip" [class.is-active]="currentTag === tag" [attr.aria-pressed]="currentTag === tag" (click)="filterProjectByTag(tag)">{{ tag }}</button>
+        }
+      </div>
+      <p class="archive__count mono" aria-live="polite">{{ listProjectsAux.length }} {{ listProjectsAux.length === 1 ? 'project' : 'projects' }}</p>
+
+      <ul class="archive">
+        @for (project of listProjectsAux; track project.id; let index = $index) {
+          <li class="archive__item reveal">
+            <a class="pcard" [class.pcard--portrait]="project.orientation === projectOrientation.VERTICAL" [routerLink]="['/project', project.id]">
+              <span class="pcard__media">
+                <img [src]="project.coverImage" [alt]="project.coverCaption || (project.name + ' project preview')" [attr.width]="project.orientation === projectOrientation.VERTICAL ? 540 : 960" [attr.height]="project.orientation === projectOrientation.VERTICAL ? 960 : 600" loading="lazy" decoding="async">
+              </span>
+              <span class="pcard__body">
+                <span class="pcard__index mono">{{ (index + 1).toString().padStart(2, '0') }}</span>
+                <span class="pcard__name">{{ project.name }}</span>
+                <span class="pcard__meta mono">{{ projectTags(project) }}</span>
+              </span>
+            </a>
+          </li>
+        }
+      </ul>
+    </section>
   </div>
 </section>

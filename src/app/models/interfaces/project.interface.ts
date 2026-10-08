@@ -27,4 +27,10 @@ export interface ProjectInterface {
   featured?: boolean;
   seoDescription?: string;
   socialImage?: string;
+  featureTier?: 'primary' | 'impact';
+  challenge?: string;
+  improvements?: string[];
+  decisions?: string[];
+  imageCaptions?: string[];
+  coverCaption?: string;
 }

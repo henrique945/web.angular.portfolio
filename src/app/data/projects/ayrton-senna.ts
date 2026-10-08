@@ -13,10 +13,9 @@ export const ayrtonSenna: ProjectInterface = {
   name: 'Ayrton Senna',
   coverImage: 'assets/imgs/projects/ayrton-senna/ias3.thumb.webp',
   developmentDate: '07/11/2021 ~ 17/12/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Deeplink</b> and <b>nsfwJs for sensitive content detection</b>.\n\n' +
-    '<b>Creating trips dynamically by blocking</b>, the application aims to provide a light and hands-on journey that offers young people tools for: self-knowledge, planning, and skills development sponsored by the <b>Ayrton Senna Institute</b>.\n\n' +
-    'In addition to being able to <b>share</b> your trips on other social networks with <b>Deeplink</b> and <b>check sensitive content</b>.\n',
-  outcome: 'The app reached more than a thousand downloads on Play Store and there are no more updates from the institute.',
+  description: 'A guided personal-development app for the <b>Ayrton Senna Institute</b>, built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'Young people assemble visual journeys around self-knowledge, planning and skill development. Deep links support social sharing, while <b>NSFW.js</b> checks user-submitted images for sensitive content.',
+  outcome: 'The app reached more than 1,000 Play Store downloads before the institute stopped publishing updates.',
   imageUrls: [
     'assets/imgs/projects/ayrton-senna/ias1.webp',
     'assets/imgs/projects/ayrton-senna/ias2.webp',

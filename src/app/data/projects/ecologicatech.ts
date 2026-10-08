@@ -13,9 +13,9 @@ export const ecologicatech: ProjectInterface = {
   name: 'Ecologicatech',
   coverImage: 'assets/imgs/projects/ecologicatech/eco9.thumb.webp',
   developmentDate: '13/03/2023 ~ 14/04/2023',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b> and integrated with <b>Google Maps API</b>.\n\n' +
-    '<b>Ecologicatech</b> was developed for <b>Aguama</b>, environmental management and marketing company, the project focused on the creation of events for companies and on replies to these events forms, with this data we can calculate the distance between locations and transport (using <b>Google Maps API</b>). And verify the amount of <b>CO2 emitted</b> on the planet. Thus knowing how many trees will be needed to combat the <b>CO2 emitted</b>.\n',
-  outcome: 'Project was used in real events, being the first one in a conference called "MMA Impact Brasil" (Mobile Marketing Association) in São Paulo - Brazil with several data obtained.',
+  description: '<b>Ecologicatech</b> is an environmental event platform built for Aguama with <b>Angular, NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'Event responses and <b>Google Maps APIs</b> are used to estimate travel distance, transport-related carbon emissions and the number of trees required for compensation.',
+  outcome: 'The platform was used at live events, beginning with the MMA Impact Brasil conference in São Paulo.',
   imageUrls: [
     'assets/imgs/projects/ecologicatech/eco1.webp',
     'assets/imgs/projects/ecologicatech/eco2.webp',

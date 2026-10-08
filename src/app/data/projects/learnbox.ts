@@ -13,11 +13,9 @@ export const learnbox: ProjectInterface = {
   name: 'Learnbox',
   coverImage: 'assets/imgs/projects/learnbox/learnbox5.thumb.webp',
   developmentDate: '27/04/2020 ~ 29/10/2021',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>.\n\n' +
-    'Create and update your collections, <b>Learnbox</b> is a <b>social network</b> for collectors, with interactions, comments and favorites.\n\n' +
-    '<b>Learn Box</b> is here to showcase your <b>best collections</b> to your friends and the world!\n\n' +
-    'After all, your collections have a lot of meaning! How about showing this meaning to everyone?\n',
-  outcome: 'The development was complete but the application is for a very specific group of people and has not been used much.',
+  description: '<b>Learnbox</b> is a collectors’ social platform built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>.\n\n' +
+    'Members can create and maintain collections, publish them for others to discover, and interact through comments and favorites.',
+  outcome: 'Development was completed, but usage remained limited within its specialized collector audience.',
   imageUrls: [
     'assets/imgs/projects/learnbox/learnbox1.webp',
     'assets/imgs/projects/learnbox/learnbox2.webp',

@@ -14,6 +14,9 @@ assert.match(robots, /Sitemap: https:\/\/henriquerod\.com\/sitemap\.xml/);
 assert.doesNotMatch(robots, /<!doctype html>/i);
 assert.equal((sitemap.match(/<url>/g) || []).length, publicRoutes.length);
 assert.ok(fs.existsSync(path.join(output, '404.html')));
+assert.ok(publicRoutes.includes('/project/controleaki'), 'ControleAki must be included in prerender routes.');
+assert.ok(fs.existsSync(path.join(output, 'assets', 'docs', 'Henrique_Rodrigues_CV.pdf')), 'The current CV must be deployed.');
+assert.ok(fs.statSync(path.join(output, 'assets', 'docs', 'Henrique_Rodrigues_CV.pdf')).size > 100000, 'The deployed CV looks incomplete.');
 
 for (const route of publicRoutes) {
   const page = route === '/'

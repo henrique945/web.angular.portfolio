@@ -102,9 +102,11 @@ export class AppComponent implements OnDestroy {
     const project = projects.find(item => item.id === projectId);
     if (project) {
       this.imageSources = [project.coverImage, ...project.imageUrls];
-      this.imageCaptions = this.imageSources.map((_, index) => index === 0
-        ? `${project.name} project preview`
-        : `${project.name} screenshot ${index}`);
+      this.imageCaptions = [
+        project.coverCaption || `${project.name} project overview`,
+        ...project.imageUrls.map((_, index) =>
+          project.imageCaptions?.[index] || `${project.name} product view ${index + 1}`),
+      ];
       this.activeImageIndex = Number.isInteger(requestedIndex)
         ? Math.max(0, Math.min(requestedIndex, this.imageSources.length - 1))
         : 0;

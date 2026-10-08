@@ -13,10 +13,9 @@ export const fablab: ProjectInterface = {
   name: 'Fablab',
   coverImage: 'assets/imgs/projects/fablab/fablab1.thumb.webp',
   developmentDate: '15/10/2019 ~ 15/10/2020',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3) for tablet</b>.\n\n' +
-    'A <b>social network</b> that helps the <b>worldwide Fablab community</b> to share knowledge and projects.\n\n' +
-    'A <b>social network</b> with features such as user achievements, machine training, project-item creation, likes and comments interactions and more...\n',
-  outcome: 'Was completed and was in the test phase but Fablab did not continue the project.',
+  description: 'A tablet-oriented community platform built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b> for Fablab members to share projects and knowledge.\n\n' +
+    'The product includes achievements, machine training, project and item publishing, likes and comments.',
+  outcome: 'Development reached the testing phase, but Fablab chose not to continue the project.',
   imageUrls: [
     'assets/imgs/projects/fablab/fablab1.webp',
     'assets/imgs/projects/fablab/fablab2.webp',

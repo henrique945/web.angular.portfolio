@@ -11,13 +11,11 @@ export const bolaoUol: ProjectInterface = {
   isActive: true,
   id: 'bolao-uol',
   name: 'Bolão do UOL',
-  coverImage: 'assets/imgs/projects/bolao-uol/bolao-app-insights.webp',
+  coverImage: 'assets/imgs/projects/bolao-uol/bolao-home.webp',
   developmentDate: '2022',
-  description: 'Developed in <b>Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgreSQL)</b> with <b>Azure Application Insights</b> monitoring.\n\n' +
-    '<b>Bolão do UOL</b> is the World Cup prediction platform for millions of UOL users, featuring match predictions, private group rooms with invite codes, community rankings and a full prediction history with scoring breakdown.\n\n' +
-    'Built to handle massive traffic spikes during live sports events. Stress testing with <b>k6</b> achieved ~<b>418 req/s</b>, <b>301,258 checks</b> and a <b>99.73% success rate</b>. Azure Live Metrics showed <b>91 servers</b> sustaining ~<b>400–600 req/s</b> with stable response times.\n\n' +
-    'The <b>staging-chutometrodb</b> database handled ~<b>308 simultaneous active connections</b> with zero failed connections. Key endpoints include <b>/guess</b> and <b>/auth/external</b>.',
-  outcome: 'Platform successfully handled World Cup traffic peaks with 99.73% check success rate and zero database connection failures under load.',
+  description: '<b>Bolão do UOL</b> is a World Cup prediction platform with match predictions, private groups, rankings and scoring history. The product was built with <b>Angular, NestJS</b> and <b>PostgreSQL</b> for a high-concurrency live sports context.\n\n' +
+    'I used <b>k6</b> load tests and <b>Azure Application Insights</b> to evaluate request throughput and observe service and database behavior under concurrent load.',
+  outcome: 'k6 load testing reached approximately 418 requests per second, with 99.73% of checks passing.',
   imageUrls: [
     'assets/imgs/projects/bolao-uol/bolao-home.webp',
     'assets/imgs/projects/bolao-uol/bolao-palpites.webp',
@@ -32,14 +30,34 @@ export const bolaoUol: ProjectInterface = {
   techs: [TechEnum.ANGULAR, TechEnum.NESTJS],
   orientation: OrientationEnum.HORIZONTAL,
   featured: true,
+  featureTier: 'primary',
   summary: 'World Cup prediction platform engineered for high-traffic live sports events.',
   role: 'Full-Stack Engineer',
   contributions: [
     'Built prediction, private group, ranking and scoring-history experiences.',
     'Validated peak traffic behavior with k6 and Azure Application Insights.',
-    'Improved service and database readiness for large concurrent audiences.',
+    'Assessed service and database behavior under concurrent load.',
   ],
-  metrics: ['99.73% load-test success', '400–600 requests/second', 'Zero failed database connections'],
+  metrics: ['~418 requests/second', '99.73% of load-test checks passed', 'k6 + Application Insights'],
+  challenge: 'Prepare a World Cup prediction experience for sharp concurrency peaks while keeping group, ranking and scoring workflows responsive.',
+  improvements: [
+    'Built match prediction, private group, ranking and scoring-history experiences.',
+    'Created k6 load scenarios to measure the platform under concurrent traffic.',
+    'Used Azure Application Insights to inspect service and database behavior during the tests.',
+  ],
+  decisions: [
+    'Used Angular for the interactive product experience and NestJS with PostgreSQL for the API and persistence layers.',
+    'Kept observability evidence inside the case study so performance claims remain tied to test results.',
+    'Reported test throughput and passing checks separately from production audience claims.',
+  ],
+  coverCaption: 'World Cup prediction experience for creating picks and following the competition.',
+  imageCaptions: [
+    'Main Bolão do UOL experience for the World Cup competition.',
+    'Match prediction flow for submitting picks.',
+    'Private group invitation flow for competing with friends.',
+    'Azure Application Insights evidence captured during concurrent load testing.',
+    'Database connection behavior observed during performance testing.',
+  ],
   seoDescription: 'Bolão do UOL case study: an Angular and NestJS World Cup prediction platform validated for high traffic and concurrency.',
   socialImage: 'assets/imgs/projects/bolao-uol/bolao-home.webp',
 };

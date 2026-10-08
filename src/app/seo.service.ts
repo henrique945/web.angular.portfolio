@@ -15,17 +15,21 @@ export class SeoService {
   ) {}
 
   public setHomeMetadata(): void {
-    const pageTitle = 'Henrique Rodrigues | Senior Full-Stack Engineer';
-    const description = 'Senior Full-Stack Engineer specializing in Angular, Node.js and AWS, with 7+ years of experience building cloud products and leading engineering teams.';
+    const pageTitle = 'Henrique Rodrigues | Senior Software Engineer';
+    const description = 'Senior Software Engineer building scalable cloud products with Angular/React, Node.js and AWS for regulated and high-traffic systems.';
 
     this.setCommonMetadata(pageTitle, description, '/', this.defaultImage);
     this.setStructuredData({
       '@context': 'https://schema.org',
       '@type': ['ProfilePage', 'WebPage'],
+      name: pageTitle,
+      description,
+      url: this.siteUrl,
       mainEntity: {
         '@type': 'Person',
         name: 'Henrique Rodrigues',
-        jobTitle: 'Senior Full-Stack Engineer',
+        jobTitle: 'Senior Software Engineer',
+        description,
         url: this.siteUrl,
         image: this.defaultImage,
         sameAs: [
@@ -33,7 +37,17 @@ export class SeoService {
           'https://github.com/henrique945',
           'https://stackoverflow.com/users/11611128/henrique-rodrigues',
         ],
-        knowsAbout: ['Angular', 'Node.js', 'NestJS', 'AWS', 'TypeScript', 'Software Architecture'],
+        knowsAbout: [
+          'Angular',
+          'React',
+          'Node.js',
+          'NestJS',
+          'AWS',
+          'TypeScript',
+          'Scalable cloud architecture',
+          'Regulated systems',
+          'High-traffic systems',
+        ],
       },
     });
   }

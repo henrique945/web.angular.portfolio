@@ -13,11 +13,9 @@ export const tintim: ProjectInterface = {
   name: 'Tintim',
   coverImage: 'assets/imgs/projects/tintim/tintim9.thumb.webp',
   developmentDate: '17/09/2022 ~ 28/04/2023',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>NestJs (NodeJs + PostgresSQL)</b> with <b>AWS Cloud (Aws Lambda + S3)</b>, integrated with <b>company authentication system</b> and <b>customized by company themes</b>.\n\n' +
-    '<b>Tintim app</b> is a fun and immersive mobile app that offers users the opportunity to <b>complete missions</b> and answer <b>quizzes to earn points</b>.\n\n' +
-    'Each <b>customized company</b> has their products, missions and awars.\n\n' +
-    'It was developed a <b>template</b> to absorb several different <b>companies, their different philoshophies, rules and themes</b>.',
-  outcome: 'There are already 4 companies (Summit, CEMIG, Facens and Newton) and more than a 1,000 employees using it.',
+  description: '<b>Tintim</b> is a white-label employee engagement app built with <b>Ionic, Angular, NestJS, PostgreSQL</b> and <b>AWS</b>. Employees complete missions and quizzes to earn points and rewards.\n\n' +
+    'A shared product template supports each company’s authentication, branding, missions, catalog and program rules.',
+  outcome: 'Four organizations—Summit, CEMIG, Facens and Newton—adopted the platform, reaching more than 1,000 employees.',
   imageUrls: [
     'assets/imgs/projects/tintim/tintim1.webp',
     'assets/imgs/projects/tintim/tintim2.webp',

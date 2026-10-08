@@ -13,10 +13,9 @@ export const falai: ProjectInterface = {
   name: 'Falai',
   coverImage: 'assets/imgs/projects/falai/falai7.thumb.webp',
   developmentDate: '02/07/2021 ~ 17/08/2022',
-  description: 'Developed in <b>Ionic/Angular (HTML, SASS, Typescript)</b> and <b>integrated with Leaflet (map + geosearch + markercluster)</b> library for Maps.\n\n' +
-    '<b>Falai</b> was developed for the <b>city of Sorocaba</b> in partnership with <b>SPLICE</b> (SpliceGroup provides a wide-range of end-to-end fibre connectivity solutions helping to connect organizations, homes and people around the globe) and sold to several cities.\n\n' +
-    'Within the app, the citizen can <b>open</b> and <b>control requests</b> about the city\'s problems, focused on integrating the system with <b>city maps, being able to search for your street and group your created requests</b>.\n',
-  outcome: 'Project was more accepted by citizens but needs support from each city hall.',
+  description: '<b>Falai</b> is an <b>Ionic/Angular</b> civic-request app created for Sorocaba in partnership with SPLICE and later offered to other cities.\n\n' +
+    'Citizens can report and track local issues on an interactive <b>Leaflet</b> map with address search and clustered request markers.',
+  outcome: 'The app reached citizens in multiple municipalities, while continued adoption depended on operational support from each city hall.',
   imageUrls: [
     'assets/imgs/projects/falai/falai1.webp',
     'assets/imgs/projects/falai/falai2.webp',
